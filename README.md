@@ -1,36 +1,26 @@
-# tangxu
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>图片循环旋转</title>
-<style>
-*{margin: 0; padding: 0;}
-
-.ta_c{text-align: center;
-margin-top: 100px;}
-
-@-webkit-keyframes rotation{
-from {-webkit-transform: rotate(0deg);}
-to {-webkit-transform: rotate(360deg);}
-}
-
-.Rotation{
--webkit-transform: rotate(360deg);
-/*animation: rotation 3s linear infinite;*/
-/*-moz-animation: rotation 3s linear infinite;*/
--webkit-animation: rotation 1s linear infinite;
--o-animation: rotation 3s linear infinite;
-}
-
-.img{border-radius: 250px;}
-
-</style>
-</head>
-<body>
-
-<div class="ta_c">
-<img class="Rotation img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495611034752&di=63fdd3c6f759eb4141118a13a0c79459&imgtype=0&src=http%3A%2F%2Fwww.iteric.cn%2Fassets%2Fimages%2Fsoft%2Fbootstrap.jpg" width="100" height="100"/>
-</div>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			background:springgreen;
+		}
+	</style>
+	<body>
+		<a href="">
+		<div id="bs">
+			Boottrap
+		</div>
+		</a>
+		<a href="">
+			<div id="jq">
+			Jquery
+		</div>
+		</a>
+	</body>
 </html>
