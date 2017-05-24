@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="carousel slide" id="myCarousel" style="width:600px ;" >
+			
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			    <li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			
+			<div class="carousel-inner">
+				<div class="item active"><img src="../图片/1.jpg"/></div>
+				<div class="item"> <img src="../图片/2.jpg"/></div>
+				<div class="item"><img src="../图片/3.jpg"/></div>
+				<div class="item"><img src="../图片/4.jpg"/></div>
+			</div>
+			
+<a href="#myCarousel" data-slide="prev" class="carousel-control left">上一张</a>
+<a href="#myCarousel" data-slide="next"class="carousel-control right">下一张</a>
+		</div>
+		<button class="btn btn-default">点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+$("button").on("click",function(){
+			$("#myCarousel").carousel("cycle")
+		})
+//	carousel("cycle")方法再在图片没有自动播放的时候通过事件驱动施行后会开始播放，播放间隔是默认5秒
+	</script>
+</html>
