@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>图片循环旋转</title>
+<style>
+*{margin: 0; padding: 0;}
+
+.ta_c{text-align: center;
+margin-top: 100px;}
+
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+
+.Rotation{
+-webkit-transform: rotate(360deg);
+/*animation: rotation 3s linear infinite;*/
+/*-moz-animation: rotation 3s linear infinite;*/
+-webkit-animation: rotation 1s linear infinite;
+-o-animation: rotation 3s linear infinite;
+}
+
+.img{border-radius: 250px;}
+
+</style>
+</head>
+<body>
+
+<div class="ta_c">
+<img class="Rotation img" src="../../../Bootstrap/bootstrap库/Bootstrap源码/docs/apple-touch-icon.png" width="100" height="100"/>
+</div>
+
+</body>
+</html>
