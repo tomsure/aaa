@@ -1,15 +1,14 @@
 
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<style type="text/css">
-		*{
-			padding: 0;
-			margin: 0;
-			background:springgreen;
-		}
+<head>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+      *{
+	padding: 0;
+	margin: 0;
+	background:springgreen;
+	}
 	</style>
 	<body>
 		<a href="">
