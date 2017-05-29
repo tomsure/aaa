@@ -1,5 +1,5 @@
 
-<html>
+
 <head>
 <meta charset="UTF-8">
 <style>
@@ -52,4 +52,4 @@ animation: hpIsPig 3s linear infinite;
 	</div>
 	</div>
 
-</html>
+
