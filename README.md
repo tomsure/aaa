@@ -18,13 +18,22 @@ to {-webkit-transform: rotate(360deg);}
 -o-animation: rotation 3s linear infinite;
 }
 .img{border-radius: 250px;}
+#dv a{
+	text-decoration:none;
+	text-align: center;
+	color:  #00BFFF;
+	font-size:1rem;
+	 }
 </style>
 </head>
 <body>
 
 <div class="ta_c">
 <img class="Rotation img" src="https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetmsgimg?&MsgID=7174067680216486919&skey=%40crypt_da1e568c_f2672ac1a95c19912a277c99c41653d8" width="100" height="100"/>
+ 
 </div>
-
+<div id="dv">
+	<a href="">欢迎访问我的网站</a>
+</div>
 </body>
 </html>
