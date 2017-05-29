@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>图片循环旋转</title>
+<title>和平</title>
 <style>
 *{margin: 0; padding: 0;}
 .ta_c{text-align: center;
@@ -23,7 +23,7 @@ to {-webkit-transform: rotate(360deg);}
 <body>
 
 <div class="ta_c">
-<img class="Rotation img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495611034752&di=63fdd3c6f759eb4141118a13a0c79459&imgtype=0&src=http%3A%2F%2Fwww.iteric.cn%2Fassets%2Fimages%2Fsoft%2Fbootstrap.jpg" width="100" height="100"/>
+<img class="Rotation img" src="https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetmsgimg?&MsgID=7174067680216486919&skey=%40crypt_da1e568c_f2672ac1a95c19912a277c99c41653d8" width="100" height="100"/>
 </div>
 
 </body>
