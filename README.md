@@ -35,8 +35,8 @@ to {-webkit-transform: rotate(360deg);}
 
 .hp{
 -webkit-transform: rotate(360deg);
-/*animation: hpIsPig 3s linear infinite;*/
-/*-moz-animation: rotation 3s linear infinite;*/
+animation: hpIsPig 3s linear infinite;
+-moz-animation: rotation 3s linear infinite;
 -webkit-animation: rotation 5s linear infinite;
 -o-animation: rotation 1s linear infinite;
 }
