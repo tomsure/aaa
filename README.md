@@ -6,12 +6,11 @@
    *{
    padding:0;
    margin:0;
-   background:green;
+   background:#0099FF;
    
    }
   #dv{
 			text-align: center;
-margin-top: 100px;
 			background-color:darksalmon;
 		  display:flex;
 		  justify-content:center;
