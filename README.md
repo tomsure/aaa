@@ -44,12 +44,12 @@ animation: hpIsPig 3s linear infinite;
 
 </style>
 </head>
-<body>
+
 	<div id="dv">
         <img class="hp isPig" src="https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetmsgimg?&MsgID=7174067680216486919&skey=%40crypt_da1e568c_f2672ac1a95c19912a277c99c41653d8" width="100" height="100"/>	
 	<div id="dv1">
 	 <a>进入我的博客</a>
 	</div>
 	</div>
-	</body>
+
 </html>
