@@ -1,15 +1,16 @@
-
+<!DOCTYPE HTML>
+<html>
 
 <head>
 <meta charset="UTF-8">
 <style>
-   *{
+   /**{
    padding:0;
    margin:0;
-   background:#0099FF;
+  
    
-   }
-  #dv{
+   }*/
+  .dv{
 			text-align: center;
 			background-color:darksalmon;
 		  display:flex;
@@ -22,7 +23,8 @@
 			width: 100px;
 			height: 100px;
 			bbackground: chartreuse;
-		    
+		    text-align: center;
+            line-height: 100px;
         
 		}
 		
@@ -44,12 +46,13 @@ animation: hpIsPig 3s linear infinite;
 
 </style>
 </head>
-
-	<div id="dv">
+<body>
+	<div class="dv">
         <img class="hp isPig" src="https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetmsgimg?&MsgID=7174067680216486919&skey=%40crypt_da1e568c_f2672ac1a95c19912a277c99c41653d8" width="100" height="100"/>	
 	<div id="dv1">
 	 <a>进入我的博客</a>
 	</div>
 	</div>
 
-
+</body>
+</html>
