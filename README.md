@@ -1,58 +1,30 @@
-
 <html>
-
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8" />
+<title>图片循环旋转</title>
 <style>
-   /**{
-   padding:0;
-   margin:0;
-  
-   
-   }*/
-  .dv{
-			text-align: center;
-			background-color:darksalmon;
-		  display:flex;
-		  justify-content:center;
-		  align-items:center;
-
-			
-		}
-		#dv1{
-			width: 100px;
-			height: 100px;
-			bbackground: chartreuse;
-		    text-align: center;
-            line-height: 100px;
-        
-		}
-		
-		
-@-webkit-keyframes hpIsPig{
+*{margin: 0; padding: 0;}
+.ta_c{text-align: center;
+margin-top: 100px;}
+@-webkit-keyframes rotation{
 from {-webkit-transform: rotate(0deg);}
 to {-webkit-transform: rotate(360deg);}
 }
-
-.hp{
+.Rotation{
 -webkit-transform: rotate(360deg);
-animation: hpIsPig 3s linear infinite;
--moz-animation: rotation 3s linear infinite;
--webkit-animation: rotation 5s linear infinite;
--o-animation: rotation 1s linear infinite;
+/*animation: rotation 3s linear infinite;*/
+/*-moz-animation: rotation 3s linear infinite;*/
+-webkit-animation: rotation 1s linear infinite;
+-o-animation: rotation 3s linear infinite;
 }
-
-.isPig{border-radius: 100px;}
-
+.img{border-radius: 250px;}
 </style>
 </head>
 <body>
-	<div class="dv">
-        <img class="hp isPig" src="https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxgetmsgimg?&MsgID=7174067680216486919&skey=%40crypt_da1e568c_f2672ac1a95c19912a277c99c41653d8" width="100" height="100"/>	
-	<div id="dv1">
-	 <a>进入我的博客</a>
-	</div>
-	</div>
+
+<div class="ta_c">
+<img class="Rotation img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495611034752&di=63fdd3c6f759eb4141118a13a0c79459&imgtype=0&src=http%3A%2F%2Fwww.iteric.cn%2Fassets%2Fimages%2Fsoft%2Fbootstrap.jpg" width="100" height="100"/>
+</div>
 
 </body>
 </html>
