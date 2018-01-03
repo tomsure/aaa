@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery手机端网页tab选项卡代码</title>
+<link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../icons/style.css"/>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+		<link rel="stylesheet" href="../../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+<style>
+	*{text-decoration: none;margin: 0;padding: 0;list-style: none;}
+		#hear{width: 100%;height:1.04rem;line-height: 45px; border:0;background-color:#26a6ff ;color: white; display: flex;justify-content: center;}
+		#hear a{font-weight: normal;color:white;}
+		#hear li{text-align: center;height:97%;width: 2rem;}
+		#hear li span {font-size: 0.4rem;}
+		#hear li:nth-of-type(1){width: 2rem;float: left;}
+		#hear li:nth-of-type(2){width: 2rem;float: left;}
+		#hear li:nth-of-type(3){width: 34%;float: right;}
+		
+		#contentop li{ display: none;margin: 0 auto;}
+	    	#contentop .action .alo dl dd .ui-radio{
+			display: inline-block;
+			/*float: right;*/
+			
+		}
+		#contentop .action .alo dl dd{
+			margin-bottom: 0.64rem;
+			
+		}
+		.span_radio{
+			/*float: right;*/
+			position: relative;
+			left: 4rem;
+			font-size: 0.4rem;
+		}
+		.span_radio span{
+			font-size: 0.4rem;
+		   margin-left: 0.5rem;
+		}
+		#contentop .action .alo dl dd input{
+			float: right;
+			border: 0;
+		}
+		.alo dl dt{
+			margin-bottom: 0.2666rem;
+			font-size: 0.42rem;
+			font-weight: 600;
+		}
+		#contentop .action{ display: block;}
+		#contentop .usl{width: 100%;height: 110px;background:wheat;border: 1px solid #cccccc;margin-bottom: 10px;text-shadow: none;}			
+		#contentop .alo{width: 100%;background: white;border: 1px solid #cccccc;margin-bottom: 10px;text-shadow: none;}
+		#contentop span{font-size: 0.4rem;color:dimgray;font-weight: 600;}
+		#contentop .sty1{margin-top: 18px;}
+		#contentop .sty2{margin-top: 13px;}
+		#contentop .sty3{margin-top: 13px;}
+		#contentop .sty4{text-align: right;font-size: 0.8em;margin-top: -20px;}
+		#contentop .Buy{font-size: 0.8em;margin-top: 2px;}
+		#contentop .Buy div:nth-of-type(1){text-align: left;padding-left: 15px;}
+		#contentop .Buy div:nth-of-type(2){float: right;}
+		#contentop .cllio {background:url(img/20010.png)repeat-x;width: 93%;height:8px;margin: 0 auto;margin-top: 5px;}
+		.ui-checkbox input, .ui-radio input{
+			position: relative;
+			top: 0.2rem;
+		}
+		.sexbox{
+			font-size: 0.4rem!important;
+		}
+		
+</style>
+<script>
+		$(function(){
+			$("#hear li").click(function(){
+				
+				$(this).css({
+					borderBottom: "4px solid white",
+					height:"1.0rem"
+				}).siblings().css({
+					borderBottom: "none",
+					height:"1.0rem"
+				});
+			});					
+				
+			$("#hear li").click(function(){
+				$(this).addClass("action").siblings().removeClass("action");
+				
+				var index = $(this).index();
+				$("#contentop li").eq(index).css("display","block").siblings().css("display","none");
+			});
+		});
+</script>
+</head>
+<body>
+	<div class="search_box audit_box">
+		<div class="search_box_content">
+			<span>
+</span><input type="text" placeholder="搜索" />
+		</div>
+	</div>
+	
+<div data-role="page" style="margin-top: 2.34rem;">
+<div data-role = "content-floud">			
+	<div style="font-family: '微软雅黑';">
+		<ul id="hear">
+			<li class="action" style="margin-right: 3rem;border-bottom: 4px solid white;" ><span >实名认证</span></li>
+			<li><span >进度查询</span></li>
+			
+		</ul>
+		
+		 	<ul id="contentop">
+			<li class="action">
+				
+				<div class="alo" >
+					 <div class="box_common">
+					<dl>
+						<dt>申请信息</dt>
+						<dd><span>真实姓名</span><input type="" name="" id="" placeholder="请输入真实姓名" value="" /></dd>
+						<dd><span>身份证号</span><input type="" name="" id="" placeholder="请输入身份证号" value="" /></dd>
+						<dd><span>设备号码</span><input type="" name="" id="" placeholder="请输入设备号码" value="" /></dd>
+						<dd><span>手机号码</span><input type="" placeholder="请输入手机号码" /></dd>
+						<dd><span>性别</span>
+							<span class="span_radio">
+								<span class="sexbox">男</span><input type="radio" name="sex" id="" value="" />
+							 <span class="sexbox">女</span><input type="radio" name="sex" id="sex" value="" />
+							</span>
+						</dd>
+						
+					</dl>
+				</div>
+				
+				  <div class="box-bottom">
+				  	 <div class="uploadbox">
+				  	 	 <p><span class="icon icon-uplodate" style="margin-top: 1.5rem;"></span><span class="uploadbtn" >点击上传</span>
+				  	 	 	<p>请上传身份证正面照</p>
+				  	 	 </p>
+				  	  <p><span class="icon icon-uplodate"></span><span class="uploadbtn">点击上传</span>
+				  	  	<p>请上传身份证背面照</p>
+				  	  </p>
+				  	  <p style="    margin-top: 1.56rem;"><span class="icon icon-uplodate"></span><span class="uploadbtn">点击上传</span>
+				  	  	<p>请上传手持身份证正面照</p>
+				  	  </p>
+				  	 </div>
+				  	 <dl>
+				  	 	<dt>说明</dt>
+				  	 	<dd>1、照片需上传正面、反面、手持照</dd>
+				  	 	<dd>2、提交后等待三个工作日审核</dd>
+				  	 </dl>
+				  	<button style="background-color:#26a6ff;
+	display: block;
+	text-align: center;
+	color: white;
+	width: 100%;
+	border: 0;
+	height: 1.146666667rem;
+	border-radius: 100px;
+	font-size: 0.45rem;
+	margin-top: 1.386666666rem;font-weight: 100;">保存</button>
+		         </div>
+					
+				</div>
+			</li>
+			<li>
+			   <div class="alo">
+					<div class="ui-grid-a sty3" >
+						<div class="ui-block-a">优惠券</div>
+						<div class="ui-block-b">仅可购买部分商品</div>
+					</div>
+					<div class="ui-grid-a sty2" >
+						<div class="ui-block-a "><span>￥50.00</span></div>
+						<div class="ui-block-b"></div>
+					</div>
+					<div class="cllio"></div>
+					<p class="sty5">2016.02.01-2016.08.25&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				</div>
+			</li>
+			
+		</ul>
+		 </div>
+	</div>			
+</div>	
+
+</div>
+
+</body>
+<script type="text/javascript" src="../flexible.js/flexible_css.js"></script>
+<script type="text/javascript" src="../flexible.js/flexible.js"></script>
+</html>
+

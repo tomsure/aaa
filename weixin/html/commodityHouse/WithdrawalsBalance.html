@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提现到余额</title>
+		<link rel="stylesheet" type="text/css" href="../../dist/libs/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+	</head>
+	<body>
+		<ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+      <a href="#account" data-toggle="tab">
+          提现到银行卡
+      </a>
+   </li>
+   <li><a href="#business" data-toggle="tab">提现到余额</a></li>
+    
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="account">
+        <div class="box_common text_box_common">
+        	<p><span class="text_left">提现金额</span> <input type="text" class="text_right" placeholder="最多可提现200元" /></p>
+        	<p><span class="text_left">收款银行</span> <input type="text" class="text_right" placeholder="请输入收款银行名称" /></p>
+        	<p><span class="text_left">收款银行卡号</span> <input type="text" class="text_right" placeholder="请输入收款银行卡号" /></p>
+        	<p><span class="text_left">手机号</span><span class="getNumber">获取验证码</span><input type="text" class="text_right" placeholder="请输入手机号" />
+        	
+        	
+        	</p>
+        	<p><span class="text_left">验证码</span><input type="text" class="text_right" placeholder="请输入验证码" /></p>
+        </div>
+       <div class="button_box">
+       	<button>提款</button>
+       </div>
+   </div>
+   <div class="tab-pane fade" id="business">
+      <div class="box_common">
+      	 <span class="text_left">提现金额</span><input type="text" class="text_right" placeholder="最多可提现200元" />
+        
+      </div>
+       <div class="button_box">
+         	<button>提款</button>
+         </div>
+   </div>
+   
+</div>
+	</body>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script src="../../dist/libs/bootstrap/js/bootstrap.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+</html>

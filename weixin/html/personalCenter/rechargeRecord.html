@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../icons/style.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/plugs/shijian/shijian.css"/>
+	</head>
+	
+	<body>
+		<div class="box_common box_header">
+			<div class="text_box_left" >
+				<p class="text_row_common"><span class="text_left">充值单号</span><input class="text_right" style="margin-top:0.3rem" type="text" placeholder="请输入充值单号" /></p>
+			<p class="text_row_common "><span class="text_left">选择日期</span>  <span class="icon icon-dateList text_right " style="margin-top: 0.2rem;font-size: 0.5rem;"></span><input style="width: 4rem;margin-top: 0.2rem;" placeholder="请选择日期"  type="text" id="inputTime" class="text_right  "  /></p>
+			</div>
+			<div class="search_btn" >
+				<button>查询</button>
+			</div>
+		</div>
+		<div class="box_common">
+			<p class="text_title"><span class="icon icon-chargelist"></span> <span>充值明细</span></p>
+			<p class="text_row_common"><span class="title_left">充值单号</span><span class="text_right">3424466453324545</span></p>
+			<p class="text_row_common"><span class="title_left">付款方式</span><span class="text_right">卡密</span></p>
+			<p class="text_row_common"><span class="title_left">金额</span><span class="text_right">100</span></p>
+			<p class="text_row_common"><span class="title_left">充值日期</span><span class="text_right">2017/12/12</span></p>
+		</div>
+		<div class="box_common">
+			<p class="text_title"><span class="icon icon-chargelist"></span> <span>充值明细</span></p>
+			<p class="text_row_common"><span class="title_left">充值单号</span><span class="text_right">3424466453324545</span></p>
+			<p class="text_row_common"><span class="title_left">付款方式</span><span class="text_right">卡密</span></p>
+			<p class="text_row_common"><span class="title_left">金额</span><span class="text_right">100</span></p>
+			<p class="text_row_common"><span class="title_left">充值日期</span><span class="text_right">2017/12/12</span></p>
+		</div>
+		<div class="box_common">
+			<p class="text_title"><span class="icon icon-chargelist"></span> <span>充值明细</span></p>
+			<p class="text_row_common"><span class="title_left">充值单号</span><span class="text_right">3424466453324545</span></p>
+			<p class="text_row_common"><span class="title_left">付款方式</span><span class="text_right">卡密</span></p>
+			<p class="text_row_common"><span class="title_left">金额</span><span class="text_right">100</span > </p>
+			<p class="text_row_common"><span class="title_left">充值日期</span><span class="text_right">2017/12/12</span></p>
+		</div>
+	
+		
+		
+		
+	  <!--<div class="box">
+			
+			<p> 自定义起始年份 </p>
+			<input type="text"  id="input4" value="1989/01/01"/>
+			<div class="jsbox">
+<pre class="prettyprint">
+
+</pre>
+			</div>
+			
+		</div>-->
+		
+
+	</body>
+
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	
+		<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/plugs/shijian/jquer_shijian.js"></script>
+	<script src="../../js/script.js"></script>
+
+		<script type="text/javascript">
+   // 时间选择器
+		$("#inputTime").shijian({
+			startYear:1989,
+			val:1989,
+			endYear:2117,
+			Hour:false,//是否显示小时
+ 			Minute:false,//是否显分钟
+		})
+
+	</script>
+	
+		
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>时间插件</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" type="text/css" href="shijian.css"/>
+		<style type="text/css">
+			.box{
+				text-align: center;
+			}
+			p{
+				padding-top: 50px;
+			}
+			.jsbox{
+				max-width: 500px;
+				text-align: left;
+				margin: 0 auto;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="box">
+			<p>默认点击显示</p>
+			<input type="text"  id="input1" value=""/>
+						<div class="jsbox">
+<pre class="prettyprint">
+
+</pre>			
+			</div>	
+			<p>直接在页面显示</p>
+			<div class="time-box" style="position: relative;width: 200px;height: 200px;margin: 0 auto;">
+				
+			</div>
+			<input type="text"  id="input2" value=""/>
+			<div class="jsbox">
+<pre class="prettyprint">
+
+</pre>			
+			</div>		
+			<p>选择需要显示的</p>
+			<input type="text"  id="input3" value=""/>
+			<div class="jsbox">
+<pre class="prettyprint">
+
+</pre>
+			</div>			
+			<p> 自定义起始年份 </p>
+			<input type="text"  id="input4" value="1989/01/01"/>
+			<div class="jsbox">
+<pre class="prettyprint">
+
+</pre>
+			</div>
+			
+		</div>
+		
+	</body>
+	<script src="jquer_shijian.js?ver=1" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		//默认点击显示
+		$("#input1").shijian()
+		//直接在页面显示
+		$("#input2").shijian({
+			showNowTime:false,
+			Year:false,//是否显示年//
+            Month:false,//是否显示月//
+            Day:false,//是否显示日//
+            h:"00",
+            m:"01",
+			alwaysShow:true,
+			timeElm:$(".time-box"),//sjObj表示当前对象  也可以使用 sjObj  用字符串 
+			//timeElm:"sjObj.prev()",// 也可以使用 sjObj  用字符串  sjObj 表示当前input
+		})
+		//选择需要显示的
+		$("#input3").shijian({
+			y:-10,//当前年份+10
+			Hour:false,//是否显示小时
+ 			Minute:false,//是否显分钟
+		})
+		$("#input4").shijian({
+			startYear:1989,
+			val:1989,
+			endYear:2017,
+			Hour:false,//是否显示小时
+ 			Minute:false,//是否显分钟
+		})
+	</script>
+</html>

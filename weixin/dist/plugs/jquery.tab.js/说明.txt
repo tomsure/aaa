@@ -1,0 +1,43 @@
+修改原因：适应一个页面存在多个TAB场景
+
+说明：
+	1. 引入文件
+		<link href="./css/tabStyle.css" rel="stylesheet" type="text/css">
+		<script src="./js/tabScript.js" type="text/javascript"></script>
+	2.添加JS代码初始化TAB功能
+		$(function(){
+				loadTab();
+			});
+	3.TAB结构
+		<ul class="tabs">
+			<li><a href="#" name=".tab1_1">TAB标题</a></li>
+			......     
+		</ul>
+		
+		<div class="content">
+			<div class="tab1_1">
+			    TAB页内容
+			</div>
+			......
+		</div>
+注意：1. ul 中 li 的数量应匹配  <div class="content"> 中 div 的数量
+			2. ul 中 a 的 name 值应匹配 <div class="content"> 中 对应div的 class 值
+			3. 关于 name=".tab1_1" 中值的问题的说明
+					3.1. 前端 “.” 为使用CLASS定位
+					3.2. 笔者的应用场景( 页面列表存在N个标题相同，内容不同的TAB )
+								<c:forEach items="${result }" var="po" varStatus="num">
+									<ul class="tabs">
+										<li><a href="#" name=".tab${num.index }_1">标题</a></li>
+										<li><a href="#" name=".tab${num.index }_2">标题</a></li>  
+									</ul>
+									
+									<div class="content">
+										<div class="tab${num.index }_1">
+										    TAB1 内容
+										</div>
+										<div class="tab${num.index }_2">
+										    TAB2 内容
+										</div>
+									</div>
+								</c:forEach>
+									

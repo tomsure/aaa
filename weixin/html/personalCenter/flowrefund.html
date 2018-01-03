@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>流量退费</title>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/libs/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		
+		
+	</head>
+	<body>
+		<div class="box_common">
+			<p><span class="text-left">ICCID</span><input type="text" class="text_right" placeholder="请输入ICCID" /></p>
+		</div>
+		<div class="button_box layer-btn"  data-method="confirmTrans"  id="flowrefundBtn">
+			<button btn-primary" data-toggle="modal" data-target="#myModal">提交</button>
+		</div>
+	
+		    <div class="modal modal-sm" id="myModal" tabindex="-1">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header refundModal">
+					    
+						<span>ICCID</span><span style="float: right;">567473892984585</span>
+					</div>
+					<div class="modal-body">
+						<p style="color: #26A6FF;">您的流量退费申请已经提交，客服人员审核后将与您联系！</p>
+						<p style="margin-top: 0.3rem;color: gray;">提示：退费成功后，该卡自动停机！</p>
+						<div class="button_box refundBtnbox">
+							<button id="refundBtn">确定</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+<div class="explain_common">
+	<h3>退费说明</h3>
+	<p>
+		  为了保证客户资金安全，我们不提供现金退款形式。退款形式为原渠道退至原支付平台/原付款卡.如超出银行受理期限，退款需用户提供银行卡的开户行（详细到支行）、开户名、卡号，将有专业人员为您处理。
+	</p>
+	
+</div>
+
+	</body>
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script src="../../dist/libs/bootstrap/js/bootstrap.min.js"></script>
+	
+	<script src="../../js/script.js"></script>
+</html>

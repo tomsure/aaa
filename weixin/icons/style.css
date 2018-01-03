@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?qx7fzu');
+  src:  url('fonts/icomoon.eot?qx7fzu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qx7fzu') format('truetype'),
+    url('fonts/icomoon.woff?qx7fzu') format('woff'),
+    url('fonts/icomoon.svg?qx7fzu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e92e";
+}
+.icon-jiantouToright:before {
+  content: "\e927";
+}
+.icon-jiantoutoLeft:before {
+  content: "\e92b";
+}
+.icon-shuangjiantou:before {
+  content: "\e92c";
+}
+.icon-jiantoudown:before {
+  content: "\e92d";
+}
+.icon-singal:before {
+  content: "\e90c";
+}
+.icon-gouwuche:before {
+  content: "\e90f";
+  color: #757575;
+}
+.icon-xiugai:before {
+  content: "\e910";
+}
+.icon-audit:before {
+  content: "\e911";
+}
+.icon-tuifei:before {
+  content: "\e91a";
+}
+.icon-zhuxiao:before {
+  content: "\e91b";
+}
+.icon-helpCenter:before {
+  content: "\e903";
+  color: #1296db;
+}
+.icon-edit:before {
+  content: "\e904";
+  color: #bfbfbf;
+}
+.icon-notpass:before {
+  content: "\e905";
+  color: #d81e06;
+}
+.icon-charge:before {
+  content: "\e906";
+  color: #1296db;
+}
+.icon-chargelist:before {
+  content: "\e907";
+  color: #2196f3;
+}
+.icon-address:before {
+  content: "\e908";
+  color: #1296db;
+}
+.icon-uplodate:before {
+  content: "\e909";
+  color: #1296db;
+}
+.icon-dianchi:before {
+  content: "\e90a";
+  color: #707070;
+}
+.icon-telphone:before {
+  content: "\e90b";
+  color: #1296db;
+}
+.icon-guzhang:before {
+  content: "\e90d";
+  color: #13227a;
+}
+.icon-jiantou-right:before {
+  content: "\e90e";
+  color: #8a8a8a;
+}
+.icon-Swbuttonopen:before {
+  content: "\e912";
+  color: #38adff;
+}
+.icon-ContactUs:before {
+  content: "\e913";
+  color: #1296db;
+}
+.icon-flow:before {
+  content: "\e914";
+  color: #1296db;
+}
+.icon-personalhead:before {
+  content: "\e915";
+  color: #bfbfbf;
+}
+.icon-dateList:before {
+  content: "\e916";
+  color: #1296db;
+}
+.icon-scanning:before {
+  content: "\e917";
+  color: #bfbfbf;
+}
+.icon-delete:before {
+  content: "\e918";
+  color: #bfbfbf;
+}
+.icon-device:before {
+  content: "\e919";
+  color: #1296db;
+}
+.icon-mobile:before {
+  content: "\e91c";
+}
+.icon-WiFi:before {
+  content: "\e91d";
+  color: #1296db;
+}
+.icon-lock:before {
+  content: "\e91e";
+  color: #bfbfbf;
+}
+.icon-add:before {
+  content: "\e91f";
+  color: #3983e5;
+}
+.icon-pass:before {
+  content: "\e920";
+}
+.icon-fangkong:before {
+  content: "\e921";
+  color: #1296db;
+}
+.icon-exit:before {
+  content: "\e922";
+  color: #1296db;
+}
+.icon-internet:before {
+  content: "\e923";
+  color: #1296db;
+}
+.icon-orderList:before {
+  content: "\e924";
+  color: #1296db;
+}
+.icon-down:before {
+  content: "\e925";
+  color: #bfbfbf;
+}
+.icon-right:before {
+  content: "\e926";
+  color: #bfbfbf;
+}
+.icon-eye:before {
+  content: "\e928";
+  color: #1296db;
+}
+.icon-Fangyuan:before {
+  content: "\e929";
+  color: #1296db;
+}
+.icon-circle:before {
+  content: "\e92a";
+  color: #bfbfbf;
+}
+.icon-telPhone:before {
+  content: "\e900";
+  color: #1296db;
+}
+.icon-auditPass:before {
+  content: "\e901";
+}
+.icon-notPass:before {
+  content: "\e902";
+  color: #d81e06;
+}

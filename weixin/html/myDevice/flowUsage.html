@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+	<head >
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>流量详情</title>
+		<link rel="stylesheet" href="../../dist/libs/jquery-weUI/lib/weui.min.css" />
+		<link rel="stylesheet" href="../../dist/libs/jquery-weUI/css/jquery-weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/plugs/shijian/shijian.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/libs/jquery-weUI/demos/css/demos.css"/>
+		
+	</head>
+	
+	<body class="bodyPage">
+		<nav class="nav_header">
+			<div class="nav_content">
+				<div class="headimage style_common head_left ">
+				<h6>头像</h6>
+			</div>
+			<div class="head_right style_common">
+				<ul>
+				<li><span class="nav_content_title">用户名</span><span>张三</span></li>
+				<li><span class="nav_content_title">ICCID</span><span>655434654324544</span></li>
+				<li><span class="nav_content_title">实名认证</span><span></span></li>
+				<li><span class="nav_content_title">已用流量</span><span>800MB</span></li>
+				<li><span class="nav_content_title">剩余流量</span><span>288MB</span></li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+		<section>
+			<p class="selecte_date"><span class="selecte_date_title">选择日期</span>
+				<span class="icon icon-dateList" style="float: right;"></span>
+				<input style="width: 4rem;margin-top: 0.2rem;" placeholder="请选择日期"  type="text" id="date2" class="text_right  "  />
+				
+			</p>
+	
+			<div class="box_common"> 
+				<p class="dataInfo dataInfo1"><span class="text_left">日期</span><span class="text_right">用量</span></p>
+				<p class="dataInfo"><span class="text_left">2017/11/30</span><span class="text_right">98.88MB</span></p>
+				<p class="dataInfo"><span class="text_left">2017/11/30</span><span class="text_right">98.88MB</span></p>
+				<p class="dataInfo"><span class="text_left">2017/11/30</span><span class="text_right">98.88MB</span></p>
+				<p class="dataInfo"><span class="text_left">2017/11/30</span><span class="text_right">98.88MB</span></p>
+				<p class="dataInfo"><span class="text_left">2017/11/30</span><span class="text_right">98.88MB</span></p>
+			</div>
+		</section>
+		<footer class="footer_fixed">
+			<div><a href="rechargePayment.html"><h2 class="dataImage1"></h2><span>流量充值</span></a></div>
+			<div><a href="../commodityHouse/commodityHouse.html"><h2></h2><span>商品屋</span></a></div>
+			<div><a href="../audit/deviceAudit.html"><h2></h2><span>实名认证</span></a></div>
+			<div><a href=""><h2></h2><span>设备</span></a></div>
+		</footer>
+	</body>
+	<!--<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>-->
+		<!--<script src="../../dist/plugs/flexible.js/flexible.js"></script>-->
+		<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+		<script src="../../dist/libs/jquery-weUI/js/jquery-weui.js"></script>
+		<script src="../../dist/libs/jquery-weUI/js/swiper.js"></script>
+		<script src="../../dist/libs/jquery-weUI/js/city-picker.js"></script>
+		<script type="text/javascript" src="../../dist/plugs/shijian/jquer_shijian.js"></script>
+		
+	
+	 <script>
+      $("#date").calendar({
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+      $("#date-multiple").calendar({
+        multiple: true,
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date3").calendar({
+        container: "#inline-calendar"
+      });
+    </script>
+</html>
