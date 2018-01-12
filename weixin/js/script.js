@@ -1,4 +1,5 @@
   $(function(){
+  	  
 		  	$('#logout').click(function(){
 		  	layer.open({
 			type:0,
@@ -12,7 +13,7 @@
 			}
 			
 			})
-		  
+		      
 		  		  	//套餐变更
 		  	$('#select_packge').click(function(){
 //         $('.picker-item').addClass('selecttextRow')
@@ -30,12 +31,16 @@
       });
 		  	})
 		  	
-		  			 //流量退费
+		  
+		    
+		  })
+		  	 
+		  	//流量退费
 		    $('#refundBtn').click(function(){
 		    	$('#myModal').modal('hide')
 		     }); 
-		    
-		  })
+		      
+		  	
   //套餐变更
      $('.handleModalBtn').find('button').eq(1).text('确定');
      $('.handleModalBtn').find('button').eq(1).click(function(){
@@ -47,9 +52,53 @@
      	  $('#myModal1').modal('hide')
      })
 
+		    $('#devBox').click(function(){
+		    	$('.zhedie').fadeIn(1000)
+		    })
+		   
+   
+		  	//充值缴费
+		  	$('.chargeRow').children().children('p').addClass('text_move')
+		  	$('#chargeContent >.chargeRow > div' ).click(function(e){
+		
+		  		  $(e.target).parent('.textb').children('.triangle-topleft').css('visibility','visible')
+		  		   $(e.target).parent('.textb').siblings().children('.triangle-topleft').css('visibility','hidden')
+		  		   $(e.target).parent('.textb').parent().siblings().children().children('.triangle-topleft').css('visibility','hidden')
+		  		   
+		  		$(e.target).parent('.textb').addClass('chargeColor')
+//      
+           	$(e.target).parent('.textb').siblings().removeClass('chargeColor')  
+           	$(e.target).parent('.textb').parent().siblings().children().removeClass('chargeColor')
+		  	    	
+		  		
+           	  
+		  		
+		  	})
 		  	
-		  })
-		  	
+//		  	云中心
+         $('#passwd').click(toPasswd)
+                     function toPasswd(){
+                     	$('#textInput').attr('type','password')
+                     	$('#passwd').click(toText)
+                     	}
+						        
+			         	    function toText(){
+			         	    	$('#textInput').attr('type','text')
+			         	    	$('#passwd').click(toPasswd)
+			         	    	}
 
-		  	
 
+       $('#iconBtn').click(function(){
+       	
+//     	  $(this).css('background-color','white')
+       	  $('#iconbtn1').toggleClass('toggleBtn')
+       	   if($('#iconbtn1').hasClass('toggleBtn')){
+       	   	  $('#iconBtn').css('background-color','lightgray')
+//     	   	  $('#iconbtn1').css('background-color','gray')
+       	   }else{
+       	   	 $('#iconBtn').css('background-color','#26A6FF')
+       	   }
+       })
+   
+     
+})

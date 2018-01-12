@@ -63,13 +63,13 @@ $.fn.transitionEnd = function (callback) {
 };
 $(function () {
     var mPickerDefaults = {
-        display: 'bottom',
+        display: 'modal',
         shadow: false,
         level: 1,
         rows: 4,
         Linkage: false,
         dataJson: '',
-        height: 36,
+        height: 72,
         idDefault: false,
         splitStr: ' ',
         isshort: false,

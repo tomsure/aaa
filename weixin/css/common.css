@@ -16,7 +16,18 @@ input{
     margin: 0.35rem;
     box-shadow: 0px 0px 6px #299eff;
     font-size: 0.4rem;
+    border-radius: 10px;
 	
+}
+.icon-alreadyAudit{
+	color: red;font-size: 1rem;
+}
+.icon-unAudit{
+	color: gray;
+	font-size: 1rem;
+}
+.box_common  .icon:before{
+	font-size: 0.5rem!important;
 }
 .dataInfo{
 	margin-top: 0.9733333rem;
@@ -128,3 +139,5 @@ margin-top: 0.2rem;
 	border: 1px solid #26A6FF;
 }
 
+/*图标*/
+ 

@@ -24,6 +24,10 @@
   bottom: 0;
   left: 0;
   z-index: 9999;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    margin-left: 10%;
 }
 
 /*遮罩*/
@@ -44,11 +48,12 @@
 .mPicker-active-box {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 70%;
+  /*left: 50%;*/
+  width: 700%;
   margin-left: -35%;
   border-top: 1px solid #31b6e7;
   border-bottom: 1px solid #31b6e7;
+  background-color: #26A6FF;
 }
 
 /* line 56, ../sass/mpicker.scss */
@@ -76,12 +81,15 @@
 .mPicker-main.mPicker-modal {
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  width: 264px;
-  top: 50%;
+  width: 80%;
+  margin-top: -50%;
   bottom: auto;
-  left: 50%;
-  margin-top: -127px;
-  margin-left: -132px;
+  /*left: 50%;*/
+  /*margin-top: -127px;*/
+  /*margin-left: -132px;*/
+ justify-content:center;
+		  align-items:center;
+		  height: 0rem;
 }
 
 /* line 86, ../sass/mpicker.scss */
@@ -93,20 +101,21 @@
 /* line 91, ../sass/mpicker.scss */
 .mPicker-header {
   position: relative;
-  height: 40px;
-  line-height: 40px;
+  height: 1rem;
+  line-height: 1rem;
   text-align: center;
   border-bottom: 1px solid #31b6e7;
-  color: #31b6e7;
-  font-size: 0.6rem;
+  color: white;
+  font-size: 0.5rem;
+  background: #26A6FF;
 }
 
 /* line 101, ../sass/mpicker.scss */
 .mPicker-footer {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  height: 36px;
-  line-height: 36px;
+  height: 1rem;
+  line-height: 1rem;
   position: relative;
 }
 
@@ -123,6 +132,7 @@
   display: flex;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background-color: white;
 }
 
 /* line 123, ../sass/mpicker.scss */
@@ -152,20 +162,22 @@
 .mPicker-content li {
   padding-left: 3%;
   padding-right: 3%;
-  height: 36px;
-  line-height: 36px;
+  height: 72px;
+  line-height: 72px;
   overflow: hidden;
-  color: #333;
-  font-size: 0.6rem;
+  color: #26A6FF;
+  font-size: 0.4rem;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
 
 /* line 156, ../sass/mpicker.scss */
 .mPicker-content li.active {
-  color: #000;
+  color: white;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  /*background-color: #26A6FF;*/
+  
 }
 
 /* line 162, ../sass/mpicker.scss */
@@ -178,13 +190,18 @@
 .mPicker-confirm,
 .mPicker-cancel {
   color: #333;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   width: 50%;
   text-align: center;
   display: inline-block;
   text-decoration: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  height: 1.5rem;
+  line-height: 4;
+  position: relative;
+  bottom: 0.5rem;
+  background-color: white;
 }
 /* line 179, ../sass/mpicker.scss */
 .mPicker-confirm:active, .mPicker-confirm:hover,
@@ -227,3 +244,13 @@
 .slide-item h4 {
 	font-size:0.5rem!important;
 }
+
+#select-input{
+  width: 4rem;
+    border: 1px solid red;
+    position: relative;
+    left: 2rem;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0px);
+    }

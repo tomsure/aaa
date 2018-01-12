@@ -110,11 +110,20 @@
 			</p>
 		</div>
 		  <div class="addAddress">
-		  	  <div class="box_bottom">
+		  	  <div class="box_bottom " id="addAddress">
 		  	  	 <span class="icon icon-add"></span><span>添加新地址</span>
 		  	  </div>
 		  </div>
 	</body>
 	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script type="text/javascript" src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#addAddress').click(function(){
+				
+				location.href='addAddress.html'
+			})
+		})
+	</script>
 </html>

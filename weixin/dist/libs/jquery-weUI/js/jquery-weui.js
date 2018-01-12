@@ -5812,16 +5812,16 @@ Device/OS Detection
     monthPicker: true,
     monthPickerTemplate: 
         '<div class="picker-calendar-month-picker">' +
-            '<a href="javascript:;" class="link icon-only picker-calendar-prev-month"><i class="icon icon-prev"></i></a>' +
+            '<a href="javascript:;" class="link icon-only picker-calendar-prev-month"><i class="icon icon-jiantoutoLeft"></i></a>' +
             '<div class="current-month-value"></div>' +
-            '<a href="javascript:;" class="link icon-only picker-calendar-next-month"><i class="icon icon-next"></i></a>' +
+            '<a href="javascript:;" class="link icon-only picker-calendar-next-month"><i class="icon icon-jiantouToright"></i></a>' +
         '</div>',
     yearPicker: true,
     yearPickerTemplate: 
         '<div class="picker-calendar-year-picker">' +
-            '<a href="javascript:;" class="link icon-only picker-calendar-prev-year"><i class="icon icon-prev"></i></a>' +
+            '<a href="javascript:;" class="link icon-only picker-calendar-prev-year"><i class="icon icon-jiantoutoLeft"></i></a>' +
             '<span class="current-year-value"></span>' +
-            '<a href="javascript:;" class="link icon-only picker-calendar-next-year"><i class="icon icon-next"></i></a>' +
+            '<a href="javascript:;" class="link icon-only picker-calendar-next-year"><i class="icon icon-jiantouToright"></i></a>' +
         '</div>',
     weekHeader: true,
     // Common settings
