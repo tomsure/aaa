@@ -6,29 +6,92 @@
 		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 		
 		<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+	
 			<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+			<link rel="stylesheet" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css" />
 	</head>
+	<style type="text/css">
+		#zhuce{
+			background: #26A6FF;
+			height: 1.146rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+       border-radius: 100px;
+       line-height: 1.146rem;
+       font-size: 0.45rem;
+       color: white;
+       font-weight: 600;
+       margin-top: 1rem;
+		}
+		.error{
+			color: red;
+			position: relative;
+			right: 2rem;
+		}
+		input{
+			/*border-bottom:2px solid lightgray!important;*/
+			position: relative;
+			left: 1rem;
+			text-align: center;
+		}
+	</style>
 	<body>
 		<div class="box_top">
-			<div class="img_box">
+			<!--<div class="img_box">
 				<img src="https://dummyimage.com/600x500/ff0"/>
-			</div>
+			</div>-->
 		</div>
+		 <form id="loginForm">
 		<div class="verificationCode box_common">
-			<p style="margin-bottom: 0.2rem;">
+			
+			 <p style="margin-bottom: 0.2rem;">
 				<span class="icon icon-personalhead"></span>
-				<input type="text" placeholder="请输入手机号" style="padding-bottom: 0.2rem;" />
-				<span class="getNumber">获取验证码</span>
+				<input type="text" placeholder="请输入账号" id="telNum" name="telNum" style="padding-bottom: 0.2rem;" />
+				<!--<span class="getNumber" id="getNum" >获取验证码</span>-->
 			</p>
 			<p style="margin-top: 0.2rem;">
 				<span class="icon icon-lock"> </span>
-				 <input type="text" placeholder="请输入验证码" />
-				
+				 <input type="text" id="verificationCode" name="yanzhengma"    placeholder="请输入密码" />
+				 
 			</p>
+			  <a href="../personalCenter/resetPassword.html" style="float: right;position: relative;top: 0.5rem;">忘记密码？</a>
 		</div>
+		 
 		     
-		    <div class="button_box"><button>登录</button></div>
+		    
+		       	<div class="button_box" ><button type="submit"  id="loginBtn">登录</button></div>
+		     </form>
+		     
+		     	<div class="button_box" id="zhuce" >注册</div>
 	</body>
 	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+	<script src="../../dist/plugs/jquery.validate.min.js"></script>
+	<script src="../../js/validate_coustom.js"></script>
+	<script src="../../js/script.js"></script>
+	<script>
+		$('#zhuce').click(function(){
+			 
+			location.href='register.html'
+		})
+//		$('#loginBtn').click(function(){
+//			if($('#telNum').val()=='' && $('#verificationCode').val()==''){
+//			 	   alert('请输入账号和验证码')
+//			 	   return false
+//			}else if($('#telNum').val()==''){
+//			 	alert('请输入账号')
+//			 	return false
+//			 }else if($('#verificationCode').val()==''){
+//			 	 alert('请输入验证码')
+//			 	 return false
+//			 } 
+//          
+//         
+//			 location.href='../personalCenter/personalCenter.html'
+//		})
+	</script>
+	 
+	
 </html>

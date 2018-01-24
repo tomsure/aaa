@@ -6,29 +6,80 @@
 	<link rel="stylesheet" href="../../dist/libs/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 	<link type="text/css" rel="stylesheet" href="../../css/layout.css">
-
+	<link rel="stylesheet" type="text/css" href="../../dist/plugs/Swiper-4.1.0/dist/css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css"/>
 </head>
+<style type="text/css">
+      html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    li a{
+    	word-break: keep-all;
+    	/*word-wrap: break-word;*/
+    	width: 2.2rem!important;
+    	right: 0.3rem;
+    }
+   
+     ul li{
+     	 /*right: 1.5rem!important;*/
+     }
+    .swiper-container {
+      width: 100%;
+      /*height: 100%;*/
+     background-color: #26A6FF;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /*background: #fff;*/
+     /*width:90%!important;*/
+    
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+</style>
 <body  >
 	<div class="search_box">
-		<div class="search_box_content">
+		<div class="search_box_content ">
 			<span>
 </span><input type="text" placeholder="搜索" />
 		</div>
 	</div>
 	
-	<ul id="myTab" class="nav nav-tabs">
-		<li  >
-		  		<a class="tab_link" href="#all" data-toggle='tab'>全部</a>
-		  	</li>
-   <li class="active">
-      <a class="tab_link" href="#account" data-toggle="tab">
-          待支付
-      </a>
-   </li>
-   <li><a class="tab_link" href="#business" data-toggle="tab">待发货</a></li>
-    <li><a class="tab_link" href="#purchase" data-toggle="tab">待签收</a></li>
-     <li><a class="tab_link" href="#Customer" data-toggle="tab">已完成</a></li>
+	<div class="swiper-container"">
+		
+		
+      <ul id="myTab" class="nav nav-tabs swiper-wrapper " >
+  <li class="swiper-slide"><a class="tab_link" href="#all" data-toggle='tab'>全部</a></li>
+   <li class="active swiper-slide"><a class="tab_link" href="#account" data-toggle="tab"> 待支付 </a></li>
+   <li class="swiper-slide"><a class="tab_link swiper-slide" href="#business" data-toggle="tab">待发货</a></li>
+    <li class="swiper-slide"><a class="tab_link swiper-slide" href="#purchase" data-toggle="tab">待签收</a></li>
+     <li class="swiper-slide"><a class="tab_link swiper-slide" href="#Customer" data-toggle="tab">已完成</a></li>
+      <li class="swiper-slide"><a class="tab_link swiper-slide" href="#tuikuan" data-toggle="tab">退款中</a></li>
+      
 </ul>
+	</div>
 <div id="myTabContent" class="tab-content ">
 	 <div class="tab-pane fade" id="all">
        <div class="box_common  f_left">
@@ -45,7 +96,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">取消订单</span></p>
         </div>
          <div class="box_common  f_left">
           <p class="text_top"><span class="Tleft">2018/10/11</span><span class="Tright bluetext">待支付</span></p>
@@ -61,7 +112,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">取消订单</span></p>
         </div>
          <div class="box_common  f_left">
           <p class="text_top"><span class="Tleft">2018/10/11</span><span class="Tright bluetext">待支付</span></p>
@@ -77,7 +128,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" id="" style="color: gray;">取消订单</span></p>
         </div>
          <div class="box_common  f_left">
           <p class="text_top"><span class="Tleft">2018/10/11</span><span class="Tright bluetext">待支付</span></p>
@@ -93,7 +144,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">取消订单</span></p>
         </div>
          <div class="box_common  f_left">
           <p class="text_top"><span class="Tleft">2018/10/11</span><span class="Tright bluetext">待支付</span></p>
@@ -109,7 +160,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" id="cancelBtn" style="color: gray;">取消订单</span></p>
         </div>
    </div>
    <div class="tab-pane fade in active" id="account">
@@ -127,7 +178,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" id="cancelOrder" style="color: gray;">取消订单</span></p>
         </div>
         
    </div>
@@ -146,7 +197,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">申请退款</span><!--<span class="setbtn gray_border cancelBtn" style="color: gray;">取消订单</span>--></p>
         </div>
    </div>
    <div class="tab-pane fade" id="purchase">
@@ -164,7 +215,7 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确认收货</span><span class="setbtn gray_border " style="color: gray;">查看物流</span></p>
         </div>
    </div>
    <div class="tab-pane fade" id="Customer">
@@ -182,17 +233,79 @@
           	</div>
           	
           </div>
-          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">确定支付</span><span class="setbtn gray_border cancelBtn" style="color: gray;">立刻取消</span></p>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">再次购买</span><span class="setbtn gray_border cancelBtn" style="color: gray;">删除订单</span></p>
+        </div>
+   </div>
+     <div class="tab-pane fade" id="tuikuan">
+      <div class="box_common  f_left">
+          <p class="text_top"><span class="Tleft">2018/10/11</span><span class="Tright bluetext">已完成</span></p>
+          <div class="commodityInfoBox">
+          	<div class="shangpinIMG">
+          		<img src="../../dist/libs/jquery-weUI/demos/images/avatar4.png" alt="" />
+          	</div>
+          	<div class="CommodityText">
+          		<p><span style="display: inline-block;width: 3.8rem;">无限流量神器4G无线路由器mifi随身wifi</span><span class="f_right">￥788.88</span></p>
+          		<p><span class="f_right" style="position: relative;top: -1.1rem;"><del>￥888.88</del></span></p>
+          		<p><span class="f_right commodifyCounts" >X1</span></p>
+          		<p class="commofity_color"> <span >颜色分类</span><span>红色</span></p>
+          	</div>
+          	
+          </div>
+          <p class="CommodityBtnRow"><span class="blue-border setbtn" style="color: #26A6FF;">取消退款</span><!--<span class="setbtn gray_border cancelBtn" style="color: gray;">删除订单</span>--></p>
         </div>
    </div>
   
 </div>
 </body>
+
+ 
 <script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
 <script src="../../dist/libs/bootstrap/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 <script type="text/javascript"src="../../dist/plugs/flexible.js/flexible.js"></script>
-
+<script src="../../dist/plugs/Swiper-4.1.0/dist/js/swiper.min.js"></script>
+<script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
 <script type="text/javascript" src="../../js/script.js"></script>
+<script>
+  	     
+  	     	
+  	     	 $(function(){
+  	     	 
+  	     	 	$('#cancelOrder').click(function(){
+  	     	 	  layer.prompt('情人会')
+  	     	 })
+  	     	 })
+  	
+  </script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      // init: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+        640: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+        320: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        }
+      }
+    });
+  </script>
+  
 </html>

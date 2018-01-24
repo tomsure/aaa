@@ -1,0 +1,19 @@
+table{width:100%;
+ 	border:1px solid #999;
+ 	word-break: keep-all;
+ 	white-space:nowrap;
+ 	}
+table thead tr th{
+	text-align: center;
+	
+}
+.table_content{
+	width: 100%;
+}
+
+table tbody td{
+	word-break: break-all;
+}
+table,table thead tr th,table tbody tr td,td{
+	border: 1px solid #999;
+}

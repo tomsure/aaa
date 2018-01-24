@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>库存管理-一体机库存</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/layui/layui.js"></script>
+<script src="../js/data_table.js"></script>
+<script src="../js/public.js" ></script>
+
+
+<body class="page-body">
+	
+	    <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>    	 
+    	当前位置：库存管理&gt;一体机库存
+      </h5>
+      
+      
+       <!--contentBegin-->  
+        <div id="content" >
+         
+    <div class="search-box check-btn">
+        <div class="check-btn">
+        
+        	<button class="btn btn-default" id="integratedMachineBuilding" onclick="">建库+</button>
+            </div>
+         </div>
+    
+ <div class="">
+       		
+		<table class="table-hide" id="integratedMachineList">
+		   
+		</table>
+		 <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}} 
+                         </script>
+          <script type="text/html" id="templet2">
+                                <a onclick="viewImei()" >查看</a> 
+                         </script>
+                         
+                         </script>
+                         <script type="text/html" id="templet4">
+                            <div id="">
+                             <a >修改</a> / <a >删除</a>
+                            </div>
+                         </script>
+    </div>
+   
+</div>
+   <div class="viewIccidImeiModal" id="viewIccidImei">
+   	    
+   	    	  <p><span style="margin-right: 27px;">IMEI</span><input type="text" />&nbsp;&nbsp;- &nbsp;&nbsp;<input type="text" /><span>1000台</span></p>
+   	    <p><span style="margin-right: 18px;">ICCID</span><input type="text" />&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" /><span>1000张</span></p>
+   	    <p><span style="margin-right: 16px;">运营商</span><input type="text" /></p>
+   	    <p><span style="margin-right: 14px;">流量套餐</span><input type="text" /></p>
+   	    
+   	   
+   </div>
+        
+</body>
+<script type="text/javascript">
+		$(function(){
+			$('#integratedMachineBuilding').click(function(){
+				layui.use('layer',function(){
+					var layer=layui.layer;
+					   layer.open({
+					   	type:1,
+					   	area:['400px','400px'],
+					   	title:['建库','font-size:18px','font-weight:800;'],
+					   	content:$('#viewIccidImei')
+
+					   })
+				})
+			})
+		})
+      function viewImei(){
+     	   layui.use('layer',function(){
+					var layer=layui.layer;
+					   layer.open({
+					   	type:1,
+					   	area:['500px','200px'],
+					   	title:['IMEI/ICCID','font-size:18px','font-weight:800;'],
+					   	content:$('#viewIccidImei')
+
+					   })
+				})
+     }
+</script>
+</html>

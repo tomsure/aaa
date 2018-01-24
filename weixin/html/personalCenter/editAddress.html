@@ -7,6 +7,21 @@
 		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
 		
 	</head>
+	 <style type="text/css">
+	 	.save{
+	 		 background: #26A6FF;
+	 		 width: 80%;
+	 		 height: 0.8rem;
+	 		 margin: 0 auto;
+	 		 margin-top: 2rem;
+	 		 text-align: center;
+	 		 color: white;
+	 		 border-radius: 100px;
+	 		 line-height: 0.8rem;
+	 		 font-size: 0.45rem;
+	 		 
+	 	}
+	 </style>
 	<body style="padding: 0.2666666rem;">
 		<div class="form_box ">
 			<form action="" >
@@ -20,28 +35,61 @@
 					联系电话：
 				</span>
 				<input type="text" class="addrRight" placeholder="输入联系电话" /></p>
-				<p><span id=" " class="addrLeft">
+				<!--<p><span id=" " class="addrLeft">
 					所在地区
 				</span>
 				<span class="addrRight">联动地址</span>
 				
-				</p>
+				</p>-->
 				<p>
 					  广东省深圳市龙华新区和平路21号振华时代广场603室
 				</p>
-			</form>
-		</div>
-		
-		  <div class="dataSubmit">
-		  	<p><div class="setLeft"><span class="icon icon-auditPass icon_set_ok" style="color:#2196F3;"></span><span>默认地址</span></div> <div class="setRight">
+				 <div class="dataSubmit" style="display: block;position: relative;top: 1rem;">
+		  	<p><div class="setLeft"><span class="icon icon-circle icon_set_ok" style="color:#2196F3;"></span><span id="default">默认地址</span></div> <div class="setRight">
 		  		<span class="icon icon-delete icon-del" ></span><span>删除</span>
 		  	</div></p>
-		  	<button class="">保存</button>
+		  
 		  </div>
+			</form>
+			
+		 	
+		</div>
+		<div class="save" id="save">保存</div>
 		
 	</body>
 	
 	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 		<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+		<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
 		
+			
+		  $(function(){
+		  	function setDefault(){
+			 	  $(this).css('color','#26A6FF')
+			 	   $('.icon').addClass('icon-auditPass')
+			 	   $('#default').click(function(){
+			 	   	  cancelDefault()
+			 	   })
+				
+			 }
+			 
+			 function cancelDefault(){
+			 	  $(this).css('color','gray')
+			 	   $('.icon').removeClass('icon-auditPass')
+			 	    $('#default').click(function(){
+				 	setDefault()
+				 })
+			 }
+			
+			$('#default').click(function(){
+				 setDefault()
+				
+			})
+		  	 $('#save').click(function(){
+		  	 	 location.href='address.html'
+		  	 })
+		  	 
+		  })
+		</script>
 </html>

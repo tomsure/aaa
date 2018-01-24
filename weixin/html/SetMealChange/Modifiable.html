@@ -9,7 +9,7 @@
 	   
 		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
 		<link rel="stylesheet" href="../../icons/style.css" />
-		
+		<link rel="stylesheet" type="text/css" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css"/>
 	    <link rel="stylesheet" type="text/css" href="../../dist/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../dist/plugs/mobileSelector/css/mpicker.css">
 	     
@@ -33,11 +33,11 @@
 		<section>
 			<p class="settingBtn" style=""><span style="display: inline-block;float: left;">选择申请变更套餐</span><input type="text" id="select-input" class=" select-value3 form-control" value=""><span class="icon icon-jiantoudown" style="float: right;color: #26A6FF;"></span><span id="select_packge" style="color:#26a6ff ;display: inline-block;float: right;">月流量包</span></p>
 			<div class="" style="clear: both;">
-	 <div class="imageParent">
+	 <div class="imageParent" id="imgBox">
 	<div class="imageCol" id="dv1"> <img src="../../images/green.png"/><p><span>月流量包10元</span><span></span></p> </div>
 	<div class="imageCol"  id="dv2">  <img src="../../images/green.png"/><p><span>月流量包10元</span><span></span></p></div>
 	<div class="imageCol" id="dv3"> <img src="../../images/green.png"/><p><span>月流量包10元</span><span></span></p></div>
-	
+	   
        </div>
        <div class="imageParent">
 	<div class="imageCol" id="dv1"> <img src="../../images/green.png"/><p><span>月流量包10元</span><span></span></p></div>
@@ -69,6 +69,13 @@
                 console.info('当前选中json：', json);
             }
         })
+        
+         $('#imgBox').children().each(function(i,val){
+         	  $(val).click(function(){
+         	  	 location.href='../personalCenter/flowDdetails.html'
+                   
+         	  })
+         })
     });
     </script>
 	</body>
@@ -79,5 +86,6 @@
     <script src="../../dist/plugs/mobileSelector/js/json.js"></script>
     <script src="../../dist/plugs/mobileSelector/js/jsonExchange.js"></script>
     <script src="../../dist/plugs/mobileSelector/js/mPicker.js"></script>
+    <script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
 		
 </html>

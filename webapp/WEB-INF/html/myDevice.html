@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卡片管理-我的设备</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script src="../js/data_table.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+
+<body class="page-body">
+	     <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：卡片管理&gt;我的设备 
+        </h5>
+      
+	 <div class="filter_content" style="margin-top: 30px;">
+	 	<form action="" method="post">
+	 	   <div class="filter_left">
+	 	   	<div class="usercode">
+	 	   		 
+	 	    	<span id="">
+	 	    		ICCID/用户自编码
+	 	    	</span>
+	 	    	<input type="text" name="" placeholder="查询ICCID/用户自编码" id="" value="" />	
+	 	    
+	 	    
+	 	   	</div>
+	 	   
+	 	
+	 	 <div class="filter_can">
+	 	 	 <span>落地商</span>
+	 	  <select name="" id="">
+	 	  	<option value="">全部</option>
+	 	  	<option value="">联通卡</option>
+	 	  	<option value="">移动卡</option>
+	 	  	<option value="">电信卡</option>
+	 	  </select>
+	 	 </div>
+	 	  <div class="filter_kind">
+	 	  	 <span>流量套餐</span>
+	 	  <select name="" id="">
+	 	  	<option value="">全部</option>
+	 	  	<option value="">套餐有什么</option>
+	 	  	<option value="">就显示什么</option>
+	 	  	<option value="">很多很多</option>
+	 	  </select>
+	 	  </div>
+	 	   <div class="filter_left_btn">
+	 	   	 <!--<button>全选</button>-->
+	 	   	 <button>矫正</button>
+	 	   	 <button>停机</button>
+	 	   	 <button>复机</button>
+	 	   	
+	 	   	 <button>断网</button>
+	 	   	 <button> 限速</button>
+	 	   </div>
+	 	   </div>
+	 	   <div class="filter_right">
+	 	   	
+	 	   	 <div class="form_btn">
+	 	   	 	 <input type="button" class="btn" name="" id="" value="重置" />
+	 	    <input type="button" class="btn btn_search" name="" id="" value="搜索" />
+	 	   	 </div>
+	 	
+	 	   	 
+	 	   
+	 	
+	 	   </div>
+	 	</form>
+	 </div>
+	
+  
+
+       <!--contentBegin-->  
+        <div id="content" >
+              <table class="table-hide" id="myDevice"></table>
+       		             <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+                         <script type="text/html" id="templte2">
+                            <div>	
+                            
+                            	<a onclick="showpic()">查看</a>
+                            	
+                            </div>
+                         </script>
+			</ul>
+        
+          
+       
+		
+		
+			 </div>
+			 <!--contentEnd-->
+                             
+   
+            <div id="picBox" class="" style="display:none;">
+            	<img src="../img/a1.jpg"/>
+            </div>
+
+</body>
+
+ <script type="text/javascript">
+               function showpic(){
+             	  layui.use('layer',function(){
+		   	   var layer=layui.layer;
+					   	       layer.open({
+					   	       	  type:1,
+					   	 		  content:$('#picBox'),
+					   	     			  })
+		   	 
+		 							  })
+             }
+            
+	        		
+		  
+		
+		
+</script>
+</html>

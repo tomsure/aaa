@@ -1,0 +1,445 @@
+@charset "utf-8";
+html {
+  font-size: 625%;
+}
+body {
+  border: 0;
+  font: normal 100% Arial, sans-serif;
+  font-family: "Microsoft Yahei", Arial;
+  font-size: 14px;
+  font-size: 0.14rem;
+  // background: #fff;
+  color: #333333;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+a{
+  // color: inherit;
+  cursor: pointer;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+input:focus {
+  outline: 0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.box-center {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  box-align: center;
+  align-items: center;
+}
+.box-between {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  box-align: center;
+  align-items: center;
+}
+.cur {
+  cursor: pointer;
+}
+.cur-hover {
+  cursor: pointer;
+}
+.cur-hover:hover {
+  box-shadow: 0px 0px 1px 1px #ccc;
+}
+.row {
+  margin: 0;
+}
+.ellipsis {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.b {
+  font-weight: bold;
+}
+.pic{
+	img{
+		width: 100%;
+	}
+}
+.clear-float::after{
+  content:" ";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+
+
+//iframe
+.page-body{
+  padding: 10px 30px;
+  h5{
+    font-size: 16px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  select,input[type="text"],input[type="date"],textarea,input[type='number']{
+    border-color: #999;
+  }
+  textarea{
+    resize: none;
+  }
+  .search-box{
+    padding: 0 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    form{
+      padding-right: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      select{
+        width: 110px;
+      }
+      input[type='text'],input[type='number']{
+        width: 200px;
+      }
+      input[type='date']{
+        width: 160px;
+      }
+      &> :nth-child(n){
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+      .search-btn{
+        width: 60px;
+        input{
+          position: absolute;
+          bottom: 0;
+          right: 15px;
+        }
+      }
+      &>div{
+        display: flex;
+        line-height: 34px;
+        span{
+          font-size: 16px;
+          display: block;
+          min-width: 80px;
+          text-align: right;
+          // line-height: 34px;
+        }
+        input[type='text']{
+          width: 160px;
+        }
+      }
+    }
+    &>div{
+      // min-width: 60px;
+      height: 34px;
+      margin-top: 15px;
+      position: relative;
+      input{
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  .check-btn{
+    height: 50px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    .btn{
+      margin-right: 10px;
+    }
+  }
+  .modal{
+    max-width: 100%;
+    overflow: auto;
+  }
+  #delete,#statusChange,#newSure,#status{
+    .modal-dialog{
+      width: 300px;
+    }
+  }
+  div.form-group.button{
+    float: right;
+    input{
+      margin-right: 30px;
+    }
+  }
+  #power{
+    .modal-dialog{
+      width: 750px;
+    }
+  }
+  #shareMes{
+    .modal-dialog{
+      width: 1200px;
+      .form-group-table{
+        border-top: 1px #ccc solid;
+        border-left: 1px #ccc solid;
+        ul{
+          li{
+            float: left;
+            width: 25%;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            border-bottom: 1px #ccc solid;
+            border-right: 1px #ccc solid;
+          }
+        }
+      }
+    }
+  }
+  #addUser,#checkedUser{
+    .modal-dialog{
+      width: 900px;
+      .modal-content{
+        min-height: 500px;
+      }
+      form{
+        width: 100%;
+        span{
+          width: 115px;
+        }
+      }
+    }
+  }
+  #roleMes,#shareMes{
+    .radio-left{
+      margin-right: 20px;
+    }
+    .control-mes{
+      padding: 7px 15px 7px 20px;
+    }
+  }
+}
+.popover-content{
+  word-wrap:break-word;
+}
+.small-pic{
+  width: 80px;
+  height: 60px;
+}
+.original-pic{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  overflow-y: auto;
+  z-index: 1200;
+  img{
+    max-width: 80%;
+  }
+}
+#zipUpLoad{
+  .col-xs-5,.col-xs-7{
+    padding: 0;
+  }
+  .zipMes{
+    line-height: 34px;
+    margin-left: 10px;
+    color: red;
+  }
+  .progress{
+    width: 100px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    background-color: #ccc;
+    .progress-bar{
+      -webkit-transition-duration: 0s;
+      transition-duration: 0s;
+    }
+  }
+}
+#picMes{
+  .modal-dialog{
+    width: 850px;
+    .modal-body{
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .picMes-pic{
+      width: 20%;
+      text-align: center;
+      float: left;
+      img{
+        width: 120px;
+        height: 120px;
+      }
+      p{
+        margin-top: 10px;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+#dateMes{
+  .dateMesListTitle .col-xs-4{
+    margin-top: 7px;
+    padding-left: 20px;
+  }
+  #listAdd,#listSub{
+    margin-top: 7px;
+    cursor: pointer;
+  }
+}
+#check.userList{
+  .modal-dialog{
+    width: 1200px;
+    font-size: 16px;
+    .modal-body{
+      width: 1198px;
+    }
+    .form-group{
+      margin-bottom: 2px;
+      line-height: 30px;
+      span{
+        font-weight:normal;
+      }
+      .left,.right{
+        display: inline-block;
+      }
+      .left{
+        margin-left: 30%;
+        width: 20%;
+      }
+      .right{
+        margin-left: 5%;
+        width: 30%;
+      }
+      .col-xs-2,.col-xs-8{
+        padding: 10px;
+      }
+      select{
+        float: right;
+        width: calc(~'100% - 80px');
+        height: 30px;
+        padding: 3px 6px;
+      }
+    }
+    #personalMes{
+      .left{
+        margin-left: 26%;
+        width: 30%;
+      }
+      .right{
+        margin-left: 0%;
+        width: 30%;
+      }
+      input{
+        width: auto;
+        position: relative;
+        right: 0;
+        display: inline-block;
+        &#province,&#city{
+          width: 60px;
+          margin: 0 10px 0 0;
+          padding: 6px 5px;
+        }
+        &#city{
+          margin-left: 10px;
+        }
+      }
+    }
+    .checkMes,#personalMes{
+      border-top: 1px #999 solid;
+      padding: 15px 0 0;
+      margin: 15px 0 0;
+    }
+    .checkBtn,.checkChange{
+      margin-top: 30px;
+      padding-left: 400px;
+      .btn{
+        padding: 8px 20px;
+        font-size: 16px;
+        margin: 0 40px;
+      }
+    }
+    .checkTable{
+      font-size: 14px;
+      padding: 0 20px;
+      margin-top: 20px;
+    }
+    .checkRule{
+      padding-left: 210px;
+      border-top: 1px #999 solid;
+      margin-top: 15px;
+      padding-top: 15px;
+      a{
+        margin: 0 20px;
+      }
+    }
+  }
+}
+#addRule{
+  .modal-dialog{
+    width: 1400px;
+    // font-size: 16px;
+    .ruleBtn{
+      margin-top: 30px;
+      padding-left: 500px;
+      .btn{
+        padding: 8px 20px;
+        font-size: 16px;
+        margin: 0 40px;
+      }
+    }
+  }
+}
+.roleMesInterval{
+  display: flex;
+  justify-content: space-between;
+  span{
+    padding: 0 10px;
+    line-height: 34px;
+  }
+}
+.th-inner{
+  position: relative;
+  .glyphicon-triangle-bottom{
+    position: absolute;
+    top: 15px;
+  }
+  .glyphicon-triangle-top{
+    position: absolute;
+    top: 11px;
+  }
+}
+.page-body{
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.big-width{
+  min-width: 1600px;
+}
+.table-striped>tbody>tr:nth-of-type(even){
+  background-color: #d5d5d5;
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>权限管理-经销商账权限</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/homeAbout/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script src="../js/data_table.js"></script>
+<script type="text/javascript" src="../js/public.js">
+	
+</script>
+
+</head>
+ 
+<body class="page-body">
+ <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：实名认证&gt;用户信息 
+        </h5>
+        <div id="content" >
+       
+                <table class="table-hide" id="dealerAuthority"></table>
+       		             <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+                         <script type="text/html" id="templet2">
+                            <div>
+                            	<a onclick="showEdit()" class="permissionEdit">编辑</a>
+                            </div>
+                         </script>
+                         <script type="text/html" id="templet3">
+                            <div>
+                            	<a >删除</a>
+                            </div>
+                         </script>
+                      
+                      
+                 </div>
+  </div>
+
+            	      	<!--权限弹窗内容开始-->
+		<div id="modal_AccountAllocation" class="modal_AccountAllocation" style="border: 1px solid gray;height: 720px;display: none;">
+			<div class="addAccount" style=" ">
+
+				<div class="addleft" style="display: inline-block;">
+
+					<div> 
+						<span>账号</span>
+						<input type="text" placeholder="请输入账号"  name="" id="" value="" />
+					</div>
+					<div>
+						<span>密码</span>
+						<input type="text" placeholder="请输入密码" name="" id="" value="" />
+					</div>
+					<div>
+						<span>部门</span>
+						<input type="text" placeholder="请输入部门" name="" id="" value="" />
+					</div>
+					<div>
+						<span>职位</span>
+						<input type="text" placeholder="请输入职位" name="" id="" value="" />
+					</div>
+					<div>
+						<span>姓名</span>
+						<input type="text" placeholder="请输入姓名" name="" id="" value="" />
+					</div>
+					<div>
+						<span>工号</span>
+						<input type="text" placeholder="请输入工号"  name="" id="" value="" />
+					</div>
+					<div>
+						<span>联系方式</span>
+						<input type="text" placeholder="请输入联系方式" name="" id="" value="" />
+					</div>
+
+				</div>
+				
+
+			</div>
+		     <div class="" style=" position: absolute;top: 160px;">
+		     		<form id="authorityModal" role="form" class="" style="">
+				<div class="form_top" style="">
+				
+					
+							 <div class="modalbox checkbox" style="margin-top: 0;">
+       	<div class="table_title">
+  		卡片管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >我的卡片
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >经销商卡片
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >套餐群组
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >套餐列表
+    </label>
+       <label class="form-label">
+      <input type="checkbox" >充值缴费
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >经销商充值缴费
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >停复机规则
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >套餐变更申请
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >套餐变更审核
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >流量转换比例
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >流量转换卡片
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >套餐变更设置
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >补卡管理
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >预销号管理
+    </label>
+     </div>
+        	 <div class="modalbox checkbox">
+  	<div class="table_title">
+  		财务管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >财务首页/待审核列表
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >采购订单审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >销售订单审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >充值审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >返佣审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >分润审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >提现审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >预存审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >退款审核
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >发票申请
+    </label>
+      <label class="form-label" >
+      <input type="checkbox" >发票管理
+    </label>
+
+     </div>  
+     	
+                 	 <div class="modalbox checkbox">
+       	<div class="table_title">
+  		订单管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >订单列表
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >订单出库
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >订单退货
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >订单取消
+    </label>
+       <label class="form-label">
+      <input type="checkbox" >经销商采购订单
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >经销商订单审核
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >我的采购
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >故障申报
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >退款管理
+    </label>
+     </div>
+        <div class="modalbox checkbox">
+							<div class="table_title">
+								经销商管理
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >经销商档案
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >资金预存
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >预存明细
+    </label>
+
+						</div>
+						  <div class="modalbox checkbox">
+  	<div class="table_title">
+  		返佣管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >返佣规则
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >返佣明细
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >返佣提现申请
+    </label>
+ </div>  
+						  <div class="modalbox checkbox">
+     	<div class="table_title">
+  	  监控管理
+  	   </div>
+    <label class="form-label" >
+      <input type="checkbox" >告警管理
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >告警规则
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >指标管理
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >指标组
+    </label>
+     <label class="form-label">
+      <input type="checkbox" >告警通知组
+    </label>
+     
+     </div> 
+	         <div class="modalbox checkbox">
+  	<div class="table_title">
+  		分销管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >用户提现明细
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >用户提现申请
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >分销设置
+    </label>
+      <label class="form-label">
+      <input type="checkbox" >分销明细
+    </label>
+       <label class="form-label">
+      <input type="checkbox" >分销提现申请
+    </label>
+     </div>  
+    
+     	<div class="modalbox checkbox">
+							<div class="table_title">
+								运营可视化
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >运营数据报表
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >财务报表
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >客户数据报表
+    </label>
+
+						</div>
+		
+    <div class="modalbox checkbox">
+							<div class="table_title">
+								商品管理
+							</div>
+							<label class="form-label">
+      <input type="checkbox"  >商品列表
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >面额充值
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >促销活动
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >活动规则
+    </label>
+
+						</div>
+						<div class="modalbox checkbox">
+							<div class="table_title">
+								实名认证
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >用户信息
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >卡片实名认证
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >设备实名认证
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >实名认证审核
+    </label>
+
+						</div>
+
+						<div class="modalbox checkbox">
+							<div class="table_title">
+								卡池管理
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >我的卡池
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >运营商测池
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >卡池流量分配
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >卡池流量补充
+    </label>
+
+						</div>
+
+
+     	 <div class="modalbox checkbox">
+  	<div class="table_title">
+  		库存管理
+  	</div>
+    <label class="form-label" >
+      <input type="checkbox" >卡片库存列表
+    </label>
+    <label class="form-label" >
+      <input type="checkbox" >设备库存列表
+    </label>
+      </div>  
+       	<div class="modalbox checkbox">
+							<div class="table_title">
+								权限管理
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >账号分配
+    </label>
+							<label class="form-label">
+      <input type="checkbox" >经销商权限
+    </label>
+						</div>
+  
+     
+             <div class="modalbox checkbox">
+             	    	<div class="table_title">
+							系统
+							</div>
+							<label class="form-label">
+      <input type="checkbox" >系统管理
+    </label>
+             </div>
+     </div> 
+ </div>
+				<div class="form_btn_bottom" style="clear: left;">
+					<input type="submit" class="btn btn_ok" value="确定" />
+					<input type="button" class=" btn btn_cancel " value="取消" />
+					<input type="reset" class=" btn  btn_reset " value="重置" style="width: 80px;" />
+				</div>
+			</form>
+		     </div>
+
+
+		<!--弹窗内容结束-->
+
+
+
+</body>
+<script type="text/javascript">
+//	$(function(){
+        function showEdit(){
+        	layui.use('layer',function(){
+        		var layer=layui.layer
+        		layer.open({
+   	 	type:1,
+   	 	area:['720px','800px'],
+   	 	content:$("#modal_AccountAllocation")
+   	 })
+        	})
+        	 
+        }
+//	})
+</script>
+</html>

@@ -1,0 +1,284 @@
+.addleft span {
+			display: inline-block;
+			width: 60px;
+			/*border: 1px solid red;*/
+			margin-right: 10px;
+			text-align: center;
+		}
+		
+		.addleft input {
+			border: 0;
+			border-bottom: 1px solid gray;
+			margin-top: 20px;
+		}
+		.addleft div{
+			float: left;
+		}
+		.modalbox{
+			/*border: 1px solid red;*/
+			width: 130px;
+			float: left;
+			margin-bottom: 0px;
+			padding: 10px;
+		}
+        .modalContent{
+        	padding: 10px;
+        	display: none;
+        }
+        .modalContent p{
+        	margin-bottom:20px;
+        	/*border: 1px solid blue;*/
+        }
+        
+        .modal_link_left{
+        	/*border: 1px solid red;*/
+        	float: left;
+        	/*width: 40%;*/
+        	margin-right: 20px;
+        }
+       .modalContent p input{
+        	display: inline-block;
+        	border: 0;
+           
+        }
+        .modalContent p input[type="text"],.modal_link_left input[type="text"]{
+         	border: 0;
+         	border-bottom: 1px solid gray; 
+         }
+        .modal_link_left span{
+        	margin-right: 15px;
+        }
+        .modalContent p span {
+        	font-size: 14px;
+        	font-weight: 400;
+        }
+        .modal_link_left span{
+        	font-size:14px;
+        	font-weight: 400;
+        	
+        	
+        }
+        .modalContent p select,.modal_link_right select{
+        	width: 100px;
+        }
+        .modal_link_right span {
+        	font-size: 14px;
+        	font-weight: 400;
+        }
+        .modal_btn{
+        	text-align: center;
+        	margin-top: 40px;
+        }
+        .spanTitle{
+        	margin-right: 25px;
+        	margin-left: 15px;
+        }
+        .spanTitle1{
+        	margin-right: 12px;
+        	/*margin-left: 15px;*/
+        }
+        .addAccount p {
+        	margin-top: 10px;
+        }
+        .addAccount p input{
+        	border: 0;
+        	border-bottom:1px solid gray ;
+        	display: inline-block;
+        	width: 150px;
+        }
+        .bottom_btn{
+        	margin-top: 250px;
+        	text-align: center;
+        }
+        .Modal_left,.Modal_right{
+        	float: left;
+        }
+        .Modal_right button{
+        	background: dodgerblue;
+        	color: white;
+        	height: 30px;
+        	
+        }
+        .Modal_left{
+        	margin-right: 10px;
+        }
+        .dataBox{
+        	float: left;
+        
+        }
+        .dataBox input{
+        	border: 0;
+        	border-bottom:1px solid gray ;
+        }
+        .bottom_btn_1{
+           margin-top: 200px;
+           text-align: center;	
+        }
+        .selectDealerFile {
+        margin-left: 20px;
+        }
+        .modal_content p input {
+    
+        	width: 150px;
+        }
+        .modal_content p{
+        	margin-bottom: 15px;
+        	
+        }
+        /*.modal-content p span{
+        	margin-right: 20px;
+        	display: inline-block;
+        	border: 1px solid red;
+        }*/
+        
+      .modal_content{
+      	display: none;
+      	padding: 10px;
+      }
+       .boxTitle{
+       	margin-right: 10px;
+       	text-align: center;
+       }
+       .modal_content p select{
+       	 width: 100px;
+       }
+      /* 建库弹窗*/
+       .cardNumberModal{
+       	display: none;
+       	padding: 10px;
+       }
+        .cardNumberModal input{
+        	width: 150px;
+        	display: inline-block;
+        }
+        .cardNumberModal p span{
+        	font-size: 18px;
+        	color: darkgray;
+        	
+        	font-weight: 600;
+        	display: inline-block;
+        	margin-right: 20px;
+        }
+        .cardNumberModal p{
+        	margin-bottom:10px;
+        }
+        /*设备库存*/
+         .buildingModal{
+         	padding: 15px;
+         	display: none;
+         	
+         }
+         .buildingModal p{
+         	margin-bottom: 10px;
+         }
+         .buildingModal p span{
+         	
+         	  font-size: 16px;
+         	  font-weight:700;
+         	  color: gray;
+         }
+         .buildingModal p input{
+         	width: 150px;
+         	display: inline-block;
+         }
+          .ImeiModal{
+          	padding: 10px;
+          	display: none;
+          }
+          .ImeiModal p{
+          margin-bottom: 10px;
+          }
+          .ImeiModal p span{
+          	   font-size: 16px;
+          	   font-weight:700;
+          	   color: gray;
+          }
+          .viewIccidImei{
+          	padding: 10px;
+          	display: none;
+          }
+          .viewIccidImei p{
+          	margin-bottom: 10px;
+          }
+          /*一体机库存*/
+          .viewIccidImeiModal{
+          	display: none;
+          	padding: 10px;
+          }
+          .viewIccidImeiModal p{
+          	margin-bottom: 10px;
+          	
+          }
+          .viewIccidImeiModal p span{
+          	 font-size: 16px;
+          	   font-weight:700;
+          	   color: gray;
+          }
+          .denominationModal{
+          	padding: 20px;
+          	display: none;
+          }          
+          .denominationModal form p{
+             margin-bottom: 20px;	
+          }
+          .addGod{
+          	 padding: 20px;
+          	 display: none;
+          }
+          .addGod p{
+          	margin-bottom: 20px;
+          }
+          
+          .addDealerModal{
+          	padding: 10px;
+          	display: none;
+          }
+          .addDealerModal form p{
+          	margin-bottom: 20px;
+          	padding-left:5px ;
+          }
+          .addtitle{
+          	padding-left:10px ;
+          	display: inline-block;
+          	margin-right: 40px;
+          }
+          .addtitle1{
+          	/*padding-left: 20px;*/
+          	  margin-right: 20px;
+          }
+          .predepositModal{
+          	padding: 10px;
+          	display: none;
+          }
+          .predepositModal p{
+          	margin-bottom: 10px;
+          }
+          .modal_title{
+          	margin-right: 20px;
+          }
+          .deliverGoods{
+            padding: 10px;
+            
+          }
+          .deliverGoods p{
+          	margin-bottom: 10px;
+          	
+          }
+          .purchaseOrderModal{
+          	padding:10px;
+          	display: none;
+          }
+          .purchaseOrderModal p{
+          	margin-bottom:10px
+          }
+          .outlibraryModal{
+          	display: none;
+          	padding: 10px;
+          }
+          .outlibraryModal p{
+          	margin-bottom: 10px;
+          }
+         
+          .modal_textarea{
+    	     /*display: none;*/
+          }

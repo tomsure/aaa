@@ -84,7 +84,7 @@ margin-top: 0.2rem;
 
 .nav-tabs{
 	display: flex;
-    justify-content: center;
+ 
     background-color: #26a6ff;
 }
 .nav-tabs>li{
@@ -96,6 +96,7 @@ margin-top: 0.2rem;
 .nav-tabs>li>a{
 	color: white;
 	font-size: 0.45rem;
+	border-radius: 0;
 }
 .explain_common{
 	padding: 0.366666rem;
@@ -138,6 +139,10 @@ margin-top: 0.2rem;
 .blue-border{
 	border: 1px solid #26A6FF;
 }
+.floatleft{
+	float: left;
+}
 
 /*图标*/
- 
+ /*设备认证表单验证*/
+    

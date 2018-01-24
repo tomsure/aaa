@@ -1,0 +1,40 @@
+@charset "utf-8";
+body {
+  height: 100%;
+}
+.login-box {
+  display: flex;
+  align-content: center;
+}
+.login {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: calc(50vh - 190px);
+}
+.login h1 {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+}
+.login .input-group-addon {
+  min-width: 45px;
+}
+.login .input-group {
+  margin-top: 20px;
+}
+.login .input-group .btn-default {
+  margin-left: 20px;
+}
+.login .form-control,
+.login .input-group-addon,
+.login .btn-default,
+.login .btn-large {
+  border-color: #666;
+  height: 40px;
+  font-size: 16px;
+}
+.login .btn-large {
+  margin-top: 20px;
+}

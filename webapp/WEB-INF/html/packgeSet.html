@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卡片管理-套餐设置</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+
+<script type="text/javascript" src="../js/data_table.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+ 
+<style type="text/css">
+		.addleft span {
+			display: inline-block;
+			width: 60px;
+			/*border: 1px solid red;*/
+			margin-right: 10px;
+			text-align: center;
+		}
+		
+		.addleft input {
+			border: 0;
+			border-bottom: 1px solid gray;
+			margin-top: 20px;
+		}
+		.addleft div{
+			float: left;
+		}
+		.modalbox{
+			/*border: 1px solid red;*/
+			width: 130px;
+			float: left;
+			margin-bottom: 0px;
+			padding: 10px;
+		}
+		
+			</style>
+<body class="page-body">
+	
+	   <div class="search-box">
+    	   <form>
+            <div>
+                <span>套餐名称：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询套餐名称(可模糊)">
+            </div>
+           
+             <div style="margin-left: 0px;">
+               <span>套餐群组：</span>
+                  <select name="" id="">
+                  	<option value="">全部</option>
+                  	<option value="">月流量</option>
+                  	<option value="">季度流量</option>
+                  	<option value="">年流量</option>
+                  	<option value="">叠加包流量</option>
+                  </select>
+                </select>
+            </div>
+               <div style="margin-left: 0px;">
+               <span>能否更改套餐：</span>
+                  <select name="" id="">
+                  	<option value="">全部</option>
+                  	<option value="">是</option>
+                  	<option value="">否</option>
+                  	
+                  </select>
+                </select>
+            </div>
+           
+                <div>
+                	<span>创建时间：</span>
+                	<input type="date" class="form-control" name="" id="" value="" />-
+                	<input type="date" class="form-control" name="" id="" value="" />
+                	
+                </div>
+               
+                <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+        </form>
+          
+    </div>
+    
+       
+        <div class="check-btn">
+        
+        	<button id="add_btn" class="btn btn-default" onclick="">新增</button>
+           	<button class="btn btn-default" onclick="">删除</button>
+        </div>
+         
+     <h5 class="position-title">当前位置：首页>卡片管理-套餐设置</h5>
+
+       <!--contentBegin-->  
+        <div id="content" >
+        	 <div class="">
+       		 <table class="table-hide" id="packageSetTable"></table>
+       		             <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+                        
+                 </div>
+         </div>
+			  <!--新增弹窗开始-->
+		     
+		   <div id='addModal' class="addPackgeModal" style="display: none;padding: 10px;">
+		        <form action="">
+		           <p>
+		           	<span>套餐群组</span>
+		           	<select name="" id="" class="">
+		           	<option value="">请选择</option>
+		           	<option value="">月流量包</option>
+		           	<option value="">季度流量包</option>
+		           	<option value="">年流量包</option>
+		           	<option value="">叠加包</option>
+		           	</select>
+		           </p>
+		           <p >
+		           	<span>套餐名称</span>
+		           	<input type="text" class="" placeholder="输入套餐名称" />
+		           </p>
+		           <p><span>套餐总量</span>
+		           	  <input type="text" class="" placeholder="输入套餐总量"/><span>G</span>
+		           </p>
+		           <p><span>限速(上)</span><input type="text" placeholder="输入限速值" style="margin-left: 10px;"  /><span>kb/s</span></p>
+		           <p><span>限速(下)</span><input type="text" placeholder="输入限速值" style="margin-left: 10px;" /><span>kb/s</span></p>
+		           <p>
+		           	<span>能否变更套餐</span>
+		           	<select name="" id="" class="">
+		           		<option value="">是</option>
+		           		<option value="">否</option>
+		           	</select>
+		           </p>
+		           <p><span>套餐描述</span>
+		           	  <textarea name="" rows="10" placeholder="输入套餐描述" cols="30" class=""></textarea>
+		           </p>
+		            <div class="form_btn">
+		            	<button class="btn btn_ok">确定</button>
+		            	<button class="btn btn_cancel">取消</button>
+		            	<button class=" btn btn_reset">重置</button>
+		            </div>
+		        </form>
+		     </div>
+
+
+		<!--弹窗内容结束-->
+
+	
+			
+
+</body>
+
+</html>

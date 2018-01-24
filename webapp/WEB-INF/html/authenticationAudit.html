@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实名认证-实名认证审核</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/layui/layui.js"></script>
+<script src="../vendor/layer/layer.min.js" ></script>
+<script type="text/javascript" src="../js/data_table.js"></script>
+<script src="../js/public.js"></script>
+</head>
+ 
+<body class="page-body">
+	 <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：实名认证&gt;用户信息 
+        </h5>
+	 <div class="filter_content" >
+	 	<form action="" method="post">
+	 	   <div class="filter_content_top"  >
+	 	   	<div class="usercode" >
+	 	   		 
+	 	    	<span id="">
+	 	    		ICCID/用户自编码
+	 	    	</span><input type="text" name="" placeholder="查询ICCID/用户自编码" id="" value="" />	
+	 	    
+	 	    
+	 	   	</div>
+	 	    <div class="CustomerName" style="margin-left: 160px;">
+	 	    	<span id="">
+	 	    	客户名称
+	 	    </span>
+	 	     <input type="text" class="filter_input" name="" id="" placeholder="查询客户名称" value="" />
+	 	    </div>
+	 	 <div class="RealName" style="margin-left:50px;">
+	 	 	 <span id="">
+	 	  	实名名称
+	 	  </span>
+	 	  <input type="text" name="" class="filter_input" placeholder="查询真实名称" id="" value="" />
+	 	 </div>
+	 	 <div class="IdentificationNumber" style="margin-left: 60px;">
+	 	 	 <span>证件号码</span>
+	 	  <input type="text" name="" class="filter_input" placeholder="查询证件号码" id="" value="" />
+	 	 </div>
+	 	   <div  style="margin-left: 50px;">
+	 	   	<button class="btn btn_reset">重置</button>
+	 	   	<button class="btn btn_search">搜索</button>
+	 	   </div>
+	 	   </div>
+	 	   
+	 	  <div class="filter_content_bottom" >
+	 	   	<div class="filter_left_btn"  style="margin-right: 55px;">
+	 	   	 
+	 	   	 <button style="width: 70px;">通过</button>
+	 	   	 <button style="width: 70px;">新增</button>
+	 	   	 <button style="width: 70px;">修改</button>
+	 	   	 <button style="width: 70px;">删除</button>
+	 	   	 
+	 	   </div>
+	 	   	 <div class="RealNameSource" >
+	 	   	 	<span>实名来源:</span>
+	 	   	 	<select name="" id="">
+	 	   	 		<option value="">全部</option>
+	 	   	 		<option value="">WEB</option>
+	 	   	 		<option value="">公众号</option>
+	 	   	 		<option value="">后台实名</option>
+	 	   	 	</select>
+	 	   	 </div>
+	 	   	 <div class="sex_select" style="margin-left:115px ;margin-right: 210px;">
+	 	   	 	<span style="margin-right: 25px;">性别</span>
+	 	   	 	<select name="" >
+	 	   	 	<option value="sex01">男</option>
+	 	   	 	<option value="sex02">女</option>
+	 	   	 	</select>
+	 	   	 </div>
+	 	   	 <div class="RealNameTime" >
+	 	   	   <span>
+	 	   	     实名时间：
+	 	   	   </span>
+	 	   	 
+	 	   	 	  <input type="date" class="filter_input" name="" id="" value="" /> -
+	 	   	     <input type="date" class="filter_input" name="" id="" value="" />
+	 	   	 
+	 	   	 </div>
+	 	   	 
+	 	   </div> 
+	 	  
+	 	  
+	 	</form>
+	 </div>
+             <div id="content" >
+              
+              <table id="auditTable" class="layui-hide"></table>
+		          <script type="text/html" id="templte2">
+		          	  <!--<div> <a class="viewPic" style="color: red;">查看</a></div>-->
+		          	  <a class="viewPayPic" onclick="viewPicture()" >{{= d.title }}</a>
+		          </script>
+		          <script type="text/html" id="indexTpl">
+    {{d.LAY_TABLE_INDEX+1}}
+</script>
+			 </div>
+			 <!--contentEnd-->
+			    <div id="dv" style="display: none;">
+			    	<!--<img src="../img/a1.jpg"/>-->
+			    </div>
+			    <button id="btn">点击</button>
+ </body>
+    <script type="text/javascript">
+    	
+    		 function viewPicture(){
+    		 	  var pic=document.createElement('img')
+    		 	      pic.src='../img/a1.jpg'
+    		 	      $('pic').append('#dv')
+    		 	      
+    		    layui.use('layer',function(){
+    		    	var layer=layui.layer;
+    		    	layer.open({
+    		    		type:1,
+    		    		content:$('#dv')
+    		    	})
+    		    })
+    		 }
+    	
+    </script>
+</html>

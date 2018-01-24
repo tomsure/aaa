@@ -59,10 +59,10 @@
 		</section>
 		<div class="zhedie">
 			<ul class="bottom_menu">
-				<li>流量使用明细</li>
-				<li>故障报修</li>
-				<li>套餐变更</li>
-				<li>切换设备</li>
+				<li id="mingxi">流量使用明细</li>
+				<li id="baoxiu">故障报修</li>
+				<li id="biangeng">套餐变更</li>
+				<!--<li id="qiehuan">切换设备</li>-->
 			</ul>
 		</div>
 		<footer class="footer_fixed">
@@ -114,4 +114,18 @@
       });
     </script>
     <script src="../../js/script.js"></script>
+    <script>
+    	  $('#mingxi').on('click',function(){
+    	  	location.href='flowUsage.html'
+    	  })
+    	  $('#baoxiu').on('click',function(){
+    	  	location.href=' '
+    	  })
+    	  $('#biangeng').on('click',function(){
+    	  	location.href='../SetMealChange/Modifiable.html'
+    	  })
+//  	  $('#qiehuan').on('click',function(){
+//  	  	location.href=''
+//  	  })
+    </script>
 </html>

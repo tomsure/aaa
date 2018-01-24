@@ -5,11 +5,57 @@
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	
 	<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../icons/icomoon2/style.css"/>
 	<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
 	<title>云中心</title>
 	
 </head>
+<style type="text/css">
+	 #c{
+   margin: 0 auto;
+   display: block;
+   justify-self: center;
+   position: relative;
+   right: 4.5rem;
+   width: 5rem;
+   height: 5rem
+   ;
+  }
+  #r{
+   display: block;
+   margin: 0 auto;
+  }
+  #r::before{
+   color: black;
+   content: attr(min);
+   padding-right: 10px;
+  }
+  #r::after{
+   color: black;
+   content: attr(max);
+   padding-left: 10px;
+  }  
+ /*.databox div{
+ 	position: relative;
+ 	bottom: 1rem;
+ }*/
+
+ .refrech{
+ 	background-color: #26A6FF;
+ 	color: white;
+ 	line-height: 1;
+ 	padding: 0.15rem 0.3rem;
+ 	border-radius: 6px;
+ }
+.icon-shuaxin{
+	color: white;
+	top: 0.1rem;
+	position: relative;
+	
+}
+</style>
 <body>
 	<div class="devTop">
 		<div class="devHeader">
@@ -20,9 +66,22 @@
 			<div class="box3"><p><span class="icon icon-mobile"></span></p><span>连接设备</span></div>
 			<div class="box4"><p><span class="icon icon-singal"></span></p><span>信号强度</span></div>
 		</div>
-		<div class="infoImg">
+		<!--<div class="infoImg">
 			<img src="../../dist/libs/jquery-weUI/demos/images/avatar.jpg"/>
-		</div>
+		</div>-->
+			<div class="dataImage" style="display: flex; width: 14rem;height: 3rem;position: relative;">
+			     <!--<img src="../../dist/libs/jquery-weUI/demos/images/avatar.jpg" style="width: 100%;
+    height: 100%;
+    border-radius: 100%;" />-->
+          <div  style="z-index: 1000;position: relative;left: 1.5rem;top: 1.5rem;color: white;font-size: 30px;">
+          	<div style="font-size: 35px;width: 6.75rem;">已使用流量</div>
+          	<div>1048MB</div>
+          	<div>总量</div>
+          	<div>2000MB</div>
+          </div>
+           <canvas id="c"></canvas>
+ <input type="range" id="r" min="0" max="100" step="1">
+		   </div>
 	</div>
 	  <div class="devBottom">
 	  	<div class="box_common hotport_box" >
@@ -36,26 +95,181 @@
 			<button>保存</button>
 		</div>
 	</div>
-	<div class="box_common">
+
+	<div class="box_common"><span class="icon icon-Fangyuan"></span>
+	<span>隐蔽wifi</span>
+    <span id="yinbiBtn" class="iconBar" style=""><span id="yinbiBtn1"></span></span>
+	</div>
+		<div class="box_common" id="flowUsage">
 		<span class="icon icon-internet"></span>
-	<span>网络切换</span>
+	<span>流量使用明细</span>
 	<span class="icon icon-jiantou-right text_right" ></span>
 	</div>
-	<div class="box_common"><span class="icon icon-Fangyuan"></span>
-	<span>停复机</span>
-	
-	 <span id="iconBtn" class="iconBar" style=""><span id="iconbtn1"></span></span>
+	<div id="devSwitch" class="box_common">
+		<span class="icon icon-internet"></span>
+	<span>切换设备</span>
+	<span class="icon icon-jiantou-right text_right" ></span>
+	</div>
+	<div class="box_common" id="renewalsRecords">
+		<span class="icon icon-internet"></span>
+	<span>套餐续费记录</span>
+	<span class="icon icon-jiantou-right text_right" ></span>
 	</div>
 	<div class="box_common deviceInfo"><p><span class="icon icon-mobile" ></span><span class="devText">设备信息</span></p>
-	<p><span class="title_left">设备号</span><span class="text_right">982798576238976236587263</span></p>
+	<p><span class="title_left">IMME</span><span class="text_right">982798576238976236587263</span></p>
 	<p><span class="title_left">MCU版本</span><span class="text_right">R456-Z434-D432-V423</span></p>
 	<p><span class="title_left">APK版本</span><span class="text_right">100</span></p>
 	</div>
+	<div class="box_common deviceInfo">
+	<p><span class="title_left">设备号</span><span class="text_right">982798576238976236587263</span></p>
+	<p><span class="title_left">设备状态</span><span class="text_right"><span>正常</span><span id="refrech" class="refrech"><span class="icon icon-shuaxin"></span>刷新</span></span></p>
+	<p><span class="title_left">当前套餐</span><span class="text_right">无量包</span></p>
+	<p><span class="title_left">有效期</span><span class="text_right">2017年2月12</span></p>
+	</div>
 	  </div>
+	  	<div style="display: flex; font-size: 0.5rem;" >
+				<div id="chargeBtn" style="float: left;flex: 1;text-align: center;display: inline-block;">
+					<p><span class="icon icon-charge"></span></p>
+			        <p>流量充值</p>
+				</div>
+			   <div style="float: left;flex: 1;text-align: center;display: inline-block;background-color:#26A6FF;">
+			   	<p><span class="icon  icon-audit " style="color: white"></span></p>
+			        <p style="color: white;">已实名</p>
+			   </div>
+			</div>
 
 </body>
 <script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 <script src="../../dist/plugs/flexible.js/flexible.js"></script>
 <script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
 <script src="../../js/script.js"></script>
+<script>
+		$('#yinbiBtn').click(function(){
+
+
+       	  $('#yinbiBtn1').toggleClass('toggleBtn')
+       	   if($('#yinbiBtn1').hasClass('toggleBtn')){
+       	   	  $('#yinbiBtn').css('background-color','#26A6FF')
+       	   	  $('#yinbiBtn1').css('float','right')
+       	   }else{
+       	   	 $('#yinbiBtn').css('background-color','lightgray')
+       	   	 $('#yinbiBtn1').css('float','left')
+       	   	 
+       	   }
+       })
+
+        
+	</script>
+	<script type="text/javascript">
+  var canvas = document.getElementById('c');
+  var ctx = canvas.getContext('2d');
+  var range = document.getElementById('r');
+ 
+  //range控件信息
+  var rangeValue = range.value;
+  var nowRange = 0; //用于做一个临时的range
+ 
+  //画布属性
+  var mW = canvas.width = 250;
+  var mH = canvas.height = 250;
+  var lineWidth = 2;
+ 
+  //圆属性
+  var r = mH / 2; //圆心
+  var cR = r - 16 * lineWidth; //圆半径
+ 
+  //Sin 曲线属性
+  var sX = 0;
+  var sY = mH / 2;
+  var axisLength = mW; //轴长
+  var waveWidth = 0.015 ; //波浪宽度,数越小越宽 
+  var waveHeight = 6; //波浪高度,数越大越高
+  var speed = 0.09; //波浪速度，数越大速度越快
+  var xOffset = 0; //波浪x偏移量
+ 
+  ctx.lineWidth = lineWidth;
+ 
+  //画圈函数
+  var IsdrawCircled = false;
+  var drawCircle = function(){
+ 
+   ctx.beginPath();
+   ctx.strokeStyle = 'white';
+   ctx.arc(r, r, cR+5, 0, 2 * Math.PI);
+   ctx.stroke();
+   ctx.beginPath();
+   ctx.arc(r, r, cR, 0, 2 * Math.PI);
+   ctx.clip();
+ 
+  }
+ 
+  //画sin 曲线函数
+  var drawSin = function(xOffset){
+   ctx.save();
+ 
+   var points=[]; //用于存放绘制Sin曲线的点
+ 
+   ctx.beginPath();
+   //在整个轴长上取点
+   for(var x = sX; x < sX + axisLength; x += 20 / axisLength){
+    //此处坐标(x,y)的取点，依靠公式 “振幅高*sin(x*振幅宽 + 振幅偏移量)”
+    var y = -Math.sin((sX + x) * waveWidth + xOffset);
+ 
+    var dY = mH * (1 - nowRange / 100 );
+ 
+    points.push([x, dY + y * waveHeight]);
+    ctx.lineTo(x, dY + y * waveHeight);  
+   }
+ 
+   //封闭路径
+   ctx.lineTo(axisLength, mH);
+   ctx.lineTo(sX, mH);
+   ctx.lineTo(points[0][0],points[0][1]);
+   ctx.fillStyle = '#00AEEF';
+   ctx.fill();
+ 
+   ctx.restore();
+  };
+ 
+  //写百分比文本函数
+  var drawText = function(){
+   ctx.save();
+ 
+   var size = 0.4*cR;
+   ctx.font = size + 'px Microsoft Yahei';
+   ctx.textAlign = 'center';
+   ctx.fillStyle = "rgba(06, 85, 128, 0.8)";
+// ctx.fillText(~~nowRange + '%', r, r + size / 2);
+ 
+   ctx.restore();
+  };
+ 
+  var render = function(){
+   ctx.clearRect(0, 0, mW, mH);
+ 
+   rangeValue = range.value;
+ 
+   if(IsdrawCircled == false){
+    drawCircle(); 
+   }
+ 
+   if(nowRange <= rangeValue){
+    var tmp = 1;
+    nowRange += tmp;
+   }
+ 
+   if(nowRange > rangeValue){
+    var tmp = 1;
+    nowRange -= tmp;
+   }
+ 
+   drawSin(xOffset);
+   drawText(); 
+ 
+   xOffset += speed;
+   requestAnimationFrame(render);
+  }
+ 
+  render();  
+ </script>
 </html>

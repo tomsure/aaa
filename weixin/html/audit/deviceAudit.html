@@ -76,7 +76,6 @@
   margin:0;
   /*border: 1px solid red;*/
   min-height: inherit;
-
 1}
 .ui-input-text{
 	/*border: 1px solid blue;*/
@@ -88,6 +87,9 @@
   .progress_status span,.info_header p span{
   	color:#299eff!important ;
   }		
+  .progress_bar{
+  	background: rgba(38, 166, 255, 0.56);
+  }
 </style>
 <script>
 		$(function(){
@@ -135,16 +137,18 @@
 					 <div class="box_common">
 					<dl>
 						<dt>申请信息</dt>
-						<dd><span>真实姓名</span><input type="" name="" id="" placeholder="请输入真实姓名" value="" /></dd>
-						<dd><span>身份证号</span><input type="" name="" id="" placeholder="请输入身份证号" value="" /></dd>
-						<dd><span>设备号码</span><input type="" name="" id="" placeholder="请输入设备号码" value="" /></dd>
-						<dd><span>手机号码</span><input type="" placeholder="请输入手机号码" /></dd>
-						<dd><span>性别</span>
+						<dd><span>1,设备号码</span><input type="" name="" id="" placeholder="请输入设备号码" value="" /></dd>
+						<dd><span>2,真实姓名</span><input type="" name="" id="" placeholder="请输入真实姓名" value="" /></dd>
+						<dd><span>3,性别</span>
 							<span class="span_radio">
 								<span class="sexbox">男</span><input type="radio" name="sex" id="" value="" />
 							 <span class="sexbox">女</span><input type="radio" name="sex" id="sex" value="" />
 							</span>
 						</dd>
+						<dd><span>4,身份证号</span><input type="" name="" id="" placeholder="请输入身份证号" value="" /></dd>
+						
+						<!--<dd><span>5,手机号码</span><input type="" placeholder="请输入手机号码" /></dd>
+						-->
 						
 					</dl>
 				</div>
@@ -181,7 +185,7 @@
 				</div>
 			</li>
 			<li style="display: none;">
-			   <div class="alo auditting hide_toggle">
+			   <div class="alo auditting ">
 					<div class="info_header">
 			<!--<p><strong>●</strong><span class="progress_bar"><hr /></span> <strong>●</strong><span class="progress_bar"><hr /></span><strong>●</strong></p>-->
 			<div class="progress_box ">
@@ -203,19 +207,23 @@
 		<div class="info_box">
 			<dl>
 				<dt>申请信息</dt>
-				<dd><p><span>姓名</span><!--<input class="info_text"  type="text" value="黄飞鸿" />--><span class="info_text">都敏俊</span></p>
-					<p><span>性别</span><!--<input class="info_text"  type="text" value="1325982737376" />--><span class="info_text" >男</span>
-					<p><span>身份证号</span><!--<input class="info_text"  type="text" value="黄飞鸿" />--><span class="info_text">12345678909665</span></p>
-					<p><span>设备号</span><!--<input class="info_text"  type="text" value="1325982737376" />--><span class="info_text">12233455432344</span></p>
+				<dd><p><span>姓名</span><!--<span class="info_text">都敏俊</span>--></p>
+					<p><span>性别</span><!--<input class="info_text"  type="text" value="1325982737376" />--><!--<span class="info_text" >男</span>-->
+					<p><span>身份证号</span><!--<input class="info_text"  type="text" value="黄飞鸿" />--><!--<span class="info_text">12345678909665</span>--></p>
+					<p><span>设备号</span><!--<input class="info_text"  type="text" value="1325982737376" />--><!--<span class="info_text">12233455432344</span>--></p>
 				</dd>
 				
 			</dl>
+			 
 		</div>
-		<div class="info " >
+		 <div class="box_common">
+			  	 请耐心等待三个工作日，审核通过后会以消息通知，审核不通过请查看原因重新提交
+			  </div>
+		<!--<div class="info " >
 			<div class="info_image"><img src="../../images/weixiujkindu.png"/></div>
 			<div class="info_image"><img src="../../images/weixiujkindu.png"/></div>
 			<div class="info_image"><img src="../../images/weixiujkindu.png"/></div>
-		</div>
+		</div>-->
 					
 				</div>
 				<div class="alo hide_toggle auditNotpass" >
@@ -243,7 +251,7 @@
 	      
 	              
 				</div>
-				<div class="alo  auditPass" >
+				<div class="alo  auditPass hide_toggle" >
 					<div class="info_header ">
 						 <div class="audit_info audit-success" style="font-size: 0.45rem;color: #666;font-weight: 600;margin-bottom: 0.45rem;"><span class="icon iconss icon-auditPass" style="font-size: 1rem;"></span>实名认证成功</div>
 			<!--<p><strong>●</strong><span class="progress_bar"><hr /></span> <strong>●</strong><span class="progress_bar"><hr /></span><strong>●</strong></p>-->
@@ -264,13 +272,13 @@
 		<div class="info_header ">
 			<p><span style="vertical-align: top;">认证时间</span>  <span style="float: right;">2017-06-16</span></p>
 			<!--<p style="color: dimgray;font-size: 0.45rem;">失败原因：<span style="color:dimgray!important;">照片信息错误/身份信息无法确认</span></p>-->
-			<div class="text_box_common successbox box_common">
-				<p><span>姓名</span><span class="textright">秦始皇</span></p>
+			<div class="text_box_common successbox box_common ">
+				<p><span>姓名</span><span class="textright" id="uName">秦始皇</span></p>
 				<p style="margin-bottom: 0;"><span style="vertical-align: top;">性别</span><img src="../../images/auditPass@2x.png" class="passimg" style="position: relative;
     top: -1rem;
     left: 2rem;" /><span class="textright">男</span></p>
 				<p><span>身份证号</span><span class="textright">1232312343321232</span></p>
-				<p style="margin-bottom: 0;"><span>设备号</span><span class="textright">11872965782365762578695</span></p>
+				<p style="margin-bottom: 0;"><span>设备号</span><span class="textright" id="cNum">11872965782365768695</span></p>
 			</div>
 		</div>
 				</div>
@@ -279,10 +287,10 @@
 		</ul>
 		 </div>
 	</div>		
-	<div class="notice_box hide_toggle">
+	<!--<div class="notice_box ">
 		 <p class="notice_bottom">请耐心等待三个工作日，审核通过后后台会以消息通知</p>
    <p class="notice_bottom">审核不通过者请查看原因重新提交</p>
-	</div>
+	</div>-->
 </div>	
  
 </div>
@@ -290,5 +298,15 @@
 </body>
 <script type="text/javascript" src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 <script type="text/javascript" src="../../dist/plugs/flexible.js/flexible.js"></script>
+<script>
+	
+	 var userName=document.getElementById("uName")
+	 var cardNum=document.getElementById("cNum")
+//	    console.log(userName.textContent.slice(-2))
+        var a=userName.textContent.replace(userName.textContent.slice(-2),'**')	 
+        var b=cardNum.textContent.replace(cardNum.textContent.slice(-5),'*****')
+        userName.textContent=a
+        cardNum.textContent=b
+        
+</script>
 </html>
-

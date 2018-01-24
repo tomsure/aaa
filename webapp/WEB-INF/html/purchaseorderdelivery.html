@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>订单管理-采购单发货</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script src="../js/public.js" ></script>
+<script type="text/javascript" src="../js/data_table.js">
+	
+</script>
+</head>
+
+<body class="page-body">
+	
+	 <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>    	 
+    	当前位置：订单管理&gt;采购单发货
+        </h5>
+      
+
+       <!--contentBegin-->  
+        <div id="content" >
+        
+    
+
+    <div class="ibox-content">
+      <table class="table-hide" id="delivery"></table>
+       <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}} 
+                         </script>
+                         
+                         <script type="text/html" id="templet2">
+                         	   <div>
+                         	      <a onclick="deliverGoods()">发货</a>	
+                         	      
+                         	   </div>
+                         </script>
+                         
+    </div>
+</div>
+ 
+   <div id="deliverGoodsModal" class="deliverGoods" style="display: none;">
+   	     <form action="">
+   	     	<p><span style="margin-right: 20px;">快递公司</span><input type="text" name="" id="" value="" /></p>
+   	     	<p><span style="margin-right: 20px;">快单单号</span><input type="text" name="" id="" value="" /></p>
+   	     	<p><span style="margin-right: 35px;">收件人</span><input type="text" name="" id="" value="" /></p>
+   	     	<p><span style="margin-right: 10px;">收件人电话</span><input type="text" name="" id="" value="" /></p>
+   	     	<p><span style="margin-right: 10px;">收件人地址</span><input type="text" name="" id="" value="" /></p>
+   	     	<p><span style="margin-right: 50px;">运费</span><input type="text" name="" id="" value="" /></p>
+   	     </form>
+   	     <div class="form_btn">
+   	       <button class="btn btn_ok">确定</button>
+   	       <button class='btn btn_cancel'>取消</button>
+   	       <button class="btn btn_reset">充值</button>
+   	     </div>
+   </div>
+
+
+</body>
+
+<script type="text/javascript">
+	
+   	  function deliverGoods(){
+   	  	   layui.use('layer',function(){
+   	  	   	var layer=layui.layer;
+   	  	   	   layer.open({
+   	  	   	   	      type:1,
+   	  	   	   	      area:['400px','350px'],
+   	  	   	   	      title:['物流信息','font-size:18px;weight:800px;'],
+   	  	   	   	      content:$('#deliverGoodsModal')
+   	  	   	   })
+   	  	   })
+   	  	
+   	  }
+</script>
+</html>

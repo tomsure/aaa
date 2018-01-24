@@ -25,16 +25,37 @@
 		.text_right{
 			margin-right: 1rem;
 		}
+		.icon-circle:before{
+			color: #26A6FF;
+			/*background: #26A6FF;*/
+			border-radius: 100%;
+		}
 	</style>
 	<body class="bodyPage">
 		
-		<nav class="nav_header_1">
-			<div class="nav_textarea ">
+		<nav class="nav_header_1" style="height: 5.5rem;">
+			<div class="nav_textarea " style="height: 4rem;">
 				<ul>
 					<dt>
 						流量充值
 					</dt>
-					<dd> <input type="text" placeholder="请输入ICCID/设备号" /> <button>充值</button></dd>
+					<dd>
+						<input type="text" placeholder="请输入ICCID/设备号" /> 
+						<!--<input type="text" placeholder="请输入卡密号充值" />--> 
+						
+					</dd>
+					<dd style="margin-top: 0.5rem;">
+						<span class="chargeMethods">
+							<span class="icon icon-circle"></span>
+					<span>账户余额</span>
+						</span>
+					<span class="chargeMethods">
+						<span class="icon-circle"></span>
+					<span>微信充值</span>
+					</span>
+					<button id="chargeBtn">充值</button>
+					</dd>
+					
 				</ul>
 			</div>
 			
@@ -62,70 +83,54 @@
 				<div class="chargeRow">
 					
 				<div class="chargeLeft textb">
-					<span class="triangle-topleft">
+					<!--<span class="triangle-topleft">
 				       <p>新</p>
-			        </span>
+			        </span>-->
 	
-				  <p class="text_move">无限量</p>	
+				  <p class="text_move">16G</p>	
 				  <p class="text_move">188元</p>
 				</div>
 				<div class="chargeCenter textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>3G</p>
 					<p>18元</p>
 				</div>
 				<div class="chargeRight textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>28G</p>
 					<p>28元</p>
 				</div>
 				</div>
 				 <div class="chargeRow">
 				 	<div class="chargeLeft textb">
-				 		<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+				 		
 				 		<p>3G</p>
 					<p>18元</p>
 				 	</div>
 				<div class="chargeCenter textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>28G</p>
 					<p>28元</p>
 				</div>
 				<div class="chargeRight textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>28G</p>
 					<p>28元</p>
 				</div>
 				 </div>
 				  <div class="chargeRow">
 				  	<div class="chargeLeft textb">
-				  		<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+				  	
 				  		<p>3G</p>
 					<p>18元</p>
 				  	</div>
 				<div class="chargeCenter textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>28G</p>
 					<p>28元</p>
 				</div>
 				<div class="chargeRight textb">
-					<span class="triangle-topleft">
-				       <p>新</p>
-			        </span>
+					
 					<p>28G</p>
 					<p>28元</p>
 				</div>
@@ -160,6 +165,9 @@
             cancel:function(json){
                 console.info('当前选中json：', json);
             }
+        })
+        $('#chargeBtn').click(function(){
+        	 location.href='../personalCenter/renewalsRecords.html'
         })
     });
     </script>

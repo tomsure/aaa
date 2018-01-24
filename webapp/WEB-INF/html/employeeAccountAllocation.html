@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>权限管理-员工账号分配</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script type="text/javascript" src="../vendor/layer/layer.min.js"></script>
+<script type="text/javascript" src="../js/data_table.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+ <body class="page-body">
+	
+	   <div class="search-box">
+    	   <form>
+            <div>
+                <span>姓名：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询姓名">
+            </div>
+             <div class="">
+             	<span>联系方式：</span>
+             	<input type="text" class="form-control" placeholder="查询联系方式">
+             </div>
+             <div style="margin-left: 0px;">
+               <span>部门：</span>
+                  <select name="" id="">
+                  	<option value="">全部</option>
+                  	<option value="">超级管理员</option>
+                  	<option value="">运营</option>
+                  	<option value="">财务</option>
+                  	<option value="">客服</option>
+                  </select>
+                </select>
+            </div>
+               <div style="margin-left: 0px;">
+               <span>职位：</span>
+                  <select name="" id="">
+                  	<option value="">全部</option>
+                  	<option value="">CEO</option>
+                  	<option value="">经理</option>
+                  	<option value="">主管</option>
+                  	<option value="">员工</option>
+                  </select>
+                </select>
+            </div>
+           
+                <div>
+                	<span>注册时间：</span>
+                	<input type="date" class="form-control" name="" id="" value="" />-
+                	<input type="date" class="form-control" name="" id="" value="" />
+                	
+                </div>
+                 <div class="">
+                 <span>账号：</span>
+                 <input type="text" class="form-control" placeholder="查询账号"  name="" id="" value="" />
+                 </div>
+                 <div style="margin-left: 0px;">
+                  <span>工号：</span>
+                   <input type="text" class="form-control" placeholder="查询工号" name="" id="" value="" />
+                   
+                  </div>
+                <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+        </form>
+          
+    </div>
+    
+       
+        <div class="check-btn">
+        
+        	<button id="addModal" class="btn btn-default" onclick="">新增</button>
+           	<button class="btn btn-default" onclick="">填充</button>
+        </div>
+        <h5 class="position-title">当前位置：首页>权限管理>员工账号分配</h5>
+
+       <!--contentBegin-->  
+        <div id="content" >
+        	 <div class="">
+       		 <table class="table-hide" id="employeeAccount"></table>
+       		             <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+                        <script type="text/html" id="viewTpl1">
+                       
+                             <div> <a class="viewPic1" onclick="">查看</a></div>
+                         </script>
+                 </div>
+         </div>
+			  <!--表格新增弹窗开始-->
+		     
+		<div id="modal_AccountAllocation" class="modal_AccountAllocation" style="padding: 10px; display: none;">
+			<div class="addAccount Modal_left" style=" ">
+                  <p><span class="spanTitle">账号</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">密码</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">部门</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">职位</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">姓名</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">工号</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle1">联系方式</span><input type="text" placeholder="查询账号" /></p>
+            </div> 
+             <div class="Modal_right">
+             	  <span>选择客户档案</span><button id="selectDealerBtn" class="btn">选择</button>
+             </div>
+             	<div class="bottom_btn" style="clear: left;">
+					<input type="submit" class="btn btn_ok" value="确定" />
+					<input type="button" class=" btn btn_cancel " value="取消" />
+					<input type="reset" class=" btn  btn_reset " value="重置" style="width: 80px;" />
+				</div>
+			
+ </div>
+                <!--选择客户档案弹窗-->
+                	 <div id="selectDealer" class="selectDealerFile" style="display: none;position: absolute;">
+                
+                	 		<p>
+                	 		<div class="dataBox">
+                	 		<input type="checkbox" /> <input type="text" name="" id="" value="" />
+                	 	    </div>
+                	 	    <div class="dataBox">
+                	 		<input type="checkbox" /> <input type="text" name="" id="" value="" />
+                	 	    </div>
+                	 	    <div class="dataBox">
+                	 		<input type="checkbox" /> <input type="text" name="" id="" value="" />
+                	 	    </div>
+                	 	</p>
+                	     <div class="bottom_btn_1" style="clear: left;">
+					<input type="submit" class="btn btn_ok" value="确定" />
+					<input type="button" class=" btn btn_cancel " value="取消" />
+					<input type="reset" class=" btn  btn_reset " value="重置" style="width: 80px;" />
+				</div>
+                	 	   
+                	 	
+                	 </div>
+                <!--选择客户档案弹窗结束--> 
+         
+               <!--弹窗内容结束-->
+
+	
+			
+
+</body>
+<script type="text/javascript">
+//	  
+   $(function(){
+   $("#addModal").click(function(){
+   	  
+   		layer.open({
+    	title:['新增账号','font-size:18px;font-weight:800;'],
+   	 	type:1,
+   	    area:['400px','400px'],
+   	 	offset:['100px'],
+   	 	content:$("#modal_AccountAllocation")
+   	 })
+    	
+     
+    })
+   
+    $("#selectDealerBtn").click(function(){
+   	  
+   		layer.open({
+    	title:['新增账号','font-size:18px;font-weight:800;'],
+   	 	type:1,
+   	    area:['600px','300px'],
+   	 	offset:['100px','400px'],
+   	 	content:$("#selectDealer")
+   	 })
+    	
+     
+    })
+     
+   })
+</script>
+</html>

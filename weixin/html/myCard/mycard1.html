@@ -7,20 +7,88 @@
 		<link rel="stylesheet" type="text/css" href="../../css/reset1.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../icons/icomoon2/style.css"/>
 		<link rel="stylesheet" type="text/css" href="../../dist/libs/layui/css/layui.css"/>
 		<link rel="stylesheet" type="text/css" href="../../dist/libs/frozen/css/frozen.css" />
+		 <link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="../../dist/libs/swiper/dist/css/swiper.css" />
-		<!--<link rel="stylesheet" type="text/css" href="../../dist/libs/jquery-WeiUI/dist/css/jquery-weui.min.css" />-->
-		<script type="text/javascript"  src="../../dist/libs/layui/layui.js"></script>
-		<!--<script type="text/javascript" src="../../dist/plugs/flexible.js/build/flexible.js"></script>-->
-	    </head>
 		
+		<script type="text/javascript"  src="../../dist/libs/layui/layui.js"></script>
+		
+	    </head>
+		<style type="text/css">
+		 .iconBar1{
+		 	width: 2rem;
+    height: 1rem;
+    display: inline-block;
+    background: lightgray;
+    border-radius: 100px;
+    float: right;
+    line-height: 1;
+    border: 2px solid #26A6FF;
+		 }
+		 .iconBar2{
+		 	width: 1rem;
+		 	height: 1rem;
+		 	background:white;
+		 	display: inline-block;
+		 	border-radius: 100%;
+		 	float: left;
+		 }
+		 #c{
+   margin: 0 auto;
+   display: block;
+   justify-self: center;
+   position: relative;
+   right: 9rem;
+  }
+  #r{
+   display: block;
+   margin: 0 auto;
+  }
+  #r::before{
+   color: black;
+   content: attr(min);
+   padding-right: 10px;
+  }
+  #r::after{
+   color: black;
+   content: attr(max);
+   padding-left: 10px;
+  }  
+  .icon-shuaxin:before{
+  	font-size: 1rem;
+  	line-height: 1.5;
+  	
+  	display: inline-block;
+  	color: white;
+  }
+  .refrech{
+  	background-color: #26A6FF;
+  	color: white;
+  	border-radius: 4px;
+  }
+  .datalist{
+  	height: 7.5rem;
+  	padding: 0.6rem;
+  }
+		</style>
 	<body>
-		<nav class="mycardNav">
-			<div class="dataImage">
-			     <img src="../../dist/libs/jquery-weUI/demos/images/icon_nav_calendar.png"/>
+		<nav class="mycardNav" style="height: 36%!important;">
+			<div class="dataImage" style="display: flex; width: 11rem;height: 15rem;position: relative;top: -1rem;">
+			     <!--<img src="../../dist/libs/jquery-weUI/demos/images/avatar.jpg" style="width: 100%;
+    height: 100%;
+    border-radius: 100%;" />-->
+          <div style="z-index: 1000;position: relative;left: 2.5rem;top: 5rem;color: white;font-size: 16px;">
+          	<div style="font-size: 20px;width: 6.75rem;">已使用流量</div>
+          	<div>1048MB</div>
+          	<div>总量</div>
+          	<div>2000MB</div>
+          </div>
+           <canvas id="c"></canvas>
+ <input type="range" id="r" min="0" max="100" step="1">
 		   </div>
-		   <div class="databox">
+		   <!--<div class="databox">
 		   	    <div class="dataflow">
 		   	    	<p>总流量</p>
 		   	    	<p>2000MB</p>
@@ -33,14 +101,16 @@
 		   	    	<p>已用流量</p>
 		   	    	<p>952MB</p>
 		   	    </div>
-		   </div>
+		   </div>-->
 		</nav>
 		<section>
-			<div class="datalist">
+			<div class="datalist box_common ">
 				<p><span class="datatitle">ICCID:</span><span class="datatext">10956856452</span></p>
 			<p><span class="datatitle">运营商：</span><span class="datatext">移动/电信/联通</span></p>
-			<p><span class="datatitle">卡片状态</span><span class="datatext">正常（或停机/异常/未激活,此状态对接运营商）</span></p>
-			<p><span class="datatitle">当前余额</span><span class="datatext"><i>¥</i> 188<i>元</i></span></p>
+			<p><span class="datatitle">卡片状态</span>
+				<span class="floatright refrech"  ><span class="icon icon-shuaxin floatright">刷新</span></span>
+				<span class="datatext">正常</span></p>
+			<!--<p><span class="datatitle">当前余额</span><span class="datatext"><i>¥</i> 188<i>元</i></span></p>-->
 			<p><span class="datatitle">当前套餐</span><span class="datatext">月流量包8元1G</span></p>
 			<p><span class="datatitle">服务期至：</span><span class="datatext">2017年12月12日</span></p>
 			</div>
@@ -48,11 +118,175 @@
 		</section>
 		 <div class="dataoperation">
 				<ul>
+					
+					
+					
+		<!--<li> <span class="icon icon-Fangyuan">
+           </span>停复机<span id="iconBtn" class="iconBar1" style="background: lightgray;"><span id="iconbtn1" class="iconBar2" ></span></span></li>-->
+					
+					<a href="../myCard/BindingsCard.html"><li> <span class="icon icon-flow"></span>切换卡片<i class="layui-icon">&#xe602;</i> </li></a> <!--暂时不要-->
 					<a href="../myDevice/flowUsage.html"><li> <span class="icon icon-flow"></span>流量使用明细<i class="layui-icon">&#xe602;</i> </li></a>
+					 <a href="../personalCenter/renewalsRecords.html"><li> <span class="icon icon-flow"></span>套餐续费记录<i class="layui-icon">&#xe602;</i> </li></a>
+					<a href="../SetMealChange/Modifiable.html"><li> <span class="icon icon-flow"></span>套餐变更<i class="layui-icon">&#xe602;</i> </li></a>
 					
 					
-					<li><a> <span class="icon icon-Fangyuan"></span>停复机<i class="layui-icon">&#xe602;</i></a></li>
+					
+					
 				</ul>
 			</div>
+			<div style="display: flex;margin-top: 1rem;" >
+				<div id="chargeBtn" style="float: left;flex: 1;text-align: center;display: inline-block;">
+					<p><span class="icon icon-charge"></span></p>
+			        <p>流量充值</p>
+				</div>
+			   <div style="float: left;flex: 1;text-align: center;display: inline-block;background-color:#26A6FF;">
+			   	<p><span class="icon  icon-audit " style="color: white"></span></p>
+			        <p style="color: white;">已实名</p>
+			   </div>
+			</div>
 	</body>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	
+	<script>
+		$('#iconBtn').click(function(){
+
+
+       	  $('#iconbtn1').toggleClass('toggleBtn')
+       	   if($('#iconbtn1').hasClass('toggleBtn')){
+       	   	  $('#iconBtn').css('background-color','#26A6FF')
+       	   	  $('#iconbtn1').css('float','right')
+       	   }else{
+       	   	 $('#iconBtn').css('background-color','lightgray')
+       	   	 $('#iconbtn1').css('float','left')
+       	   	 
+       	   }
+       })
+
+        
+	</script>
+	<script type="text/javascript">
+  var canvas = document.getElementById('c');
+  var ctx = canvas.getContext('2d');
+  var range = document.getElementById('r');
+ 
+  //range控件信息
+  var rangeValue = range.value;
+  var nowRange = 0; //用于做一个临时的range
+ 
+  //画布属性
+  var mW = canvas.width = 250;
+  var mH = canvas.height = 250;
+  var lineWidth = 2;
+ 
+  //圆属性
+  var r = mH / 2; //圆心
+  var cR = r - 16 * lineWidth; //圆半径
+ 
+  //Sin 曲线属性
+  var sX = 0;
+  var sY = mH / 2;
+  var axisLength = mW; //轴长
+  var waveWidth = 0.015 ; //波浪宽度,数越小越宽 
+  var waveHeight = 6; //波浪高度,数越大越高
+  var speed = 0.09; //波浪速度，数越大速度越快
+  var xOffset = 0; //波浪x偏移量
+ 
+  ctx.lineWidth = lineWidth;
+ 
+  //画圈函数
+  var IsdrawCircled = false;
+  var drawCircle = function(){
+ 
+   ctx.beginPath();
+   ctx.strokeStyle = 'white';
+   ctx.arc(r, r, cR+5, 0, 2 * Math.PI);
+   ctx.stroke();
+   ctx.beginPath();
+   ctx.arc(r, r, cR, 0, 2 * Math.PI);
+   ctx.clip();
+ 
+  }
+ 
+  //画sin 曲线函数
+  var drawSin = function(xOffset){
+   ctx.save();
+ 
+   var points=[]; //用于存放绘制Sin曲线的点
+ 
+   ctx.beginPath();
+   //在整个轴长上取点
+   for(var x = sX; x < sX + axisLength; x += 20 / axisLength){
+    //此处坐标(x,y)的取点，依靠公式 “振幅高*sin(x*振幅宽 + 振幅偏移量)”
+    var y = -Math.sin((sX + x) * waveWidth + xOffset);
+ 
+    var dY = mH * (1 - nowRange / 100 );
+ 
+    points.push([x, dY + y * waveHeight]);
+    ctx.lineTo(x, dY + y * waveHeight);  
+   }
+ 
+   //封闭路径
+   ctx.lineTo(axisLength, mH);
+   ctx.lineTo(sX, mH);
+   ctx.lineTo(points[0][0],points[0][1]);
+   ctx.fillStyle = '#00AEEF';
+   ctx.fill();
+ 
+   ctx.restore();
+  };
+ 
+  //写百分比文本函数
+  var drawText = function(){
+   ctx.save();
+ 
+   var size = 0.4*cR;
+   ctx.font = size + 'px Microsoft Yahei';
+   ctx.textAlign = 'center';
+   ctx.fillStyle = "rgba(06, 85, 128, 0.8)";
+// ctx.fillText(~~nowRange + '%', r, r + size / 2);
+ 
+   ctx.restore();
+  };
+ 
+  var render = function(){
+   ctx.clearRect(0, 0, mW, mH);
+ 
+   rangeValue = range.value;
+ 
+   if(IsdrawCircled == false){
+    drawCircle(); 
+   }
+ 
+   if(nowRange <= rangeValue){
+    var tmp = 1;
+    nowRange += tmp;
+   }
+ 
+   if(nowRange > rangeValue){
+    var tmp = 1;
+    nowRange -= tmp;
+   }
+ 
+   drawSin(xOffset);
+   drawText(); 
+ 
+   xOffset += speed;
+   requestAnimationFrame(render);
+  }
+ 
+  render();  
+ </script>
+ <script>
+ 	 //流量充值
+ 	 $('#chargeBtn').click(function(){
+        
+        	  location.href='cardflowRechage.html'
+        	  
+        })
+        $('#devSwitch').click(function(){
+        	
+        	  location.href='../myCard/BindingsCard.html'
+        	  
+        })
+ </script>
 </html>

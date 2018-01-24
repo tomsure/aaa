@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卡片管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link href="css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="css/table_public.css"/>
+<script src="vendor/jquery-3.1.1.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/bootstrap/bootstrap-table.min.js"></script>
+<script src="vendor/bootstrap/bootstrap-table-locale-all.min.js"></script>
+<script src="vendor/layer/layer.min.js" ></script>
+</head>
+ 
+<body class="page-body" >
+	 <div class="filter_content">
+	 	<form action="" method="post">
+	 	   <div class="filter_left">
+	 	   	<div class="usercode">
+	 	   		 <span id="">
+	 	    	<span id="">
+	 	    		ICCID/用户自编码
+	 	    	</span><input type="text" name="" placeholder="查询ICCID/用户自编码" id="" value="" />	
+	 	    </span>
+	 	    
+	 	   	</div>
+	 	    <div class="filter_line">
+	 	    	<span id="">
+	 	    	在线
+	 	    </span>
+	 	  <select name="" id="">
+	 	  	 
+	 	   
+	 	  	<option value="">全部</option>
+	 	  	<option value="">是</option>
+	 	  	<option value="">否</option>
+	 	  </select>
+	 	    </div>
+	 	 <div class="filter_area">
+	 	 	 <span id="">
+	 	  	归属地
+	 	  </span>
+	 	  <select name="" id="">
+	 	  	
+	 	  	<option value="">全部</option>
+	 	  	<option value="">深圳市</option>
+	 	  	<option value="">东莞市</option>
+	 	  	<option value="">显示更多城市...</option>
+	 	  </select>
+	 	 </div>
+	 	 <div class="filter_can">
+	 	 	 <span>运营商</span>
+	 	  <select name="" id="">
+	 	  	<option value="">全部</option>
+	 	  	<option value="">联通卡</option>
+	 	  	<option value="">移动卡</option>
+	 	  	<option value="">电信卡</option>
+	 	  </select>
+	 	 </div>
+	 	  <div class="filter_kind">
+	 	  	 <span>流量套餐</span>
+	 	  <select name="" id="">
+	 	  	<option value="">全部</option>
+	 	  	<option value="">套餐有什么</option>
+	 	  	<option value="">就显示什么</option>
+	 	  	<option value="">很多很多</option>
+	 	  </select>
+	 	  </div>
+	 	   <div class="filter_left_btn">
+	 	   	 <button>全选</button>
+	 	   	 <button>新增</button>
+	 	   	 <button>批量限速</button>
+	 	   	 <button>批量矫正</button>
+	 	   	 <button>停机</button>
+	 	   	 <button>批量删除</button>
+	 	   </div>
+	 	   </div>
+	 	   <div class="filter_right">
+	 	   	 <div class="issuingTime">
+	 	   	 	<span>发卡时间：</span>
+	 	   	 	<input type="date" name="" id="" value="" />-
+	 	   	 	<input type="date" name="" id="" value="" />
+	 	   	 </div>
+	 	   	 <div class="form_btn">
+	 	   	 	 <input type="button" class="btn" name="" id="" value="重置" />
+	 	    <input type="button" class="btn" name="" id="" value="搜索" />
+	 	   	 </div>
+	 	   	 <div class="validityTime">
+	 	   	   <span>
+	 	   	   	有效期:
+	 	   	   </span>
+	 	   	 
+	 	   	 	  <input type="date" name="" id="" value="" />
+	 	   	   <input type="date" name="" id="" value="" />
+	 	   	 
+	 	   	 </div>
+	 	   	 
+	 	   
+	 	   	 <div class="activationTime">
+	 	   	 	<span>激活时间:</span>
+	 	   	 	<input type="date" name="" id="" value="" />
+	 	   	 	<input type="date" name="" id="" value="" />
+	 	   	 </div>
+	 	   </div>
+	 	</form>
+	 </div>
+	
+   
+
+       <!--contentBegin-->  
+        <div id="content" style="width: 100%;" >
+           
+            <div class="table_content" style="float: left;">
+            	 <iframe src="myCard.html" width="100%" height="500px" frameborder="0"></iframe>
+            	 
+            </div>
+            
+			 </div>
+			 <!--contentEnd-->
+                   
+
+
+
+</body>
+
+</html>

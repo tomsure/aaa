@@ -1,20 +1,46 @@
-  $(function(){
-  	  
-		  	$('#logout').click(function(){
-		  	layer.open({
-			type:0,
-		   
-//			area:['3.5rem','3.5rem'],
-			style:'height:3.5rem;width:8.5rem;font-size:0.5rem;',
-			content:'你确定退出账户吗？',
-			btn:['确定','取消'],
-			btn1:function(){
-				alert(1)
-			}
+$(function(){
+         //页面登录
+          $('#getNum').click(function(){
+       var countdown=60;
+function settime() { 
+			if (countdown == 0) { 
+					  $('#getNum').removeAttr("disabled"); 
+					
+					   $('#getNum').text("免费获取验证码"); 
+					countdown = 60; 
+					return;
+			} else { 
+						$('#getNum').attr("disabled",true)
+						$('#getNum').text("重新发送(" + countdown + ")"); 
+						countdown--; 
+					} 
+			setTimeout(function() { 
+					settime( ) }
+					,1000) 
 			
-			})
-		      
-		  		  	//套餐变更
+			}
+         settime()
+   
+		      $.ajax({
+		      	type:"post",
+		      	url:"",
+		      	async:true,
+		      	data:{'telphone':$('#telphone').val()},
+		      	dataType:'json',
+		      	success:function(){
+		      		  
+		      	}
+		      	
+		      });
+		})
+			
+			 
+	  
+			
+			  
+			
+			
+		  			  		  	//套餐变更
 		  	$('#select_packge').click(function(){
 //         $('.picker-item').addClass('selecttextRow')
 //		  		FastClick.attach(document.body);
@@ -30,10 +56,6 @@
        
       });
 		  	})
-		  	
-		  
-		    
-		  })
 		  	 
 		  	//流量退费
 		    $('#refundBtn').click(function(){
@@ -57,7 +79,7 @@
 		    })
 		   
    
-		  	//充值缴费
+		  	//流量充值
 		  	$('.chargeRow').children().children('p').addClass('text_move')
 		  	$('#chargeContent >.chargeRow > div' ).click(function(e){
 		
@@ -93,12 +115,114 @@
 //     	  $(this).css('background-color','white')
        	  $('#iconbtn1').toggleClass('toggleBtn')
        	   if($('#iconbtn1').hasClass('toggleBtn')){
-       	   	  $('#iconBtn').css('background-color','lightgray')
+       	   	  $('#iconBtn').css('background-color','#26A6FF')
 //     	   	  $('#iconbtn1').css('background-color','gray')
        	   }else{
-       	   	 $('#iconBtn').css('background-color','#26A6FF')
+       	   	 $('#iconBtn').css('background-color','lightgray')
        	   }
        })
    
+        $('#chargeBtn').click(function(){
+        
+        	  location.href='../myDevice/flowRecharge.html'
+        	  
+        })
+        $('#devSwitch').click(function(){
+        	
+        	  location.href='../myCard/BindingsCard.html'
+        	  
+        })
+        $('#renewalsRecords').click(function(){
+        	 location.href='../personalCenter/renewalsRecords.html'
+        })
+        $('#flowUsage').click(function(){
+        	 location.href='flowUsage.html'
+        })
+        
+        //设备认证-认证进度
+          $('#prog').click(function(){
+          	 
+          	 $.ajax({
+          	 	url:'demo2.php',
+          	 	dataType:'text',
+          	 	type:'get',
+          	 	success:function(d){
+          	 		   if(d=='auditting'){
+          	 		   	 $('.auditting').removeClass('hide_toggle')
+          	 		   }else if(d=='auditPass'){
+          	 		   	  $('.auditPass').removeClass('hide_toggle')
+          	 		   }else if(d=='auditNotpass'){
+          	 		   	  $('.auditNotpass').removeClass('hide_toggle')
+          	 		   }
+          	 	},
+          	 	error:function(err){
+          	 		  alert(err)
+          	 	}
+          	 })
+          	
+          })
      
+       $('#zhuxiao').click(function(){
+       	   layer.open({
+       	   	 content:'你确定注销吗？',
+       	   	 style:'font-size:0.5rem;',
+       	   	 btn:['确定','取消'],
+       	   	 yes:function(){
+       	   	 	  $.ajax({   //发送注销请求
+       	   	 	  	url:'',
+       	   	 	  	type:'post',
+       	   	 	  	data:'cancellation',
+       	   	 	  	dataType:'',
+       	   	 	  	success:function(d){
+       	   	 	  		   layer.open({
+       	   	 	  		   	  type:'0',
+       	   	 	  		   	  content:'已注销',
+       	   	 	  		   	  time:3
+       	   	 	  		   })
+       	   	 	  	}
+       	   	 	  })
+                	layer.open({
+       	   	 	  		   	  type:'0',
+       	   	 	  		   	  content:'已注销,页面即将退出',
+       	   	 	  		   	  style:'font-size:0.5rem;',
+       	   	 	  		   	  time:2
+       	   	 	  		   })
+       	   	 	   function tiaozhuan(){
+       	   	 	   	location.href='../../html/QRcode/NotLoggedIn.html'
+       	   	 	   }
+       	   	 	   setTimeout(tiaozhuan,2000)
+       	   	     clearTimeout(tiaozhuan)
+       	   	 }
+       	   })
+       	   
+       })
+      
+           //退出页面
+  	      
+		  	$('#logout').click(function() {
+			
+				layer.open({
+					type: 0,
+
+					area:['3.5rem','3.5rem'],
+					style: 'height:3.5rem;width:8.5rem;font-size:0.5rem;',
+					content: '你确定退出账户吗？',
+					btn: ['确定', '取消'],
+					yes: function() {
+						location.href="../../html/QRcode/NotLoggedIn.html"
+					}
+
+				})
+               
+		  })
+       
+       $('#tingfuji').click(function(){
+       	  
+       })
+       
+       //设备报修
+        $('#baoxiuBtn').click(function(){
+//      	  alert(1)
+        })
+       
 })

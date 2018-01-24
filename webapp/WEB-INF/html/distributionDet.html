@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分销管理-分销明细</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../vendor/layui/css/layui.css" />
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/layui/layui.js"></script>
+<script src="../js/data_table.js"></script>
+<script src="../js/public.js" ></script>
+</head>
+
+<body class="page-body">
+	
+	
+        <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：分销管理&gt;分销明细 
+        </h5>
+      
+       <!--contentBegin-->  
+        <div id="content" >
+         <div class="search-box">
+    	   <form>
+            <div>
+                <span>用户编号：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询用户编号">
+            </div>
+           
+            <div>
+                <span>绑定编号：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询绑定编号">
+            </div>
+            
+           <div>
+                <span>银行卡号：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询卡号">
+            </div>
+            
+             <div>
+                <span>客户名称：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询客户名称">
+            </div>
+           <div>
+                <span>负责人：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询负责人">
+            </div>
+          <div>
+                <span>负责人电话：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询负责人电话">
+            </div>
+           <div style="margin-left: 0px;">
+                <span>身份：</span>
+                <select class="form-control" id="" name="" style="width:120px">               	
+                	<option>全部</option>
+                	<option>A</option>
+                	<option>B</option> 
+                	<option>C</option>
+                	<option>D</option>
+                	<option>X</option>
+                </select>
+            </div>
+            <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+        </form>
+    </div>
+    
+    <div class="search-box check-btn">
+        <div class="check-btn">
+        	
+        	<button class="btn btn-default" onclick="">申请</button>
+        	<button class="btn btn-default" onclick="">修改</button>
+            <button class="btn btn-default" onclick="">删除</button>
+            
+        </div>
+        <div class="validityTime" style="float: right;">
+	 	   	   <span>
+	 	   	   	分润日期:
+	 	   	   </span>
+	 	   	 
+	 	   	 	<input type="date" name="" id="" value=""  style="position: static"/>-
+	 	   	   <input type="date" name="" id="" value="" style="position: static"/>
+	 	   	 
+	 	   	 </div>
+    </div>
+    
+
+    <div class="ibox-content">
+       		
+		<table class="table-hide" id="distributionDet">
+		
+		</table>
+		 <script type="text/html" id="indexTpl">
+		 	  {{d.LAY_TABLE_INDEX+1}} 
+		 </script>
+      	 </div>
+          <!--paginationBegin-->
+    
+</div>
+ <!--contentEnd-->
+
+
+
+</body>
+
+</html>

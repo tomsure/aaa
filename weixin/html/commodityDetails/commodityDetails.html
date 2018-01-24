@@ -6,7 +6,55 @@
 		<link rel="stylesheet" type="text/css" href="../../dist/libs/bootstrap/css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css"/>
 	</head>
+	<style type="text/css">
+		.textMove{
+			position: relative;
+			left: 2rem;
+		}
+		.textOnlyMove{
+			margin-right: 0.7rem;
+		}
+		.devType{
+			margin-left: 1rem;
+			margin-right: 0.3rem;
+		}
+		
+		.selectBox {
+			display: flex;
+			flex-direction: row;
+			/*flex-flow: nowrap;*/
+			flex-wrap: wrap;
+			overflow-y: scroll;
+			
+		} 
+		 .commodityColor,.commodityPackage{
+		 	border: 4px dashed gray;
+		 	padding: 0.2rem 0.4rem;
+		 	margin: 0.2rem;
+		 	border-radius: 10px;
+		 	font-size: 0.4rem;
+		 }
+		 .btnBox{
+		 	 position: fixed;
+		 	 bottom: 0;
+		 	 width: 100%;
+		 	 left: 0;
+		 	justify-content: center;
+		 	background-color: #26A6FF;
+		 	color: white;
+		 	text-align: center;
+		 	height: 1.5rem;
+		 	line-height: 1.5rem;
+		 	font-size: 0.5rem;
+		 }
+		 
+		 .selectTitle{
+		 	align-self: flex-start;
+		 }
+		 
+	</style>
 	<body>
 		
 			<div class="carousel slide" id="myCarousel" style="width:100% ;" data-ride="carousel">
@@ -28,14 +76,28 @@
 		    <div class="CommodityInfoText">
 		    	<p>无限流量神器充电宝随身WiFi电信上网宝不插卡托mifi4G无线路由器</p>
 		    	<div class="priceContent">
-		    		<p><span class="title_left">购买价格</span><span>
+		    		<p><span class="title_left" >购买价格</span><span>
 		    			￥798.00
 		    		</span></p>
-		    		<p><span class="title_left">购买原价</span><span><del>￥998.00</del></span></p>
+		    		<p><span class="title_left">购买原价</span><span style=" left:0.2rem;position: relative;"><del>￥998.00</del></span></p>
+		    		<p style="">
+		    			
+		    			
+		    				
+		    				<span class="">
+		    					<span class="title_left  textOnlyMove">运营商</span><span >电信</span>
+		    					<span class="title_left devType" >类型</span><span >一体机</span>
+		    				</span>
+		    			
+		    		</p>
+		    		 <div class="selectOrder" id="selectColor">选择颜色</div>
+		    		 <div class="selectOrder" id="selectPackage">选择套餐</div>
+		    	
 		    	</div>
 		    	<div class="shareBox">
 		    		<span class="icon_share"><img src="../../images/share.png"/></span><span>分享</span>
 		    	</div>
+		    	
 		    </div>
 		    <div class="picView"><img src="https://dummyimage.com/600x400/fc1"/></div>
 		    <div class="picView"><img src="https://dummyimage.com/600x400/green"/></div>
@@ -44,10 +106,100 @@
 		    <div class="buyBtn">
 		    	立即购买
 		    </div>
-		    
+		   
 	</body>
 	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
 	<script src="../../dist/libs/bootstrap/js/bootstrap.js"></script>
 	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
 	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+		<script type="text/javascript">
+				$(function(){
+					$('#selectColor').on('click',function(){
+					
+					layer.open({
+						title:['选择颜色','text-align:left;padding:0;font-size:0.55rem;'],
+						type:1,
+						content:'<div class="selectBox" id="ColorBox">'+
+		    	 
+		    	'<div class="commodityColor bcolor">白色</div> ' + 
+		    	'<div class="commodityColor bcolor">黑色</div> ' + 
+		    	'<div class="commodityColor bcolor">红色</div> ' + 
+		    	'<div class="commodityColor bcolor">黄色</div> ' + 
+		    	'<div class="commodityColor bcolor">蓝色</div> ' + 
+		    	'<div class="commodityColor bcolor">绿色</div> ' + 
+		    	'<div class="commodityColor bcolor">紫色</div> ' + 
+		    	'<div class="commodityColor bcolor">棕色</div> ' + 
+		    	'<div class="commodityColor bcolor">无色</div> ' + 
+		    	'<div class="commodityColor bcolor">卡其</div> ' + 
+		    	"<div class='btnBox' id='selectOk'>确定</div> "+ 
+		    '</div>',
+						anim:'up',
+						style:'position:fixed; bottom:0; left:0; width: 100%; min-height:40%; padding:10px 0; border:none;',
+						success:function(){
+							  
+							$('#ColorBox').children('.bcolor').each(function(i,val){
+								 $(val).click(function(){
+								 	$(this).css('border','4px solid #26A6FF')
+								 	$(this).siblings('.bcolor').css('border','4px dashed gray')
+								 })
+								 
+							})
+							
+							$('#selectOk').on('click',function(){
+								
+							  layer.closeAll()
+						})
+						}
+						
+						
+					})
+				})
+					
+					$('#selectPackage').on('click',function(){
+					
+					layer.open({
+						title:['选择套餐','text-align:left;padding:0;font-size:0.55rem;'],
+						type:1,
+						content:'<div class="selectBox" id="packageBox">'+
+		    	
+		    	'<div class="commodityPackage bcolor" id="box">无线流量不太网口短信版</div> ' +
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor ">无限流量不带网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线流量不带网就短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线网口短信版</div> ' + 
+		    	'<div class="commodityPackage bcolor">无线流量不带网口短信版</div> ' + 
+		    	'<div class="btnBox" id="selectOK1">确定</div> ' + 
+		    '</div>',
+						anim:'up',
+						style:'position:fixed; bottom:0; left:0; width: 100%; min-height:40%; padding:10px 0; border:none;',
+						success:function(){
+							$('#packageBox').children('.bcolor').each(function(i,val){
+								 $(val).click(function(){
+								 	$(this).css('border','4px solid #26A6FF')
+								 	$(this).siblings('.bcolor').css('border','4px dashed gray')
+								 })
+								 
+							})
+							$('#selectOK1').on('click',function(){
+								
+							  layer.closeAll()
+						})
+						}
+					})
+					
+				})
+					
+								 
+					   
+					      
+				})
+				
+				
+		</script>
+	
 </html>

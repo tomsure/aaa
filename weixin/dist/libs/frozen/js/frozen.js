@@ -683,14 +683,14 @@ if("undefined" == typeof Zepto) throw new Error("Parallax.js's script requires Z
 	}), a(".page *").on("webkitAnimationEnd", function() {
 		event.stopPropagation()
 	}), a(window).on("load", function() {
-		if(w.loading && (a(".parallax-loading").remove(), y = !1, a(u[p]).addClass("current"), w.onchange(p, u[p], o), j()), w.indicator) {
-			y = !1;
-			var b = "horizontal" === w.direction ? "parallax-h-indicator" : "parallax-v-indicator";
-			a(".wrapper").append("<div class=" + b + "></div>");
-			for(var c = "<ul>", d = 1; q >= d; d++) c += 1 === d ? '<li class="current">' + d + "</li>" : "<li>" + d + "</li>";
-			c += "</ul>", a("." + b).append(c)
-		}
-		w.arrow && (u.append('<span class="parallax-arrow"></span>'), a(u[q - 1]).find(".parallax-arrow").remove())
+//		if(w.loading && (a(".parallax-loading").remove(), y = !1, a(u[p]).addClass("current"), w.onchange(p, u[p], o), j()), w.indicator) {
+//			y = !1;
+//			var b = "horizontal" === w.direction ? "parallax-h-indicator" : "parallax-v-indicator";
+//			a(".wrapper").append("<div class=" + b + "></div>");
+//			for(var c = "<ul>", d = 1; q >= d; d++) c += 1 === d ? '<li class="current">' + d + "</li>" : "<li>" + d + "</li>";
+//			c += "</ul>", a("." + b).append(c)
+//		}
+//		w.arrow && (u.append('<span class="parallax-arrow"></span>'), a(u[q - 1]).find(".parallax-arrow").remove())
 	}), window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
 		(180 === window.orientation || 0 === window.orientation) && w.orientationchange("portrait"), (90 === window.orientation || -90 === window.orientation) && w.orientationchange("landscape")
 	}, !1)
