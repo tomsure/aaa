@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+	</head>
+	  <style type="text/css">
+	  	   .record p{
+	  	   	line-height: 1rem;
+	  	   	display: flex;
+	  	   	justify-content: space-around;
+	  	   }
+	  	   .shizhong{
+	  	   	background: url(../../images/shizhong.png);
+	  	   }
+	  	   .head{
+	  	   	  height: 5rem;
+	  	   	  width: 100%;
+	  	   	  background-color: #26A6FF;
+	  	   }
+	  	   .qrcode{
+	  	   	  
+	  	   	  width: 3rem;
+	  	   	  height: 3rem;
+	  	   	  margin: 0 auto;
+	  	   	  padding-top: 0.6rem;
+	  	   }
+	  	   .qrcode img{
+	  	   	  width: 100%;
+	  	   	  height: 100%;
+	  	   }
+	  	   .search{
+	  	   	width: 90%;
+	  	   	margin: 0 auto;
+	  	   	margin-top: 0.5rem;
+	  	   	background-color: white;
+	  	   }
+	  	   .search input{
+	  	   	width: 80%;
+	  	   	display: inline-block;
+	  	   	height: 0.7rem;
+	  	   	border-radius: 4px;
+	  	   	font-size: 0.45rem;
+	  	   	float: right;
+	  	   }
+	  	   .search .icon-scanning:before{
+	  	   	/*position: relative;
+	  	   	right: 0.5rem;
+	  	   	/*color: #26A6FF;*/
+	  	   	/*color: black;
+	  	   	top: 0.1rem;*/
+	  	   	font-size: 0.6rem;
+	  	   	color: #26A6FF;
+	  	   	margin-left: 0.1rem;
+	  	   	/*z-index: 1000;
+	  	   	float: right;
+	  	   	top: -0.6rem;*/
+	  	   }
+	  	   .icon-search:before{
+	  	   	 /*color: #26A6FF;*/
+	  	   	 margin-right: 0.2rem;
+	  	   	 margin-top: 0.3rem;
+	  	   	 font-size: 0.5rem;
+	  	   }
+	  	   .tip{
+	  	   	border: 2px solid white;
+	  	   	height: 0.5rem;
+	  	   	width: 3rem;
+	  	   	/*position: relative;*/
+	  	   	bottom: 0.5rem;
+	  	   	border-radius: 5px;
+	  	   	color: white;
+	  	   	float: left;
+	  	   	margin-top: 3.2rem;
+	  	   	
+	  	   }
+	  	   .sanjiao{
+	  	    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-right: 21px solid white;
+    border-bottom: 21px solid transparent;
+    display: inline-block;
+      position: relative;
+      top: 0.06rem;
+         left: 1.3rem;
+	  	   }
+	  	   /*ul{
+	  	   	width: 2.1rem;
+	  	   	float: right;
+	  	   	/*display: none;*/
+	  	   }
+	  	   ul li{
+	  	   	list-style: none;
+	  	   	border: 1px solid #26A6FF;
+	  	   	width: 2rem;
+	  	   	text-align: center;
+	  	   }*/
+	  </style>
+	<body>
+		<div class="head">
+			<div class="floatright tip">
+				 点击扫码更快捷
+				<span class="sanjiao "></span>
+			
+			</div>
+			<div class="qrcode">
+				<img src="../../images/qrcode.png" alt="" />
+			</div>
+			
+			<div class="search" style="border-radius:6px; display: flex;justify-content: space-between;">
+					<span class="icon icon-scanning"></span>
+				<input type="text" placeholder="请输入ICCID号码" />
+				<span id="searchBtn" class="icon icon-search"></span>
+				
+			</div>
+			<!--<ul  >
+				<li>搜索卡片</li>
+				<li>搜索设备</li>
+				<li>卡片未实名</li>
+				<li>设备未实名</li>
+			</ul>-->
+			
+		</div>
+		<div class="box_common record">
+			<p><span class="" ><img src="../../images/shizhong.png"/></span><span class="floatleft" style="position: relative;right: 1.6rem;" >历史记录</span><span >6条</span><p>
+			<p><span>1122422352534546445</span><span>2-19 12:56</span></p>
+			<p><span>1122422352534580965</span><span>2-19 12:56</span></p>
+			<p><span>1122422352546480968</span><span>2-19 12:56</span></p>
+			<p><span>1122422334546480968</span><span>2-19 12:56</span></p>
+		</div>
+		
+	</body>
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<!--<script>
+		 $('ul').hide()
+		 $('#searchBtn').click(function(){
+//		 	  alert(1)
+		 	   $('ul').show()
+		 })
+	</script>-->
+</html>

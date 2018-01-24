@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<title>卡片流量充值</title>
+	 <link rel="stylesheet" type="text/css" href="../../dist/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../dist/plugs/mobileSelector/css/mpicker.css">
+		<link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../icons/icomoon/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		
+	     
+	
+		
+	</head>
+	<style type="text/css">
+			.dataInfo{
+			margin-top: 0.5rem;
+		}
+		.text_left{
+			margin-left: 1rem;
+		}
+		.text_right{
+			margin-right: 1rem;
+		}
+		.icon-circle:before{
+			color: #26A6FF;
+			/*background: #26A6FF;*/
+			border-radius: 100%;
+		}
+	</style>
+	<body class="bodyPage">
+		
+		<nav class="nav_header_1" style="height: 5.5rem;">
+			<div class="nav_textarea " style="height: 4rem;">
+				<ul>
+					<dt>
+						流量充值
+					</dt>
+					<dd>
+						<input type="text" placeholder="请输入ICCID/设备号" /> 
+						<input type="text" placeholder="请输入卡密号充值" /> 
+						
+					</dd>
+					<dd style="margin-top: 0.5rem;">
+						<span class="chargeMethods">
+							<span class="icon icon-circle"></span>
+					<span>账户余额</span>
+						</span>
+					<span class="chargeMethods">
+						<span class="icon-circle"></span>
+					<span>微信充值</span>
+					</span>
+					<button id="chargeBtn">充值</button>
+					</dd>
+					
+				</ul>
+			</div>
+			
+			   </div>
+			     <p id="show-actions" class="settingBtn" style="margin: 0;margin-top: 0.2rem;">
+			  	<span style="display: inline-block;float: left;">选择变更套餐</span>
+			  	<input type="text" id="select-input" class=" select-value3 form-control" value="1111" style="width: 3rem; width: 3rem;
+    position: relative;left: 3rem;opacity: 0;" >
+			  	<span class="icon icon-jiantoudown" style="float: right;color: white;position: relative;font-size: 0.5rem;">
+			  		
+			  	</span>
+			  	<span id="select_packge" style="color:white ;display: inline-block;float: right;">月流量包</span>
+			  </p>  
+		</nav>
+		<section>
+			
+<!--<p class="selecte_date"><span class="selecte_date_title">选择日期</span>
+				<span class="icon icon-dateList" style="float: right;position: relative;left: 2.4rem;
+    top: 0.15rem;"></span>
+				<input style="direction: ltr; background-color:rgba(255,255,255,0.001); width: 5rem;margin-top: -0.7rem;position: relative;
+    left: 1rem" placeholder="请选择日期"  type="text" id="date2" class="text_right  "  />
+				
+			</p>-->
+			<div id="chargeContent" class="chargeBox box_common">
+				<div class="chargeRow">
+					
+				<div class="chargeLeft textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+	
+				  <p class="text_move">16G</p>	
+				  <p class="text_move">188元</p>
+				</div>
+				<div class="chargeCenter textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>3G</p>
+					<p>18元</p>
+				</div>
+				<div class="chargeRight textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>28G</p>
+					<p>28元</p>
+				</div>
+				</div>
+				 <div class="chargeRow">
+				 	<div class="chargeLeft textb">
+				 		<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+				 		<p>3G</p>
+					<p>18元</p>
+				 	</div>
+				<div class="chargeCenter textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>28G</p>
+					<p>28元</p>
+				</div>
+				<div class="chargeRight textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>28G</p>
+					<p>28元</p>
+				</div>
+				 </div>
+				  <div class="chargeRow">
+				  	<div class="chargeLeft textb">
+				  		<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+				  		<p>3G</p>
+					<p>18元</p>
+				  	</div>
+				<div class="chargeCenter textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>28G</p>
+					<p>28元</p>
+				</div>
+				<div class="chargeRight textb">
+					<!--<span class="triangle-topleft">
+				       <p>新</p>
+			        </span>-->
+					<p>28G</p>
+					<p>28元</p>
+				</div>
+				  </div>
+			</div>
+			
+		</section>
+		</body>
+	
+	
+    
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+		<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+      <script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+    <script src="../../dist/plugs/mobileSelector/js/json.js"></script>
+    <script src="../../dist/plugs/mobileSelector/js/jsonExchange.js"></script>
+    <script src="../../dist/plugs/mobileSelector/js/mPicker.js"></script>
+    <script src="../../js/script.js"></script>
+    <script chartset="UTF-8">
+    $(function() {
+//  一级
+        var method3=$('.select-value3').mPicker({
+            level:1,
+            dataJson:dataJson,
+            Linkage:false,
+            rows:4,
+            idDefault:true,
+            header:'<div class="mPicker-header">套餐选择</div>',
+            confirm:function(json){
+                console.info('当前选中json：', json);
+            },
+            cancel:function(json){
+                console.info('当前选中json：', json);
+            }
+        })
+        $('#chargeBtn').click(function(){
+        	 location.href='../personalCenter/renewalsRecords.html'
+        })
+    });
+    </script>
+</html>

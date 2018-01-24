@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>库存管理-卡片库存</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+		<link href="../css/public.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/cardMange.css" />
+		<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css" media="all" />
+		<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+			<script src="../vendor/jquery-3.1.1.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/data_table.js"></script>
+		
+	</head>
+  
+	<body class="page-body">
+		<h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：库存管理&gt;卡片库存
+        </h5>
+
+		<!--contentBegin-->
+		<div id="content">
+			
+			<div class="search-box check-btn">
+				<div class="check-btn">
+
+					<button class="btn btn-default" id="building" onclick="">建库+</button>
+					
+				 </div>
+					
+			</div>
+
+			<div class="ibox-content">
+
+				<table id="cardInveroryList" class="table-hide">
+				
+				</table>
+                 <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}} 
+                         </script>
+                         <script type="text/html" id='showCardNumber'>
+                         	  <div id="">
+                         	  	<a  onclick="showCardNumber()">查看</a>
+                         	  </div>
+                         </script>
+			   
+
+			</div>
+
+		</div>
+			  <!--表格新增弹窗开始-->
+		     
+		<div id="modal_AccountAllocation" class="modal_AccountAllocation" style="padding: 10px; display: none;">
+			<div class="addAccount Modal_left" style=" ">
+                  <p><span class="spanTitle">套餐群组</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">套餐名称</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">套餐总量</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">能否变更套餐</span>
+                  	<select name="">
+                  	<option value="">是</option>
+                  	<option value="">否</option>
+                  </select></p>
+                  <p><span class="spanTitle">变更次数</span><input type="text" placeholder="查询账号" /></p>
+                  <p><span class="spanTitle">套餐描述</span><textarea name="" rows="10" cols="30"></textarea></p>
+                  
+            </div> 
+             <div class="Modal_right">
+             	  <span>有效期</span>
+             	  <select name="" id="">
+             	  	<option value="">
+             	  		月
+             	  	</option>
+             	  	<option value="">季度</option>
+             	  	<option value="">年</option>
+             	  </select>
+             </div>
+             	<div class="bottom_btn" style="clear: left;margin-top: 380px;">
+					<input type="submit" class="btn btn_ok" value="确定" />
+					<input type="button" class=" btn btn_cancel " value="取消" />
+					<input type="reset" class=" btn  btn_reset " value="重置" style="width: 80px;" />
+				</div>
+			
+ </div>
+      
+         
+               <!--弹窗内容结束-->
+
+	          <!--卡号段-->
+	             <div id="cardNumber" class="cardNumberModal">
+	             <p>	<input type="text" name="" />&nbsp;&nbsp-&nbsp&nbsp<input type="text" name="" /><span>1000张</span></p>
+	             <p><span>运营商</span> <input type="text" / style="margin-left: 12px;"></p>
+	             <p><span>流量套餐</span><input type="text" /></p>
+	             	
+	             </div>
+	          <!--卡号段-->
+			
+
+</body>
+<script type="text/javascript">
+//	  
+   $(function(){
+   $("#building").click(function(){
+   	     layui.use('layer',function(){
+   	     		layer.open({
+    	title:['建库','font-size:18px;font-weight:800;'],
+   	 	type:1,
+   	    area:['480px','480px'],
+   	 	offset:['100px'],
+   	 	content:$("#modal_AccountAllocation")
+   	 })
+   	     })
+   	
+    	
+     
+    })
+    })
+     function showCardNumber(){
+        layui.use('layer',function(){
+        	var layer=layui.layer
+        	 layer.open({
+        	 	type:1,
+        	 	title:['卡号段','font-size:18px;'],
+                area:['420px','200px'],
+        	 	content:$('#cardNumber')
+        	 })
+        })
+    }
+  
+</script>
+
+</html>

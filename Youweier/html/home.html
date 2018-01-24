@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title>优为尔后台系统</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/homeAbout/animate.css" rel="stylesheet">
+<link href="../css/homeAbout/style.css?v=4.1.0" rel="stylesheet">
+<script src="../vendor/jquery.min.js"></script>
+<script src="../vendor/layer/layer.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/metisMenu/jquery.metisMenu.js"></script>
+<script src="../vendor/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../js/home/home.js"></script>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="height: 100%;overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs" style="font-size:20px;">
+                                        <i class="fa fa-area-chart"></i>
+                                        <strong class="font-bold">优为尔后台系统</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="logo-element">后台系统
+                        </div>
+                    </li>
+                    <!--商品管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">商品管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+                    	<li><a class="J_menuItem" data-href="shopList.html">商品列表</a></li>
+							<li><a class="J_menuItem" data-href="shopRecharge.html">面额充值</a></li>
+							<li><a class="J_menuItem" data-href="shopActivity.html">促销活动</a></li>
+							<li><a class="J_menuItem" data-href="shopRule.html">活动规则</a></li>
+							<li><a class="J_menuItem" data-href="orderList.html">商品订单</a></li>
+							<li><a class="J_menuItem" data-href="orderOutLibrary.html">商品出库</a></li>
+							<li><a class="J_menuItem" data-href="orderReturns.html">商品退货</a></li>								
+							<li><a class="J_menuItem" data-href="orderCancel.html">商品取消</a></li>
+                    	</ul>
+                    </li>
+                     <!--商品管理结束-->
+                     <!--订单管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">订单管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+                    	  <!-- 	<li>
+                    	   		<a href=""><i class="fa fa-table"></i> <span class="nav-label">订单管理</span><span class="fa arrow"></span> </a>
+                    	        <ul class="nav nav-second-level">
+	                    	   	<li><a class="J_menuItem" data-href="orderList.html">订单列表</a></li>
+	                    	   	</ul>
+                    	   	</li>-->
+                    		<li><a class="J_menuItem" data-href="orderHisPurDetails.html">历史采购明细</a></li>
+							<li><a class="J_menuItem" data-href="orderPurchaseApply.html">采购申请</a></li>
+							<li><a class="J_menuItem" data-href="orderMyPurchase.html">我的采购</a></li>
+							<li><a class="J_menuItem" data-href="orderMoneyApply.html">预存金额申请</a></li>
+							<li><a class="J_menuItem" data-href="orderFaultReporting.html">故障申报</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">退款管理</a></li>
+                    	</ul>
+                    </li>
+                    <!--订单管理结束-->
+                    <!--卡片管理开始-->
+                    	
+                    	
+                       <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">卡片管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">                    	
+                    		<li><a class="J_menuItem" data-href="myCard.html">我的卡片</a></li>
+							
+							<!--<li><a class="J_menuItem" data-href="cardActivation.html">卡片激活</a></li>-->								
+							<li><a class="J_menuItem" data-href="packageList.html">套餐列表</a></li>
+							<li><a class="J_menuItem" data-href="packageGroup.html">套餐群组</a></li>
+							
+							<li><a class="J_menuItem" data-href="chargePayment.html">充值缴费</a></li>
+							<li><a class="J_menuItem" data-href="dealerPayment.html">经销商充值缴费</a></li>
+							<!--<li><a class="J_menuItem" data-href="orderRefundManagement.html">流量监控</a></li>-->
+							<!--<li><a class="J_menuItem" data-href="orderRefundManagement.html">停复机</a></li>-->
+							<li><a class="J_menuItem" data-href="ruleSetting.html">停复机规则设置</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">套餐变更申请</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">套餐变更审核</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">流量转换比例</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">流量转换卡片</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">套餐变更设置</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">补卡管理</a></li>
+							<li><a class="J_menuItem" data-href="orderRefundManagement.html">预销号卡片管理</a></li>
+							
+                    	</ul>
+                    </li>
+                    	
+                    <!--卡片管理结束-->
+                    <!--实名认证开始-->
+                    	   <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">实名认证</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">       
+                    		<li><a class="J_menuItem" data-href="userInfo.html">用户信息</a></li>
+                    		<li><a class="J_menuItem" data-href="cardAuthentication.html">卡片实名认证</a></li>
+							<li><a class="J_menuItem" data-href="deviceAuthentication.html">设备实名认证</a></li>
+							<li><a class="J_menuItem" data-href="authenticationAudit.html">实名认证审核</a></li>
+							
+                    	</ul>
+                    </li>
+                    <!--实名认证结束-->
+                    <!--库存管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">库存管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+                    		<li><a class="J_menuItem" data-href="ConfirmationPurchaseOrder.html">采购单确认</a></li>
+                    		<li><a class="J_menuItem" data-href="pendingPurchaseOrder.html">待出库采购单</a></li>
+							<li><a class="J_menuItem" data-href="cardInventoryList.html">卡片库存列表</a></li>
+							<li><a class="J_menuItem" data-href="deviceInventoryList.html">设备库存列表</a></li>
+                    	</ul>
+                    </li>
+                     <!--库存管理结束-->
+                     <!--分销管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">分销管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="distributionUserWDet.html">用户提现明细</a></li>
+							<li><a class="J_menuItem" data-href="distributionUserWApply.html">用户提现申请</a></li>
+						    <li><a class="J_menuItem" data-href="distributionSet.html">分销设置</a></li>
+						    <li><a class="J_menuItem" data-href="distributionDet.html">分销明细</a></li>
+						    <li><a class="J_menuItem" data-href="distributionWApply.html">分销提现申请</a></li>
+                    	</ul>
+                    </li>
+                     <!--分销管理结束-->
+                     <!--经销商管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">经销商管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="dealerFile.html">经销商档案</a></li>
+							
+						    <li><a class="J_menuItem" data-href="dealerCardInventoryList.html">经销商卡片库存列表</a></li>
+						    <li><a class="J_menuItem" data-href="dealerDeviceInventoryList.html">经销商设备库存列表</a></li>
+						    <li><a class="J_menuItem" data-href="dealerCard.html">经销商卡片</a></li>
+						    <li><a class="J_menuItem" data-href="storedFunds.html">资金预存</a></li>
+						    <li><a class="J_menuItem" data-href="storedDetails.html">预存明细</a></li>
+						   
+                    	</ul>
+                    </li>
+                    <!--经销商管理结束-->
+                    <!--返佣管理开始-->
+                    <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">返佣管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="rebateRules.html">返佣规则</a></li>
+							<li><a class="J_menuItem" data-href="rebateDetails.html">返佣明细</a></li>
+						    <li><a class="J_menuItem" data-href="rebateWApply.html">返佣提现申请</a></li>
+                    	</ul>
+                    </li>
+                    <!--返佣管理结束-->
+                    <!--财务管理开始-->
+                    	 <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">财务管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="dealerFile.html">财务首页/待审核列表</a></li>
+						    <li><a class="J_menuItem" data-href="orderAudit.html">采购订单审核</a></li>
+						    <li><a class="J_menuItem" data-href="dealerDeviceInventoryList.html">销售订单审核</a></li>
+						    <li><a class="J_menuItem" data-href="dealerCard.html">充值审核</a></li>
+						    <li><a class="J_menuItem" data-href="storedFunds.html">返佣审核</a></li>
+						    <li><a class="J_menuItem" data-href="storedDetails.html">分润审核</a></li>
+						    <li><a class="J_menuItem" data-href="dealerCardInventoryList.html">提现审核</a></li>
+						    <li><a class="J_menuItem" data-href="StoredAudit.html">预存审核</a></li>
+						    <li><a class="J_menuItem" data-href="dealerCard.html">退款审核</a></li>
+						    <li><a class="J_menuItem" data-href="storedFunds.html">发票申请</a></li>
+						    <li><a class="J_menuItem" data-href="storedDetails.html">发票管理</a></li>
+                    	</ul>
+                    </li>
+                    <!--财务管理结束-->
+                    <!--权限管理开始-->
+                    	 <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">权限管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="employeeAccountAllocation.html">员工账号分配</a></li>
+							<li><a class="J_menuItem" data-href="dealerAccount.html">经销商账号管理</a></li>
+						    <li><a class="J_menuItem" data-href="dealerAuthority.html">经销商权限</a></li>
+                    	</ul>
+                    </li>
+                    <!--权限管理结束-->
+                    <!--监控管理开始-->
+                    	 <li>
+                    	<a href=""><i class="fa fa-table"></i> <span class="nav-label">监控管理</span><span class="fa arrow"></span> </a>
+                    	<ul class="nav nav-second-level">
+							<li><a class="J_menuItem" data-href="employeeAccountAllocation.html">告警查询</a></li>
+							<!--<li><a class="J_menuItem" data-href="dealerAccount.html">警告规则</a></li>-->
+							  <li>
+							    <a href=""> <span class="nav-label">告警规则</span><span class="fa arrow"></span> </a>
+							    <ul class="nav nav-second-level">
+							    	<li><a class="J_menuItem" data-href="dealerAuthority.html">阀值设置</a></li>
+							    </ul>
+							  </li>
+						    <li><a class="J_menuItem" data-href="dealerAuthority.html">指标管理</a></li>
+						     <li><a class="J_menuItem" data-href="dealerAuthority.html">指标组</a></li>
+						      <li><a class="J_menuItem" data-href="dealerAuthority.html">告警通知组</a></li>
+						       
+                    	</ul>
+                    </li>
+                    <!--监控管理结束-->
+                </ul>
+               
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1" style="overflow: hidden;">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-info " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li >超级管理员</li>
+                        <li id="users"><!-- <b style="font-size: 15px;margin: 0 10px">admin</b> --></li>
+                     
+                         <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" onclick="logOut()" title="注销">
+                                <i class="fa fa-power-off fa-2x icolor" style="position: relative;top:5px"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe id="J_iframe" width="100%" height="100%" src="orderDealerPurchase.html" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            </div>
+            
+        </div>
+        <!--右侧部分结束-->
+    </div>
+
+    <!-- 全局js -->
+
+</body>
+</html>

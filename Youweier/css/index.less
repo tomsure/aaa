@@ -1,0 +1,39 @@
+@charset "utf-8";
+body{
+  height: 100%;
+}
+.login-box{
+  // height: 100vh;
+  // width: 100%;
+  display: flex;
+  align-content: center;
+}
+.login{
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: calc(~"50vh - 190px");
+  h1{
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+  }
+  .input-group-addon{
+    min-width: 45px;
+  }
+  .input-group{
+    margin-top: 20px;
+    .btn-default{
+      margin-left: 20px;
+    }
+  }
+  .form-control,.input-group-addon,.btn-default,.btn-large{
+    border-color: #666;
+    height: 40px;
+    font-size: 16px;
+  }
+  .btn-large{
+    margin-top: 20px;
+  }
+}

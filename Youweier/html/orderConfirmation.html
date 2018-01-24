@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>订单管理-订单出库-采购单确认</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script src="../js/public.js" ></script>
+<script src="../js/data_table.js"></script>
+</head>
+
+<body class="page-body">
+	
+	  <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>    	 
+    	当前位置：订单管理&gt;订单出库&gt;采购单确认
+        </h5>
+   
+       <!--contentBegin-->  
+        <div id="content" >
+         <div class="search-box">
+    	   <form>
+            <div>
+                <span>采购单号：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询采购单号">
+            </div>
+           
+            <div>
+                <span>经销商名称：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询经销商名称">
+            </div>
+            
+             <div>
+                <span>申请人：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询申请人">
+            </div>
+            
+              <div>
+                <span>审核人：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询审核人">
+            </div>
+            
+            <div>
+                <span>发货人：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询发货人">
+            </div>
+            
+            <div>
+                <span>快递公司：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询快递公司">
+            </div>
+            
+             <div>
+                <span>快递单号：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询快递单号">
+            </div>
+            
+             <div>
+                <span>收件人：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询收件人">
+            </div>
+            
+            <div>
+                <span>收件人电话：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询收件人电话">
+            </div>
+            
+          
+            
+            
+           <div style="margin-left: 0px;">
+                <span>落地商：</span>
+                <select class="form-control" id="" name="" style="width:120px">               	
+                	<option>电信</option>
+                	<option>联通</option>
+               	    <option>移动</option>                	
+                </select>
+            </div>
+           
+            <div style="margin-left: 0px;">
+               <span>支付方式：</span>
+                <select class="form-control" id="" name="">
+                	
+                	<option>全部</option>
+                	<option>线下</option>
+                	<option>信用额度</option>
+               	    <option>余额</option>
+                </select>
+            </div>
+             <div style="margin-left: 0px;">
+               <span>采购类型：</span>
+                <select class="form-control" id="" name="">                	
+                	<option>全部</option>
+                	<option>设备</option>
+                	<option>一体机</option>
+               	    <option>卡片</option>
+               	    <option>空卡</option>
+                </select>
+            </div>
+            
+             <div style="margin-left: 0px;">
+               <span>流量套餐：</span>
+                <select class="form-control" id="" name="">                	
+                	<option>全部</option>
+                	<option>套餐1</option>
+                	<option>套餐2</option>
+               	    <option>套餐3</option>
+               	    <option>套餐4</option>
+                </select>
+            </div>
+            
+             <div style="margin-left: 0px;">
+               <span>返佣类型：</span>
+                <select class="form-control" id="" name="">                	
+                	<option>全部</option>
+                	<option>折扣</option>
+                	<option>定额</option>
+                </select>
+            </div>
+              <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+           </form>
+    </div>
+    <div class="search-box check-btn">
+        <div class="check-btn">
+        
+        	<button class="btn btn-default" onclick="">删除</button>
+
+        </div>
+       
+    </div>
+    
+
+    <div class="">
+       		 <table class="table-hide" id="orderConfirmation"></table>
+		                 <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+	</div>
+	 <!--paginationEnd-->
+</div>
+ <!--contentEnd-->
+
+
+</body>
+
+</html>

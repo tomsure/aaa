@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品管理-商品上架</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/layer/layer.min.js" ></script>
+<script src="../js/public.js" ></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script type="text/javascript" src="../vendor/jquery.validate.min.js"></script>
+<script src="../js/data_table.js"></script>
+</head>
+
+<body class="page-body">
+<h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>    	 
+    	当前位置：商品管理&gt;商品上架
+        </h5>
+ <!--contentBegin-->  
+			 <div id="content" >
+			    
+			    <div class="search-box check-btn">
+			        <div class="check-btn">
+			        
+			        	<button  id="addTable" class="btn btn-default"  >新增</button>
+			        	<button class="btn btn-default" onclick="">上架</button>
+			        	<button class="btn btn-default" onclick="">下架</button>
+			        	<button id="btn_del" class="btn btn-default" onclick="">删除</button>
+			        
+			        </div>
+			       
+			    </div>
+			    
+			          <div class="">
+			          	  <table id="demo"   class="layui-hide"  >
+
+			            </table>
+			            <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}} 
+                         </script>
+                         <script type="text/html" id="viewTpl1">
+                             <div> <a class="viewPic1" onclick="viewPic1()">查看</a></div>
+                         </script>
+                         <script type="text/html" id="viewTpl2">
+                             <div><a  class="viewPic2" onclick="viewPic2()">查看</a></div> 
+                         </script>
+			          </div>
+			  
+ <!--新增弹窗-->
+ 	 <div id="modalContent" class="modalContent">
+	<p>
+		<span>商品名称：</span> <input type="text" />
+	</p>
+	<p >
+		<span style="margin-right: 42px;">金额</span>
+		<input type="text" name="" id="" value="" />
+	</p>
+	<p>
+		<span>展示图片内容</span>
+		<input type="file"  />
+	</p>
+	<p>
+		<span>商品类型</span>
+		<select name="" id="" style="margin-left:14px ;" >
+			<option value="">设备</option>
+			<option value="">卡片</option>
+			<option value="">一体机</option>
+		</select>
+		
+	</p>
+	<p>
+		<div class="modal_link_left">
+			<span>链接名称</span>
+			<input type="text" name="" id="" value="" />
+		</div>
+		<div class="modal_link_right">
+		<span>链接类型</span>
+		<select name="" class="textarea_select" id="">
+				<option value="">内页</option>
+				<option value=""   >链接</option>
+			</select>
+			<textarea class="modal_textarea" placeholder="请输入链接地址" name="10" rows="10" cols="20"></textarea>
+		</div>
+	</p>
+	<p>
+		<div class="modal_link_left">
+			<span>链接名称</span>
+			<input type="text" name="" id="" value="" />
+		</div>
+		<div class="modal_link_right">
+		<span>链接类型</span>
+		<select name="" id="" class="textarea_select">
+				<option value="">内页</option>
+				<option value="" selected="selected">链接</textarea></option>
+			</select>
+			<textarea placeholder="请输入链接地址" class="modal_textarea" name="" rows="10" cols="20"></textarea>
+		</div>
+	</p>
+	<p>
+		<div class="modal_link_left">
+			<span>链接名称</span>
+			<input type="text" name="" id="" value="" />
+		</div>
+		<div class="modal_link_right">
+		<span>链接类型</span>
+		<select name="" id="" class="textarea_select">
+				<option value="">内页</option>
+				<option value="">链接</option>
+			</select>
+			<textarea placeholder="请输入链接地址" class="modal_textarea" name="" rows="10" cols="20"></textarea>
+		</div>
+	</p>
+	<p>
+		<span>详情图片上传</span>
+		<input type="file" />
+	</p>
+	
+	    <div class=" modal_btn">
+	  	  <button class="btn btn_ok">确定</button>
+	  	  <button class='btn btn_cancel'>取消</button>
+	  	  <button class='btn btn_reset'>重置</button>
+	  </div>
+</div>
+ 	
+ <!--新增弹窗结束-->
+     	
+     	<!--展示图片弹窗开始-->
+     		<div id="viewModal1" style="display: none;">
+     			<img src="../img/a1.jpg" alt="" />
+     		</div>
+     	<!--展示图片弹窗结束-->
+     	<!--详情图片弹窗-->
+     		<div id="viewModal2" style="display: none;">
+     			<img src="../img/a1.jpg" alt="" />
+     		</div>
+     	<!--详情图片弹窗结束-->
+</body>
+
+<script type="text/javascript">
+		$("form").validate({
+			rules: {
+				CommodityName: {
+					required: true
+				},
+				CommodityType: {
+					required: true
+				}
+			},
+			messages: {
+				CommodityName: {
+					required: function() {
+						alert("请填写商品名称")
+					}
+				},
+			}
+
+		})
+		
+		function viewPic1(){
+			layui.use('layer',function(){
+				 var layer=layui.layer; 
+				layer.open({
+					type:1,
+					
+					content:$('#viewModal1')
+				})
+			})
+		}
+		function viewPic2(){
+			layui.use('layer',function(){
+				 var layer=layui.layer; 
+				layer.open({
+					type:1,
+					content:$('#viewModal2')
+				})
+			})
+		
+		}
+
+         $(function(){
+         	$('select').on('change',function(){
+         		
+         	 })
+         })
+	</script>
+</html>

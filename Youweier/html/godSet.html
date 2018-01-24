@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理-卡密设置</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/homeAbout/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+		<script type="text/javascript" src="../vendor/jquery-3.1.1.js"></script>
+		<script src="../vendor/layui/layui.js"></script>
+		<script type="text/javascript" src="../js/data_table.js"></script>
+		<script src="../js/public.js"></script>
+	</head>
+	<body class="page-body">
+		  <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>
+    	当前位置：商品管理&gt;卡密设置
+        </h5>
+		<div class="headerBox">
+			<p><span>卡密</span> <input type="text" placeholder="卡密查询" /></p>
+		</div>
+		 <div class="search-box check-btn">
+        <div class="check-btn">        
+        	<button class="btn btn-default" id="addGodsetBtn"  onclick="">新增</button>
+        	<button class="btn btn-default" onclick="">上架</button>
+        	<button class="btn btn-default" onclick="">下架</button>
+        	<button class="btn btn-default" onclick="">应用活动</button>
+        	<button class="btn btn-default" onclick="">删除</button>       
+        </div>      
+        
+    </div>
+    
+		 <div class="ibox-content" id="content">
+		 	   <div class="dataTable">
+		 	   	 <table class="table-hide" id="godSetTable"></table>
+		 	   </div> 
+		 </div>
+		 <div id="addGodModal" class="addGod" >
+		 	 <form action="">
+		 	 	<p><span style="margin-right: 38px;">卡密</span><input type="text" /></p>
+		 	 	<p><span style="margin-right:10px;">卡密金额</span><input type="text" /></p>
+		 	 </form>
+		 	  <div class="modal_btn">
+	  	  <button class="btn btn_ok">确定</button>
+	  	  <button class='btn btn_cancel'>取消</button>
+	  	  <button class='btn btn_reset'>重置</button>
+	  </div>
+		 </div>
+	</body>
+</html>

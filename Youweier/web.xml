@@ -1,0 +1,495 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>FeeSys</display-name>
+	<!-- 加载log4j配置文件 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:config/log4j.properties</param-value>
+	</context-param>
+	<!--log4jRefreshInterval为100000表示 开一条watchdog线程每10秒扫描一下配置文件的变化; -->
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>100000</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:config/applicationContext.xml</param-value>
+	</context-param>
+
+	<!-- shiro过滤器定义 -->
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<!-- 该值缺省为false,表示生命周期由SpringApplicationContext管理,设置为true则表示由ServletContainer管理 -->
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 1. 动态的改变记录级别和策略，不需要重启Web应用; 2. 把log文件定在 /WEB-INF/logs/ 而不需要写绝对路径。 -->
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextCleanupListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- ========商品管理======== -->
+	<servlet>
+		<servlet-name>shopList</servlet-name>
+		<jsp-file>/WEB-INF/pages/shopList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>shopRecharge</servlet-name>
+		<jsp-file>/WEB-INF/pages/shopRecharge.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>shopActivity</servlet-name>
+		<jsp-file>/WEB-INF/pages/shopActivity.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>shopRule</servlet-name>
+		<jsp-file>/WEB-INF/pages/shopRule.jsp</jsp-file>
+	</servlet>
+	<!-- ========订单管理======== -->
+	<servlet>
+		<servlet-name>orderHisPurDetails</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderHisPurDetails.jsp</jsp-file>
+	</servlet>
+		<servlet>
+		<servlet-name>orderPurchaseApply</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderPurchaseApply.jsp</jsp-file>
+	</servlet>
+		<servlet>
+		<servlet-name>orderMyPurchase</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderMyPurchase.jsp</jsp-file>
+	</servlet>
+		<servlet>
+		<servlet-name>orderMoneyApply</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderMoneyApply.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderList</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderOutLibrary</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderOutLibrary.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderReturns</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderReturns.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderCancel</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderCancel.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderDealerPurchase</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderDealerPurchase.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderDealerReview</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderDealerReview.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderFaultReporting</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderFaultReporting.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>orderRefundManagement</servlet-name>
+		<jsp-file>/WEB-INF/pages/orderRefundManagement.jsp</jsp-file>
+	</servlet>
+	<!-- ========卡片管理======== -->
+	<servlet>
+		<servlet-name>myCard</servlet-name>
+		<jsp-file>/WEB-INF/pages/myCard.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>packageList</servlet-name>
+		<jsp-file>/WEB-INF/pages/packageList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>packageGroup</servlet-name>
+		<jsp-file>/WEB-INF/pages/packageGroup.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>chargePayment</servlet-name>
+		<jsp-file>/WEB-INF/pages/chargePayment.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerPayment</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerPayment.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>ruleSetting</servlet-name>
+		<jsp-file>/WEB-INF/pages/ruleSetting.jsp</jsp-file>
+	</servlet>
+	<!-- <servlet> <servlet-name>orderOutLibrary</servlet-name> <jsp-file>/WEB-INF/pages/orderOutLibrary.jsp</jsp-file> 
+		</servlet> <servlet> <servlet-name>cardActivation</servlet-name> <jsp-file>/WEB-INF/pages/cardActivation.jsp</jsp-file> 
+		</servlet> <servlet> <servlet-name>orderCancel</servlet-name> <jsp-file>/WEB-INF/pages/orderCancel.jsp</jsp-file> 
+		</servlet> <servlet> <servlet-name>orderDealerPurchase</servlet-name> <jsp-file>/WEB-INF/pages/orderDealerPurchase.jsp</jsp-file> 
+		</servlet> <servlet> <servlet-name>authentication</servlet-name> <jsp-file>/WEB-INF/pages/authentication.jsp</jsp-file> 
+		</servlet> <servlet> <servlet-name>authenticationAudit</servlet-name> <jsp-file>/WEB-INF/pages/authenticationAudit.jsp</jsp-file> 
+		</servlet> -->
+		
+	<!-- ========实名认证======== -->
+	<servlet>
+		<servlet-name>userInfo</servlet-name>
+		<jsp-file>/WEB-INF/pages/userInfo.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>cardAuthentication</servlet-name>
+		<jsp-file>/WEB-INF/pages/cardAuthentication.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>deviceAuthentication</servlet-name>
+		<jsp-file>/WEB-INF/pages/deviceAuthentication.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>authenticationAudit</servlet-name>
+		<jsp-file>/WEB-INF/pages/authenticationAudit.jsp</jsp-file>
+	</servlet>
+	<!-- ========库存管理======== -->
+	<servlet>
+		<servlet-name>ConfirmationPurchaseOrder</servlet-name>
+		<jsp-file>/WEB-INF/pages/ConfirmationPurchaseOrder.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>pendingPurchaseOrder</servlet-name>
+		<jsp-file>/WEB-INF/pages/pendingPurchaseOrder.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>cardInventoryList</servlet-name>
+		<jsp-file>/WEB-INF/pages/cardInventoryList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>deviceInventoryList</servlet-name>
+		<jsp-file>/WEB-INF/pages/deviceInventoryList.jsp</jsp-file>
+	</servlet>
+	<!-- ========分销管理======== -->
+	<servlet>
+		<servlet-name>distributionUserWDet</servlet-name>
+		<jsp-file>/WEB-INF/pages/distributionUserWDet.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>distributionUserWApply</servlet-name>
+		<jsp-file>/WEB-INF/pages/distributionUserWApply.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>distributionSet</servlet-name>
+		<jsp-file>/WEB-INF/pages/distributionSet.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>distributionDet</servlet-name>
+		<jsp-file>/WEB-INF/pages/distributionDet.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>distributionWApply</servlet-name>
+		<jsp-file>/WEB-INF/pages/distributionWApply.jsp</jsp-file>
+	</servlet>
+	<!-- ========经销商管理======= -->
+	<servlet>
+		<servlet-name>dealerFile</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerFile.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerCardInventoryList</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerCardInventoryList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerDeviceInventoryList</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerDeviceInventoryList.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerCard</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerCard.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>storedFunds</servlet-name>
+		<jsp-file>/WEB-INF/pages/storedFunds.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>storedDetails</servlet-name>
+		<jsp-file>/WEB-INF/pages/storedDetails.jsp</jsp-file>
+	</servlet>
+	<!-- ========返佣管理======= -->
+	<servlet>
+		<servlet-name>rebateRules</servlet-name>
+		<jsp-file>/WEB-INF/pages/rebateRules.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>rebateDetails</servlet-name>
+		<jsp-file>/WEB-INF/pages/rebateDetails.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>rebateWApply</servlet-name>
+		<jsp-file>/WEB-INF/pages/rebateWApply.jsp</jsp-file>
+	</servlet>
+	<!-- ========权限管理======= -->
+	<servlet>
+		<servlet-name>employeeAccountAllocation</servlet-name>
+		<jsp-file>/WEB-INF/pages/employeeAccountAllocation.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerAccount</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerAccount.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>dealerAuthority</servlet-name>
+		<jsp-file>/WEB-INF/pages/dealerAuthority.jsp</jsp-file>
+	</servlet>
+	<!-- =============分割线=============== -->
+	<!-- =============分割线=============== -->
+	
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- ========商品管理mapping======== -->
+	<servlet-mapping>
+		<servlet-name>shopRecharge</servlet-name>
+		<url-pattern>/shopRecharge</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>shopActivity</servlet-name>
+		<url-pattern>/shopActivity</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>shopRule</servlet-name>
+		<url-pattern>/shopRule</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>shopList</servlet-name>
+		<url-pattern>/shopList</url-pattern>
+	</servlet-mapping>
+	<!-- ========订单管理mapping======== -->
+	<servlet-mapping>
+		<servlet-name>orderHisPurDetails</servlet-name>
+		<url-pattern>/orderHisPurDetails</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>orderPurchaseApply</servlet-name>
+		<url-pattern>/orderPurchaseApply</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>orderMyPurchase</servlet-name>
+		<url-pattern>/orderMyPurchase</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>orderMoneyApply</servlet-name>
+		<url-pattern>/orderMoneyApply</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderList</servlet-name>
+		<url-pattern>/orderList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderOutLibrary</servlet-name>
+		<url-pattern>/orderOutLibrary</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderReturns</servlet-name>
+		<url-pattern>/orderReturns</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderCancel</servlet-name>
+		<url-pattern>/orderCancel</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderDealerPurchase</servlet-name>
+		<url-pattern>/orderDealerPurchase</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderDealerReview</servlet-name>
+		<url-pattern>/orderDealerReview</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderFaultReporting</servlet-name>
+		<url-pattern>/orderFaultReporting</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>orderRefundManagement</servlet-name>
+		<url-pattern>/orderRefundManagement</url-pattern>
+	</servlet-mapping>
+	<!-- ========卡片管理mapping======== -->
+	<servlet-mapping>
+		<servlet-name>myCard</servlet-name>
+		<url-pattern>/myCard</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>packageList</servlet-name>
+		<url-pattern>/packageList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>packageGroup</servlet-name>
+		<url-pattern>/packageGroup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>chargePayment</servlet-name>
+		<url-pattern>/chargePayment</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerPayment</servlet-name>
+		<url-pattern>/dealerPayment</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ruleSetting</servlet-name>
+		<url-pattern>/ruleSetting</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping> <servlet-name>orderOutLibrary</servlet-name> <url-pattern>/orderOutLibrary</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>orderReturns</servlet-name> 
+		<url-pattern>/orderReturns</url-pattern> </servlet-mapping> <servlet-mapping> 
+		<servlet-name>orderCancel</servlet-name> <url-pattern>/orderCancel</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>orderDealerPurchase</servlet-name> 
+		<url-pattern>/orderDealerPurchase</url-pattern> </servlet-mapping> <servlet-mapping> 
+		<servlet-name>orderDealerReview</servlet-name> <url-pattern>/orderDealerReview</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>orderFaultReporting</servlet-name> 
+		<url-pattern>/orderFaultReporting</url-pattern> </servlet-mapping> -->
+		
+		<!-- ========实名认证mapping======== -->
+	<servlet-mapping>
+		<servlet-name>userInfo</servlet-name>
+		<url-pattern>/userInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cardAuthentication</servlet-name>
+		<url-pattern>/cardAuthentication</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>deviceAuthentication</servlet-name>
+		<url-pattern>/deviceAuthentication</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>authenticationAudit</servlet-name>
+		<url-pattern>/authenticationAudit</url-pattern>
+	</servlet-mapping>	
+	<!-- ========库存管理mapping======== -->
+	<servlet-mapping>
+		<servlet-name>ConfirmationPurchaseOrder</servlet-name>
+		<url-pattern>/ConfirmationPurchaseOrder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>pendingPurchaseOrder</servlet-name>
+		<url-pattern>/pendingPurchaseOrder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cardInventoryList</servlet-name>
+		<url-pattern>/cardInventoryList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>deviceInventoryList</servlet-name>
+		<url-pattern>/deviceInventoryList</url-pattern>
+	</servlet-mapping>
+	<!-- ========分销管理mapping======== -->
+	<servlet-mapping>
+		<servlet-name>distributionUserWDet</servlet-name>
+		<url-pattern>/distributionUserWDet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>distributionUserWApply</servlet-name>
+		<url-pattern>/distributionUserWApply</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>distributionSet</servlet-name>
+		<url-pattern>/distributionSet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>distributionDet</servlet-name>
+		<url-pattern>/distributionDet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>distributionWApply</servlet-name>
+		<url-pattern>/distributionWApply</url-pattern>
+	</servlet-mapping>
+	<!-- ========经销商管理mapping======= -->
+	<servlet-mapping>
+		<servlet-name>dealerFile</servlet-name>
+		<url-pattern>/dealerFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerCardInventoryList</servlet-name>
+		<url-pattern>/dealerCardInventoryList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerDeviceInventoryList</servlet-name>
+		<url-pattern>/dealerDeviceInventoryList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerCard</servlet-name>
+		<url-pattern>/dealerCard</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>storedFunds</servlet-name>
+		<url-pattern>/storedFunds</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>storedDetails</servlet-name>
+		<url-pattern>/storedDetails</url-pattern>
+	</servlet-mapping>
+<!-- ========返佣管理mapping======= -->
+	<servlet-mapping>
+		<servlet-name>rebateRules</servlet-name>
+		<url-pattern>/rebateRules</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>rebateDetails</servlet-name>
+		<url-pattern>/rebateDetails</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>rebateWApply</servlet-name>
+		<url-pattern>/rebateWApply</url-pattern>
+	</servlet-mapping>
+	<!-- ========权限管理mapping======= -->
+	<servlet-mapping>
+		<servlet-name>employeeAccountAllocation</servlet-name>
+		<url-pattern>/employeeAccountAllocation</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerAccount</servlet-name>
+		<url-pattern>/dealerAccount</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dealerAuthority</servlet-name>
+		<url-pattern>/dealerAuthority</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

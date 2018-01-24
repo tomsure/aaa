@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实名认证-用户信息</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script type="text/javascript" src="../js/data_table.js"></script>
+</head>
+
+<body class="page-body">
+	
+	
+        <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：实名认证&gt;用户信息 
+        </h5>
+      
+       <!--contentBegin-->  
+        <div id="content" >
+         <div class="search-box">
+    	   <form>
+            <div>
+                <span>ICCID/用户自编码：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询ICCID/用户自编码">
+            </div>
+           
+            <div>
+                <span>客户名称：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询客户名称">
+            </div>
+            
+           <div>
+                <span>证件号码：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询真实名称">
+            </div>
+            
+             <div>
+                <span>实名来源：</span>
+                <input type="text" class="form-control" name="" value="" placeholder="查询联系方式">
+            </div>
+           
+           <div style="margin-left: 0px;">
+                <span>性别：</span>
+                <select class="form-control" id="" name="" style="width:120px">               	
+                	<option>全部</option>
+                	
+                	<option>男</option> 
+                	<option>女</option>
+                </select>
+            </div>
+           <div style="margin-left: 0px;">
+                <span>实名时间：</span>
+                <input type="date" class="form-control" />-- <input type="date" class="form-control" />
+            </div>
+             
+             <div style="margin-left: 0px;">
+                <span>通过时间：</span>
+                <input type="date" class="form-control" />-- <input type="date" class="form-control" />
+            </div>
+         
+             <!--<input id="search" type="button" class="btn btn-info" value="查询" onclick="" style="height:34px;margin-left: 30px;">-->
+             	  <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+        </form>
+    </div>
+    
+    <div class="search-box check-btn">
+        <div class="check-btn">
+        
+        	<button class="btn btn-default" onclick="">新增</button>
+            <button class="btn btn-default" onclick="">修改</button>
+            <button class="btn btn-default">批量删除</button>
+            
+        </div>
+        <!--<div class="validityTime" style="float: right;">
+	 	   	   <span>
+	 	   	   	申请日期:
+	 	   	   </span>
+	 	   	 
+	 	   	 	<input type="date" name="" id="" value=""  style="position: static"/>-
+	 	   	   <input type="date" name="" id="" value="" style="position: static"/>
+	 	   	 
+	 	   	 </div>-->
+    </div>
+    
+
+          		
+		
+</div>
+<div class="">
+ <table id="userinfo"   class="layui-hide"></table>
+ <script type="text/html" id="indexTpl">
+    {{d.LAY_TABLE_INDEX+1}}
+</script>
+<script type="text/html" id="indexTpl">
+    {{d.LAY_TABLE_INDEX+1}}
+</script>
+
+</div>    
+ <!--contentEnd-->
+
+
+</body>
+
+</html>

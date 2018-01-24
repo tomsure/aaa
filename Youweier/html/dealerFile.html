@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经销商管理-经销商档案</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link href="../css/public.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../css/table_public.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src='../vendor/layui/layui.js'></script>
+<script src="../js/data_table.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+
+
+</head>
+
+<body class="page-body">
+	
+	
+        <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;float: right;" title="刷新"></i> 
+    	当前位置：经销商管理&gt;经销商档案 
+        </h5>
+      
+       <!--contentBegin-->  
+        <div id="content" >
+         
+    
+    <div class="search-box check-btn">
+        <div class="check-btn">
+        
+        	<button class="btn btn-default" id="addBtn" onclick="">新增</button>
+            <button class="btn btn-default" onclick="">删除</button>
+            
+        </div>
+        <div class="validityTime" style="float: right;">
+	 	   	   <span>
+	 	   	   	合作日期:
+	 	   	   </span>
+	 	   	 
+	 	   	 	<input type="date" name="" id="" value=""  style="position: static"/>-
+	 	   	   <input type="date" name="" id="" value="" style="position: static"/>
+	 	   	 
+	 	   	 </div>
+    </div>
+    
+
+    <div class="ibox-content">
+       		
+		<table class="table-hide" id="dealerFile">
+		    
+		</table>
+		 <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}} 
+                         </script>
+          <script type="text/html" id="templet2">
+                                <a >查看</a> 
+                         </script>
+                          <script type="text/html" id="templet3">
+                            <div id="">
+                            	<a >查看</a>
+                            </div>
+                         </script>
+                         <script type="text/html" id="templet4">
+                            <div id="">
+                            	 <a >修改</a> / <a >删除</a>
+                            </div>
+                         </script>
+           </div>
+</div>
+   <!--新增弹窗开始-->
+   	   <div class="addDealerModal" id="addDlealer">
+   	   	  <form>
+   	   	  <p><span class="addtitle ">账号</span><input type="text" placeholder="自动生成" /></p>
+   	   	  <p><span class="addtitle ">密码</span><input type="text" placeholder="默认123456" /></p>
+   	   	  <p><span class="addtitle ">编号</span><input type="text" placeholder="自动生成" /></p>
+   	   	  <p style="margin-left: 0;"><span class="" >经销商名称</span><input type="text" /></p>
+   	   	  <p>
+   	   	  	<span class="addtitle ">身份</span>
+   	   	  	<input type="radio" name="identity" />
+   	   	  	<span>经销商</span> <input type="radio" name="identity" id="" value="" />
+   	   	  	<span>区域经销商</span> <span style="margin-left: 35px;">业务交接人</span><input type="button" value="选择" style="background-color: dodgerblue;color: white;" /></p>
+   	   	  
+   	   	  <p><span class="addtitle1">信用额度</span><input type="text" placeholder="输入信用额度" /></p>
+   	   	  <p><span class="addtitle1">营业执照</span><span style="background-color: dodgerblue;color: white;">上传</span></p>
+   	   	  <p><span class=" addtitle1">行业分类</span><input type="text" placeholder="行业分类" /></p>
+   	   	  <p><span class=" " style="margin-right: 30px;">联系人</span><input type="text" placeholder="输入联系人" /></p>
+   	   	  <p><span class="addtitle1 ">联系方式</span><input type="text" placeholder="输入联系方式" /></p>
+   	   	  </form>
+   	       <div id="" class="modal_btn">
+   	   	    	<button class="btn btn_ok">确定</button>
+   	   	    	<button class="btn btn_cancel ">取消</button>
+   	   	    	<button class="btn btn_reset">重置</button>
+   	   	    </div>	   
+   	   </div>
+   	   
+   <!--新增弹窗结束--><!----><!---->
+
+</body>
+
+</html>

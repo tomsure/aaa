@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>库存管理-待出库采购单</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		
+		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+		<link href="../css/public.css" rel="stylesheet">
+		<script src="../vendor/jquery-3.1.1.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	   
+	</head>
+
+	<body class="page-body">
+
+		<h5 class="position-title">当前位置：库存管理&gt;待出库采购单</h5>
+
+		<!--contentBegin-->
+		<div id="content">
+			<div class="search-box">
+				<form>
+					<div>
+						<span>采购单号：</span>
+						<input type="text" class="form-control" name="" value="" placeholder="查询采购单号">
+					</div>
+
+					<div>
+						<span>经销商：</span>
+						<input type="text" class="form-control" name="" value="" placeholder="查询经销商">
+					</div>
+
+					<div>
+						<span>状态：</span>
+						<select name="" id="">
+							<option value="">全部</option>
+							<option value="">待出库</option>
+							<option value="">已出库</option>
+							
+						</select>
+					</div>
+
+					<div style="margin-left: 0px;">
+						<span>采购类型：</span>
+						<select class="form-control" id="" name="" style="width:120px">
+							<option>全部</option>
+							<option>卡片</option>
+							<option>设备</option>
+							<option value="">一体机</option>
+							<option value="">空卡</option>
+						</select>
+					</div>
+
+					<div style="margin-left: 0px;">
+						<span>审核人：</span>
+						<input type="text" class="form-control" placeholder="查询审核人" />
+					</div>
+					<div style="margin-left: 0px;">
+						<span>卡号段：</span>
+						<input type="text" class="form-control" name="" id="" placeholder="查询采购单号" value="" />-
+						<input type="text" class="form-control" name="" id="" placeholder="查询采购单号" value=""/>
+					</div>
+					 <div class="">
+					 	<span id="">
+					 		出库人:
+					 	</span>
+					 	<input type="text" class="form-control" name="" id="" placeholder="查询出库人" value="" />
+					 </div>
+					 <div class="">
+					 	<span id="">
+					 		申请人：
+					 	</span>
+					 	<input type="text" class="form-control" placeholder="查询申请人" name="" id="" value="" />
+					 </div>
+					   <div><span>流量套餐：</span>
+					   	<select name="" id="" class="form-control">
+					   		<option value="status01">全部</option>
+					   		<option value="status02">套餐1</option>
+					   		<option value="status03">套餐2</option>
+					   		
+					   	</select>
+					   </div>
+					   <div><span>落地商：</span>
+					   	<select name="" id="" class="form-control">
+					   		<option value="status01">全部</option>
+					   		<option value="status02">套餐1</option>
+					   		<option value="status03">套餐2</option>
+					   		
+					   	</select>
+					   </div>
+					   <div>
+					     <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+                </from>
+			</div>
+
+		</div>
+	
+		<div class="ibox-content">
+
+			<table class="table table-bordered">
+
+				<thead>
+					<tr>
+						<th><input type="checkbox" name="" id="" value="" /></th>
+						<th>序号</th>
+						<th>采购单号</th>
+						<th>落地商</th>
+						<th>数量</th>
+						<th>采购类型</th>
+						<th>流量套餐</th>
+						<th>套餐描述</th>
+						<th>经销商名称</th>
+						<th>申请人</th>
+						<th>申请时间</th>
+						<th>审核人</th>
+						<th>审核时间</th>
+						<th>状态</th>
+						<th>出库人</th>
+						<th>出库时间</th>
+						<th>卡号段</th>
+						<th>出库时间</th>
+						<th>操作</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						
+						<td>卡片</td>
+						<td>32G</td>
+						<td></td>
+						<td></td>
+						<td>0788</td>
+						<td></td>
+						<td>13456</td>
+						<td></td>
+						<td>待出库</td>
+						<td>待出库</td>
+						<td></td>
+						<td><a href="">查看</a></td>
+						<td></td>
+						
+						<td>
+							<a href="">出库</a>
+							
+							
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>2</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						
+						<td>设备</td>
+						<td>无</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>已出库</td>
+						<td>1345678</td>
+						<td></td>
+						<td><a href="">查看</a></td>
+						<td></td>
+						
+						<td>
+							<a href="">删除</a>
+							
+							
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>3</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						
+						<td>一体机</td>
+						<td>32G</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>待出库</td>
+						<td>待出库</td>
+						<td></td>
+						<td><a href="">查看</a></td>
+						<td></td>
+						
+						<td>
+							<a href="">出库</a>
+							
+							
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>4</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						
+						<td>空卡</td>
+						<td>无</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href=""></a></td>
+						<td></td>
+						
+						<td>
+							<a href=""></a>
+							
+							
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<ul class="pagination" style="float: right;">
+				<li>
+					<a href="#">&laquo;</a>
+				</li>
+				<li class="active">
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">&raquo;</a>
+				</li>
+			</ul>
+
+		</div>
+		</div>
+		<!--contentEnd-->
+
+	</body>
+
+</html>

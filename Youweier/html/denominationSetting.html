@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品管理-面额设置</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link rel="stylesheet" type="text/css" href="../css/cardMange.css"/>
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/layer/layer.min.js" ></script>
+<script src="../vendor/layui/layui.js"></script>
+<script src="../js/public.js" ></script>
+<script src="../js/data_table.js"></script>
+</head>
+
+<body class="page-body">
+	
+	  <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>
+    	当前位置：商品管理&gt;面额设置
+        </h5>
+  <!--contentBegin-->    
+        <div id="content" >
+         <div class="search-box">
+    	   <form>
+            <div>
+                <span>面额名称：</span>
+                <input type="text" class="form-control" value="" placeholder="查询面额名称">
+            </div>
+            
+           <div style="margin-left: 40px;">
+                <span>状态：</span>
+                <select class="form-control" id="" name="propType" style="width:120px">               	
+                	<option>全部</option>
+                	<option>上架</option>
+                	<option>下架</option>               	              	
+                </select>
+            </div>
+            <div style="margin-left: 40px;">
+               <span>应用活动：</span>
+                <select class="form-control" id="" name="auditType">
+                	
+                	<option>全部</option>
+                	<option>是</option>
+                	<option>否</option>
+                	
+                </select>
+            </div>
+             <div style="margin-left: 40px;">
+               <span>分期：</span>
+                <select class="form-control" id="" name="auditType">
+                	
+                	<option>全部</option>
+                	<option>是</option>
+                	<option>否</option>
+                	
+                </select>
+            </div>
+              <div id="">
+                	<input type="reset" class="btn btn_reset" name="" id="" value="重置" />
+                	<input type="button" class="btn btn_search" name="" id="" value="搜索" />
+                </div>
+        </form>
+    </div>
+    <div class="search-box check-btn">
+        <div class="check-btn">        
+        	<button class="btn btn-default" id="denominationBtn" onclick="">新增</button>
+        	<button class="btn btn-default" onclick="">上架</button>
+        	<button class="btn btn-default" onclick="">下架</button>
+        	<button class="btn btn-default" onclick="">应用活动</button>
+        	<button class="btn btn-default" onclick="">删除</button>       
+        </div>      
+        
+    </div>
+    
+
+    <div class="ibox-content">
+	    <table class="layui-hide" id="denominationTable"></table>
+    </div>
+   
+</div>
+ <!--contentEnd-->
+  <div id="denominationSetting" class="denominationModal">
+  	   <form action="">
+  	   	<p><span>面额名称</span><input type="text" /><span>元</span></p>
+  	   	<p><span style="margin-right: 15px;">人民币</span><input type="text" /><span>元</span></p>
+  	   	<p><span>促销活动</span><select name="" id="">
+  	   		<option value="">无</option>
+  	   		<option value="">活动规则名称</option>
+  	   	</select></p>
+  	   	<p><span style="vertical-align:top;">点击说明</span>
+  	   		<textarea name="" rows="5" cols="30"></textarea>
+  	   	</p>
+  	   </form>
+  	     <div class="denominationBtn modal_btn">
+	  	  <button class="btn btn_ok">确定</button>
+	  	  <button class='btn btn_cancel'>取消</button>
+	  	  <button class='btn btn_reset'>重置</button>
+	  </div>
+  </div>
+</body>
+ 
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		html{
+			background-color:#E1F3FF ;
+			height: 100%;
+		}
+		.dataset p{
+			border: 5px solid #C9EAFF;
+			line-height: 0.8rem;
+			margin: 1rem;
+			display: flex;
+			justify-content: space-around;
+			border-radius: 16px;
+			box-shadow: -1px -4px 13px 2px #C9EAFF;
+			
+		}
+		.btn{
+			height: 0.8rem;
+			background-color: #26A6FF;
+			color: white;
+			border: 0;
+			border-radius: 100px;
+			width: 3rem;
+			font-size: 0.4rem;
+			
+		}
+		 .btnBox{
+		 	display: flex;
+		 	margin: 1rem;
+		 	justify-content: space-between;
+		 	
+		 }
+		 #addBtn{
+		   align-self: flex-start;
+		 }
+		 
+		 .icon-notpass{
+		 	float: right;
+		 	font-size:0.5rem;
+		 	position: relative;
+		 	bottom: 1.9rem;
+		 	/*right: 0.1rem;*/
+		 	font-size: 1rem;
+		 	
+		 	
+		 	display: none;
+		 	
+		 }
+		 .icon-notepass:before{
+		 	font-size: 1rem;
+		 }
+	</style>
+	<style type="text/css">
+	  	  .aa{
+	  	  	  position: relative;
+	  	  	  left: 5rem;
+	  	  	  float: right;
+	  	  }
+	  </style>
+	<!--<link rel="stylesheet" type="text/css" href="../../css/reset1.css"/>-->
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="../../icons/style.css"/>
+	<body>
+		 <div class="dataset" id="link">
+		      <p><span>ICCID</span><span>122425990283908590389</span></p>
+		      <span class="icon icon-notpass"></span>
+		      <p><span>ICCID</span><span>2398409529034890829345</span></p>
+		      <span class="icon icon-notpass"></span>
+		      
+		      
+		      <p><span>ICCID</span><span>3290487095278098098345</span></p>
+		      <span class="icon icon-notpass"></span>
+		      <p><span>ICID</span><span>23985093845dasfasfasafa</span></p>
+		      <span class="icon icon-notpass"></span>
+		 	
+		 	<div class="btnBox" id="btnBox">
+		 		 <button id="addBtn" class="btn">新增</button>
+		 		 <button id="removeBtn" class="btn">解绑</button>
+		 		
+		 	</div>
+		 </div>
+	</body>
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+	  
+	<script>
+		  $(function(){
+		  
+		  	$('#addBtn').click(function(){
+		 	   location.href='myCard_inputICCID.html'
+		 	
+		 })
+ function quxiao(){
+		   	 $('#removeBtn').text('取消')
+		   	 $('#addBtn').text('确定')
+		   	 $('.icon-notpass').show()
+		   	 $('#addBtn').hide()
+//		   	 $('#removeBtn').css({'float':'right'},{'position':'relative'},{"left":'5rem'})
+             $('#removeBtn').addClass('aa')
+
+		   }
+		   function jiebang(){
+		   	  $('#removeBtn').text('解绑')
+		   	 $('.icon-notpass').hide()
+		   	 $('#addBtn').show()
+		   	 $('#removeBtn').removeClass('aa')
+		   	 $('#addBtn').text('新增')
+		   }
+		$('#removeBtn').click(function(){
+            if($('#removeBtn').text()=='解绑'){
+            	quxiao()
+            }else if($('#removeBtn').text()=='取消'){
+            	 jiebang()
+            }
+
+       	  
+       })
+		  	   
+		  	 $('.icon-notpass').click(function(e){
+
+		  	 	  $(e.target).prev().remove()
+		  	 	  $(e.target).remove()
+		  	 })
+              
+              
+		  })
+	</script>
+	<script>
+		  $('#link p').click(function(){
+		  	 location.href='mycard1.html'
+		  })
+
+        
+	</script>

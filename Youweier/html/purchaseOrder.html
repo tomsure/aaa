@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>订单管理-出库采购单</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="../css/homeAbout/font-awesome.css" rel="stylesheet">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../vendor/bootstrap/bootstrap-table.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../vendor/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="../css/customModal.css"/>
+<link href="../css/public.css" rel="stylesheet">
+<script src="../vendor/jquery-3.1.1.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/layui/layui.js"></script>
+<script src="../js/public.js" ></script>
+<script src="../js/data_table.js"></script>
+</head>
+
+<body class="page-body">
+	
+	  <h5 class="position-title">
+    	<a href="javascript:history.back(-1)" title="返回上一页"><i class="fa fa-reply fa-lg fa-fw" style="color:#337ab7;"></i> </a>
+    	<a href="javascript:void(0)" onclick="location.reload()" style="float: right;"><i class="fa fa-refresh fa-lg fa-fw" style="color:#337ab7;" title="刷新"></i> </a>    	 
+    	当前位置：订单管理&gt;出库采购单
+        </h5>
+
+        <div id="content" >
+  <div class="">
+       		 <table class="table-hide" id="purchaseOrder"></table>
+		                 <script type="text/html" id="indexTpl">
+                            {{d.LAY_TABLE_INDEX+1}}
+                         </script>
+                          <script type="text/html" id="templet2">
+                            <div>
+                            	<a onclick="showPic()">查看</a>
+                            </div>
+                         </script>
+                          <script type="text/html" id="templet3">
+                            <div>
+                            	<a onclick="showModal()">出库</a>
+                            </div>
+                         </script>
+	</div>
+
+</div>
+ 
+   
+    <div id="dvpurchaseOrder" class="purchaseOrderModal">
+    	
+    	<p><span style="margin-right: 58px;">IMEI</span><input type="text" />&nbsp&nbsp-&nbsp&nbsp <input type="text" /> <span>1000台</span></p>
+   	     <p><span style="margin-right: 12px;">MCU版本号</span><input type="text" value="12289278957298365" /> </p>
+   	     <p><span style="margin-right: 55px;">颜色</span> <input type="text"  value="红色"/></p>
+    </div>
+    <div class="outlibraryModal" id="outlibrary">
+    	<p><span style="margin-right: 40px;">卡号</span><input type="text" />&nbsp&nbsp-&nbsp&nbsp<input type="text" /> <span>1000张</span></p>
+    	<p><span style="margin-right: 28px;">运营商</span><input type="text" value="电信" /></p>
+    	<p><span style="margin-right: 15px;">流量套餐</span><input type="text" value="" value="8G" /></p>
+    	<p><span style="margin-right: 30px;">设备号</span><input type="text" placeholder="设备号" />&nbsp&nbsp-&nbsp&nbsp<input  type="text" placeholder="设备号" /></p>
+    	   <p style="text-align: center;margin-top: 40px;"> <button class="btn" style="height: 30px;width: 80px;color:white;background-color: deepskyblue;">出库</button></p>
+    </div>
+</body>
+<script>
+	function showPic(){
+		layui.use('layer',function(){
+			var layer=layui.layer;
+			    layer.open({
+			    	type:1,
+			    	title:['出库','font-size:18px;font-weight:800;'],
+			    	area:['500px','200px'],
+			    	content:$('#dvpurchaseOrder'),
+//                  content:'111'
+			    	
+			    	
+			    })
+		})
+	}
+	
+	function showModal(){
+		layui.use('layer',function(){
+			var layer=layui.layer;
+			    layer.open({
+			    	type:1,
+			    	title:['出库','font-size:18px;font-weight:800;'],
+			    	area:['500px','260px'],
+			    	content:$('#outlibrary'),
+//                  content:'111'
+			    	
+			    	
+			    })
+		})
+	}
+</script>
+</html>

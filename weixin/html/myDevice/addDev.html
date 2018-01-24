@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	</head>
+	<style type="text/css">
+		 
+		 p{
+		 	margin-top: 0.5rem;
+		 	font-size: 0.5rem;
+		 	color: gray;
+		 	text-align: center;
+		 }
+		.binds{
+			display: flex;
+			justify-content: space-around;
+		}
+		.btnBox{
+			/*display: flex;*/
+			 /*border: 1px solid red;*/
+			text-align: center;
+			margin: 0 auto;
+		}
+		button{
+			 background: #26A6FF;
+			 color: white;
+			 font-size: 0.35rem;
+			/*padding: 0.2rem!important;
+			padding-bottom: 0.2rem!important;*/
+			 border: 0;
+			 width: 40%;
+			 /*margin: 0 auto;*/
+			 align-self: center;
+			 height: 0.75rem;
+			 border-radius: 100px;
+			margin-bottom: 0.4rem!important;
+		}
+		
+	</style>
+	<body>
+		 <p>输入设备号进行绑定吧</p>
+		<div class="box_common binds" >
+			<span>设备号</span>
+			<input type="text" placeholder="请输入设备号" />
+		</div>
+		<div class="btnBox">
+			<button id="addBtn">新增</button><br />
+			<button>扫一扫设备二维码</button>
+		</div>
+	</body>
+	<script src="../../dist/plugs/flexible.js/flexible_css.js"></script>
+	<script src="../../dist/plugs/flexible.js/flexible.js"></script>
+	<script type="text/javascript" src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#addBtn').click(function(){
+				 location.href='BindingsDev.html'
+			})
+		})
+	</script>
+		
+</html>

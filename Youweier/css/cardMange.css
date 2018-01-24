@@ -1,0 +1,113 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.filter_content{
+	/*position: relative;*/
+	float: left;
+	/*border: 1px solid red;*/
+	width: 2200px;
+	
+	margin-bottom: 10px;
+}
+.filter_left{
+	/*border:1px solid red;*/
+	float:left;
+	width: 800px;
+}
+
+.usercode,.filter_area,.filter_can,.filter_kind,.filter_line{
+	float: left;
+	margin-left: 40px;
+}
+.usercode input{
+	border: 0;
+	border-bottom: 1px solid black;
+	}
+.filter_left_btn{
+	float: left;
+	margin-top: 10px;
+	/*margin-left: -300px;*/
+}
+.filter_left_btn button{
+	border: 0;
+	background-color:darkgray;
+	border-radius: 5px;
+	color: white;
+	margin-left: 20px;
+	
+	width: 100px;
+}
+.filter_right{
+	/*border:1px solid red;*/
+	float:left;
+	width: 800px;
+}
+
+
+.issuingTime,.validityTime,.activationTime{
+	float: left;
+	margin-left:30px;
+	
+   }
+.issuingTime input,.validityTime input,.activationTime input{
+	border: 0;
+	border-bottom: 1px solid black;
+}
+.form_btn{
+	float: left;
+	/*margin-left: 200px;*/
+	/*border: 1px solid red;*/
+}
+.form_btn input[type="button"]{
+	margin-left: 20px;
+	}
+.filter_input{
+	border:0;
+	border-bottom: 1px solid black;
+	
+}
+.filter_content_top{
+	/*border: 1px solid red;*/
+	float: left;
+	width: 100%;
+}
+.filter_content_bottom{
+	/*border: 1px solid red;*/
+	float: left;
+	width: 100%;
+}
+.filter_content_top div{
+	float: left;
+	margin-right: 50px;
+	margin-left: 0px;
+}
+.filter_content_bottom div{
+	float: left;
+	margin-left: -20px;
+	margin-right: 50px;
+	margin-top: 10px;
+	
+
+}
+.btn_search {
+	background-color:grey ;
+	color: white;
+	width: 80px;
+	margin-left: 10px;
+}
+.btn_step{
+	width: 70px;
+}
+.sex_select select{
+	width: 80px;
+	text-align: center;
+}
+.btn_reset{
+	margin-right: 20px;
+	color: white;
+	background-color: darkgray;
+}
+tr td{
+	text-align: center;
+}
