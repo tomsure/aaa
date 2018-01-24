@@ -16,7 +16,7 @@
 <body>
 
 <div id="dv">
-	<a href="">欢迎访问我的网站</a>
+	<a href="weixin/html/personalCenter/personalCenter.html">欢迎访问我的网站</a>
 </div>
 </body>
 </html>
